@@ -1,6 +1,6 @@
 const http = require('http')    /* Retrive the library http by using require() */
-const fs = reqiure('fs')        /* File system library */
-const port = 7000
+const fs = require('fs')        /* File system library */
+const port = 3000
 
 const server = http.createServer(function(req, res) {
     res.writeHead(200, { 'Content-Type': 'text/html' }) /* OK code, and specify content type */
