@@ -135,3 +135,4 @@ Per le prestazioni sanitarie non si deve emettere nessuna fattura elettronica ma
 Gestionali già sul mercato che hanno le stesse funzionalità:
 - Fisiodate
 - Fisiodesk
+- Physiotools
