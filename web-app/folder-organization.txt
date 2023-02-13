@@ -34,6 +34,8 @@ Explanation of the folders:
 
 
 frontend/
+|-- dist/
+|-- |-- bundle.js
 |-- node_modules/
 |-- public/
 |   |-- index.html

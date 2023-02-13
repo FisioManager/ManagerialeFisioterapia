@@ -9,7 +9,7 @@
 - [Gestione degli account utente]()
 - [Recensioni]()
 - [Vendita]()
-- [Competitors]()
+- [Competitors](#competitors)
 
 ## <u>*Funzionalità principali*</u>
 
@@ -86,14 +86,13 @@ I framework utilizzati sono scelti per fornire due soluzioni:
 #### <u>Front-end</u>
 
 - React (Interfaccia utente)
-- Redux (Gestione dello stato dell’applicazione)
-- Sass
+- Scss (Sassy css)
+- Webpack e Babel (Per fare il bundle di tutti gli assets)
 
 #### <u>Back-end</u>
 
 - NodeJS (Runtime system) + nvm, npm
 - MongoDB (Database non relazionale)
-- Redis (Caching database)
 - Nginx (Web server)
 - AWS (Hosting del server)
 
