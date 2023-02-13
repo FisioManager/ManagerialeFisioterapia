@@ -9,6 +9,7 @@
 - [Gestione degli account utente]()
 - [Recensioni]()
 - [Vendita]()
+- [Competitors]()
 
 ## <u>*Funzionalità principali*</u>
 
@@ -30,10 +31,23 @@ Produzione di un documento firmato dal fisioterapista che tratti il resoconto de
 Il documento ha formato pdf e può essere stampato in qualsiasi momento futuro.
 Il documento afferma che il risultato è ottenuto tramite l’analisi delle pubblicazioni scientifiche, facendo riferimento alla sorgente, con l’analisi integrativa del fisioterapista stesso.
 
+### **Video tutorial di esercizi**
+
+Database di brevi video tutorial di esercizi e trattamenti, divisi per regione corporea, obbiettivo, patalogie da curare ecc...
+La possibilità di costruire tabelle di esercizi da proporre al paziente.
+
 ### **Fatturazione**
 
 Il programma permette la creazione automatica di fatture e l’eventuale invio di tali a commercialisti/ufficio delle entrate (SdI) e ricevere eventuali notifiche da parte dell’SdI sugli esiti dei controlli.
 Il sistema si occuperà solo di fatture attive.
+
+### **Modulistaica GDPR e consensi informativi**
+
+Preocompilazione di tutti i moduli per il trattamento dei dati e della privacy:
+- Modulo privacy
+- Consenso informato
+- Informativa
+- Consenso al trattamento
 
 ### **Sistema di notifiche**
 
@@ -57,6 +71,7 @@ L’applicativo deve notificare i seguenti eventi:
 - Pazienti
 - Fatture
 - Agenda
+- Libreria di esercizi
 - Aiuto (Documentazione)
 
 ## <u>*Framework e tecnologie*</u>
@@ -72,7 +87,7 @@ I framework utilizzati sono scelti per fornire due soluzioni:
 
 - React (Interfaccia utente)
 - Redux (Gestione dello stato dell’applicazione)
-- Tailwind CSS (Design)
+- Sass
 
 #### <u>Back-end</u>
 
@@ -114,3 +129,9 @@ Esistono tre modi tramite cui l’SdI invia le fatture:
 3. Tramite Codice Fiscale del cliente se esso è un consumatore finale oppure è un contribuente a regime agevolato esonerato dall’obbligo di utilizzo della fattura elettronica (è necessario indicare in questo caso come codice destinatario sette zeri: 0000000). Chi emette la fattura ha l’obbligo di consegnare al cliente una copia cartacea o elettronica della fattura, oltre ad informarlo che una copia sarà presente nell’area riservata del sito dell’AdE. Se il cliente possiede una PEC occorre segnarlo in fattura. Se il cliente è estero occorre indicare come codice destinatario sette X: XXXXXXX. È onere del venditore l’invio del documento fiscale digitalmente o tramite cartaceo.
 
 Per le prestazioni sanitarie non si deve emettere nessuna fattura elettronica ma bensì i dati devono essere inviate al sistema TS (tessera sanitaria) entro il 31 gennaio successivo dell’anno del pagamento del servizio.
+
+## <u>*Competitors*</u>
+
+Gestionali già sul mercato che hanno le stesse funzionalità:
+- Fisiodate
+- Fisiodesk
