@@ -4,6 +4,9 @@ backend/
 |   |-- css/
 |   |-- images/
 |   |-- js/
+|   |-- bundle.jsx
+|   |-- favicon.ico
+|   |-- index.html
 |-- src/
 |   |-- controllers/
 |   |-- models/
@@ -35,7 +38,7 @@ Explanation of the folders:
 
 frontend/
 |-- dist/
-|-- |-- bundle.js
+|-- |-- bundle.jsx
 |-- node_modules/
 |-- public/
 |   |-- index.html
@@ -43,33 +46,35 @@ frontend/
 |-- src/
 |   |-- components/
 |   |   |-- Button/
-|   |   |   |-- Button.js
-|   |   |   |-- Button.css
+|   |   |   |-- Button.jsx
+|   |   |   |-- Button.scss
 |   |   |-- Header/
-|   |   |   |-- Header.js
-|   |   |   |-- Header.css
+|   |   |   |-- Header.jsx
+|   |   |   |-- Header.scss
 |   |   |-- ...
 |   |-- context/
-|   |   |-- MyContext.js
+|   |   |-- MyContext.jsx
 |   |-- pages/
 |   |   |-- Home/
-|   |   |   |-- Home.js
-|   |   |   |-- Home.css
+|   |   |   |-- Home.jsx
+|   |   |   |-- Home.scss
 |   |   |-- About/
-|   |   |   |-- About.js
-|   |   |   |-- About.css
+|   |   |   |-- About.jsx
+|   |   |   |-- About.scss
 |   |   |-- ...
 |   |-- services/
-|   |   |-- api.js
+|   |   |-- api.jsx
 |   |-- utils/
-|   |   |-- helpers.js
-|   |-- App.js
-|   |-- index.js
+|   |   |-- helpers.jsx
+|   |-- App.jsx
+|   |-- index.jsx
 |   |-- ...
 |-- .env
 |-- .gitignore
 |-- package.json
 |-- package-lock.json
+|-- webpack.config.js
+|-- babel.config.json
 |-- README.md
 
     1.node_modules/: This folder contains the dependencies that your project depends on. You can install these dependencies using npm or yarn.
