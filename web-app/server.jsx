@@ -20,7 +20,7 @@ app.get("/index.html", function (req, res) {
 
 app.get("/bundle.jsx", (req, res) => {
   res.type("text/javascript");
-  res.sendFile(__dirname + "/dist/bundle.jsx");
+  res.sendFile(__dirname + "/public/bundle.jsx");
 });
 
 app.get("/favicon.ico", (req, res) => {

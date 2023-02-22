@@ -37,6 +37,7 @@ web-app/
 |-- package-lock.json
 |-- webpack.config.js
 |-- babel.config.json
+|-- server.jsx
 |-- README.md
 
     1.node_modules/: This folder contains the dependencies that your project depends on. You can install these dependencies using npm or yarn.
