@@ -10,13 +10,17 @@ app.listen(port, function (error) {
   }
 });
 
+app.get("/", function (req, res) {
+  res.sendFile(__dirname + "/public/index.html");
+});
+
 app.get("/index.html", function (req, res) {
   res.sendFile(__dirname + "/public/index.html");
 });
 
 app.get("/bundle.jsx", (req, res) => {
   res.type("text/javascript");
-  res.sendFile(__dirname + "/public/bundle.jsx");
+  res.sendFile(__dirname + "/dist/bundle.jsx");
 });
 
 app.get("/favicon.ico", (req, res) => {

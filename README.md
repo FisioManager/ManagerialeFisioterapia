@@ -44,6 +44,7 @@ Il sistema si occuperà solo di fatture attive.
 ### **Modulistaica GDPR e consensi informativi**
 
 Preocompilazione di tutti i moduli per il trattamento dei dati e della privacy:
+
 - Modulo privacy
 - Consenso informato
 - Informativa
@@ -132,6 +133,7 @@ Per le prestazioni sanitarie non si deve emettere nessuna fattura elettronica ma
 ## <u>*Competitors*</u>
 
 Gestionali già sul mercato che hanno le stesse funzionalità:
+
 - Fisiodate
 - Fisiodesk
 - Physiotools

@@ -1,42 +1,4 @@
-backend/
-|-- node_modules/
-|-- public/
-|   |-- css/
-|   |-- images/
-|   |-- js/
-|   |-- bundle.jsx
-|   |-- favicon.ico
-|   |-- index.html
-|-- src/
-|   |-- controllers/
-|   |-- models/
-|   |-- routes/
-|   |-- services/
-|   |-- views/
-|-- .env
-|-- .gitignore
-|-- package.json
-|-- package-lock.json
-|-- README.md
-
-Explanation of the folders:
-
-    1.node_modules/: This folder contains the dependencies that your project depends on. You can install these dependencies using npm or yarn.
-    2.public/: This folder contains the assets that you want to make available to your users, such as images, CSS files, and JavaScript files.
-    3.src/: This folder contains the source code for your project.
-    4.controllers/: This folder contains the code that handles incoming requests from the user and communicates with the model to retrieve the data needed to fulfill the request.
-    5.models/: This folder contains the code that represents the data for your application, such as a database model or a set of data structures.
-    6.routes/: This folder contains the code that defines the routes for your application, mapping URL patterns to controllers.
-    7.services/: This folder contains the code that provides a layer of abstraction for interacting with external services or APIs.
-    8.views/: This folder contains the templates that define the HTML pages for your application.
-    9..env: This file contains environment-specific configuration, such as API keys and database credentials.
-    10..gitignore: This file contains a list of files and directories that you want to ignore when committing code to your Git repository.
-    11.package.json: This file contains information about your project, such as the name, version, and list of dependencies.
-    12.package-lock.json: This file contains a snapshot of the exact versions of the packages that were installed, including their dependencies.
-    13.README.md: This file contains documentation for your project, such as installation instructions and usage information.
-
-
-frontend/
+web-app/
 |-- dist/
 |-- |-- bundle.jsx
 |-- node_modules/

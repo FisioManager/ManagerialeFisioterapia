@@ -18,6 +18,18 @@ module.exports = {
                         presets: ['@babel/preset-env']
                     }
                 }
+            },
+            {
+                test: /\.svg$/,
+                use: 'svg-inline-loader'
+            },
+            {
+                test: /\.scss$/,
+                use: [
+                  "style-loader",
+                  "css-loader",
+                  "sass-loader"
+                ]
             }
         ]
     },
