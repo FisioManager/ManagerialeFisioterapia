@@ -15,7 +15,7 @@ app.get("/", function (req, res) {
 });
 
 app.get("/bundle.jsx", (req, res) => {
-  res.type("text/javascript");
+  res.type("text/jsx");
   res.sendFile(__dirname + "/public/bundle.jsx");
 });
 

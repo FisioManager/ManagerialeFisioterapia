@@ -1,7 +1,6 @@
-$nav-bg: #002b49;
-$nav-text-color: #fff;
+@import './../../assets/variables.scss';
 
 header {
     height: 150px;
-    background-color: $nav-bg;
+    background-color: $--background-secondary;
 }
