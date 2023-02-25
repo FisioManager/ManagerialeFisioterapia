@@ -1,10 +1,25 @@
 # Guida
 
-## Comandi per buildare e runnare
+- [Build e Debug](#build-e-debug)
+- [Documentazione React](#documentazione-react)
+- [MongoDB](#mongodb)
 
-- npx webpack (per buildare l'app)
-- npm start (per runnare l'app nel browser)
+## <u>Build e Debug</u>
 
-## Documentazione React
+- npx webpack
+- npm start
+- npm run server
 
-- [react router](https://blog.webdevsimplified.com/2022-07/react-router/)
+## <u>Documentazione React</u>
+
+- [React Router](https://blog.webdevsimplified.com/2022-07/react-router/)
+
+## <u>MongoDB</u>
+
+- mongod --dbpath . (all'interno di /db)
+- mongo (entrare nella shell di mongodb)
+- use ***databaseName***
+
+***projectDB:***
+- Utenti
+- altre tabelle...
