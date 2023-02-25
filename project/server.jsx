@@ -20,7 +20,7 @@ app.get("/favicon.ico", (req, res) => {
   res.sendFile(__dirname + "/public/favicon.ico");
 });
 
-app.get("/logo.svg", (req, res) => {
+app.get("/images/logo.svg", (req, res) => {
   res.sendFile(__dirname + "/public/images/logo.svg");
 });
 

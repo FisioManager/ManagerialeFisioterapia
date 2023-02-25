@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <>
       <div id="header">
-        <img src="logo.svg" alt="logo" />
+        <img src="/images/logo.svg" alt="logo" />
         <div id="navbar">
           <ul>
             <li>
