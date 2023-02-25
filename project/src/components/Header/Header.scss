@@ -1,6 +1,33 @@
 @import './../../assets/variables.scss';
 
-header {
-    height: 150px;
+#header {
+    height: 100px;
     background-color: $--background-secondary;
+    display: flex;
+    justify-content: space-between; /* mette img sulla estrema sinistra e navbar sulla estrema destra */
+    img {
+        padding: 30px;
+    }
+    #navbar {
+        display: flex;
+        align-items: center;
+        ul {
+            list-style-type: none;
+            li {
+                display: inline;
+                margin-right: 60px;
+                a {
+                    text-decoration: none;
+                    font: 400 1.3rem $--font-primary;
+                    color: $col-white !important;
+                    color: $--text-primary;
+                    transition: all .4s;
+
+                    &:hover {
+                        color: $col-resin-black !important;
+                    }
+                }
+            }
+        }
+    }
 }

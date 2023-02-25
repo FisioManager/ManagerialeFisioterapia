@@ -1,9 +1,11 @@
+/* SCREEN */
 $screen-sm: 320px;
 $screen-md: 480px;
 $screen-lg: 768px;
 $screen-xl: 1024px;
 $screen-xxl: 1200px;
 
+/* COLORS */
 $col-white: #f4f4f4;
 $col-white-r: $col-white;
 $col-white-d: darken($col-white, 25%);
@@ -41,3 +43,10 @@ $col-uranian-blue: #BCE7FD;
 $--background-primary: $col-resin-black;
 $--background-secondary: $col-coral;
 $--text-primary: $col-lavender;
+
+/* FONT */
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+$font-source-sans-pro: "Source Sans Pro";
+
+$--font-primary: $font-source-sans-pro;

@@ -1,10 +1,15 @@
+/* PAGES */
 @import './pages/Home/Home.scss';
 @import './pages/Login/Login.scss';
 @import './pages/Prodotti/Prodotti.scss';
 @import './pages/Documentazione/Documentazione.scss';
 
+/* COMPONENTS */
 @import './components/Header/Header.scss';
 @import './components/Footer/Footer.scss';
+
+/* ASSETS */
+@import './assets/variables.scss';
 
 * {
 	margin: 0;
@@ -16,7 +21,7 @@
 
 body {
 	cursor: default;
-	font: 400 16px "Source Sans Pro";
+	font: 400 16px $--font-primary;
 	background-color: $--background-primary;
 	color: $--text-primary;
 	transition: color .4s, background-color .4s;

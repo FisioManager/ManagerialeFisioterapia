@@ -3,9 +3,9 @@ import logo from "../../assets/images/logo.svg";
 
 const Header = () => {
   return (
-    <header>
+    <div id="header">
       <img className="logo" src={logo} alt="logo" />
-      <nav>
+      <div id="navbar">
         <ul>
           <li>
             <a href="#">Chi Siamo</a>
@@ -20,8 +20,8 @@ const Header = () => {
             <a href="#">Log In</a>
           </li>
         </ul>
-      </nav>
-    </header>
+      </div>
+    </div>
   );
 };
 
