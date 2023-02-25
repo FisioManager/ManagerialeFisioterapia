@@ -1,11 +1,6 @@
 import React from "react";
 import logo from "../../assets/images/logo.svg";
-import Login from "../../pages/Login/Login";
-import ChiSiamo from "../../pages/ChiSiamo/ChiSiamo";
-import Prodotti from "../../pages/Prodotti/Prodotti";
-import Contattaci from "../../pages/Contattaci/Contattaci";
-import Home from "../../pages/Home/Home";
-import { Route, Routes, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -15,7 +10,7 @@ const Header = () => {
         <div id="navbar">
           <ul>
             <li>
-              <Link to="/home" className="link">
+              <Link to="/" className="link">
                 Home
               </Link>
             </li>
@@ -42,14 +37,6 @@ const Header = () => {
           </ul>
         </div>
       </div>
-
-      <Routes>
-        <Route path="/home" element={<Home />} />
-        <Route path="/chi-siamo" element={<ChiSiamo />} />
-        <Route path="/contattaci" element={<Contattaci />} />
-        <Route path="/prodotti" element={<Prodotti />} />
-        <Route path="/log-in" element={<Login />} />
-      </Routes>
     </>
   );
 };
