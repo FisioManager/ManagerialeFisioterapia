@@ -11,10 +11,6 @@ app.listen(port, function (error) {
   }
 });
 
-app.get("/", function (req, res) {
-  res.sendFile(__dirname + "/public/index.html");
-});
-
 app.get("/bundle.jsx", (req, res) => {
   res.type("text/jsx");
   res.sendFile(__dirname + "/public/bundle.jsx");
@@ -30,3 +26,7 @@ app.get(
     res.sendFile(__dirname + "/src/assets/images/logo.svg");
   }
 );
+
+app.get("/*", function (req, res) {
+  res.sendFile(__dirname + "/public/index.html");
+});
