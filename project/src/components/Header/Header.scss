@@ -27,6 +27,18 @@
                         color: $col-resin-black !important;
                     }
                 }
+
+                .link {
+                    text-decoration: none;
+                    font: 400 1.3rem $--font-primary;
+                    color: $col-white !important;
+                    color: $--text-primary;
+                    transition: all .4s;
+
+                    &:hover {
+                        color: $col-resin-black !important;
+                    }
+                }
             }
         }
     }

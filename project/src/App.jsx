@@ -1,9 +1,17 @@
 import React from "react";
 import "./App.scss";
-import Prog from "./pages/Home/Home";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+import Home from "./pages/Home/Home";
 
 function App() {
-  return <Prog />;
+  return (
+    <>
+      <Header />
+      <Home />
+      <Footer />
+    </>
+  );
 }
 
 export default App;
