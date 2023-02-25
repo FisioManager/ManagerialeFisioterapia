@@ -34,15 +34,19 @@ $col-green-l: lighten($col-green, 25%);
 $col-green-r: $col-green;
 $col-green-d: darken($col-green, 25%);
 
+$col-lavender: #D2D9E7;
+$col-lavender-d: darken($col-lavender, 25%);
+
 $col-resin-black: #272932;
 $col-coral: #FF8552;
 $col-citron: #D8D174;
-$col-lavender: #D2D9E7;
 $col-uranian-blue: #BCE7FD;
 
-$--background-primary: $col-resin-black;
+$--background-primary: $col-uranian-blue;
 $--background-secondary: $col-coral;
+$--background-tertiary: $col-resin-black;
 $--text-primary: $col-lavender;
+$--text-secondary: $col-black;
 
 /* FONT */
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');

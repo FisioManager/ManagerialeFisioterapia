@@ -1,0 +1,23 @@
+@import './../../variables.scss';
+
+#footer {
+    height: 200px;
+    background-color: $--background-tertiary;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    ul {
+        list-style-type: none;
+        li {
+            margin-top: 10px;
+            .link {
+                text-decoration: none;
+                color: $--text-primary;
+            }
+            &:first-child {
+                margin-top: 0px !important;
+                color: $col-lavender-d;
+            }
+        }
+    }
+}
