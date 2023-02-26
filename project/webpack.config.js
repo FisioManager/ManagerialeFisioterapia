@@ -1,10 +1,14 @@
-const path = require("path");
+import { dirname, join } from "path";
+import { fileURLToPath } from "url";
 
-module.exports = {
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+export default {
   mode: "development",
   entry: "./src/index.jsx",
   output: {
-    path: path.resolve(__dirname, "public"),
+    path: join(__dirname, "public"),
     filename: "bundle.jsx",
   },
   module: {
@@ -15,22 +19,18 @@ module.exports = {
         use: {
           loader: "babel-loader",
           options: {
-            presets: ["@babel/preset-react", "@babel/preset-env"]
+            presets: ["@babel/preset-react"],
           },
         },
       },
       {
         test: /\.svg$/,
-        use: 'svg-inline-loader'
+        use: "svg-inline-loader",
       },
       {
         test: /\.scss$/,
-        use: [
-          "style-loader",
-          "css-loader",
-          "sass-loader"
-        ]
-      }
+        use: ["style-loader", "css-loader", "sass-loader"],
+      },
     ],
   },
   resolve: {

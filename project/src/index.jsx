@@ -10,6 +10,6 @@ root.render(
   siccome causa rallentamenti e impatta sulle performance
   */
   <React.StrictMode>
-      <App />
+    <App />
   </React.StrictMode>
 );

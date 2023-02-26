@@ -16,7 +16,7 @@
 	border: 0;
 	padding: 0;
 	scroll-behavior: smooth;
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 body {
@@ -26,9 +26,3 @@ body {
 	color: $--text-primary;
 	transition: color .4s, background-color .4s;
 }
-
-/* div {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-} */
