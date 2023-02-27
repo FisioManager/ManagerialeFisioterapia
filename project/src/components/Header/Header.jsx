@@ -7,19 +7,19 @@ const Header = () => {
       <div id="header">
         <img src="/images/logo.svg" alt="logo" />
         <div id="navbar">
-            <Link to="/" className="link">
+            <Link to="/">
               Home
             </Link>
-            <Link to="/chi-siamo" className="link">
+            <Link to="/chi-siamo">
               Chi Siamo
             </Link>
-            <Link to="/contattaci" className="link">
+            <Link to="/contattaci">
               Contattaci
             </Link>
-            <Link to="/Prodotti" className="link">
+            <Link to="/Prodotti">
               Prodotti
             </Link>
-            <Link to="/log-in" className="link">
+            <Link to="/log-in">
               Log In
             </Link>
         </div>
