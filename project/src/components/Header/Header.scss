@@ -1,8 +1,10 @@
 @import './../../variables.scss';
 
 #header {
-    height: 100px;
+    height: $header-height;
+    width: 100vw;
     background-color: $--background-secondary;
+    position: fixed;
     display: flex;
     justify-content: space-between;
 

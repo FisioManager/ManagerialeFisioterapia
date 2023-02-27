@@ -1,10 +1,9 @@
 @import './../../variables.scss';
 
 #body {
-    height: 100vh;
-    width: 100vw;
+    height: calc(100vh - $header-height);
+    width: 80vw;
+    margin: auto;
     color: $--text-secondary;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex;
 }

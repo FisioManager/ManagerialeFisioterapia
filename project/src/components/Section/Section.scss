@@ -1,0 +1,29 @@
+@import './../../variables.scss';
+
+#section {
+    height: 100%;
+    width: 100%;
+    @include flex;
+
+    #illustration {
+        width: 50%;
+        height: 100%;
+        @include flex;
+
+        img {
+            width: 80%;
+        }
+    }
+
+    #description {
+        width: 50%;
+        height: 100%;
+        @include flex;
+        flex-direction: column;
+
+        p {
+            margin-top: 5vh;
+            padding: 0 10% 0 10%;
+        }
+    }
+}

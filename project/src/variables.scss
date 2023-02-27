@@ -54,3 +54,13 @@ $--text-secondary: $col-black;
 $font-source-sans-pro: "Source Sans Pro";
 
 $--font-primary: $font-source-sans-pro;
+
+/* MIXIN */
+@mixin flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* DIMENSION */
+$header-height: 100px;
