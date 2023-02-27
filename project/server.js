@@ -28,6 +28,10 @@ app.get("/images/logo.svg", (req, res) => {
   res.sendFile(__dirname + "/public/images/logo.svg");
 });
 
+app.get("/images/place-holder-500.png", (req, res) => {
+  res.sendFile(__dirname + "/public/images/place-holder-500.png");
+});
+
 app.get("/*", function (req, res) {
   res.sendFile(__dirname + "/public/index.html");
 });
