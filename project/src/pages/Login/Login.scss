@@ -1,0 +1,94 @@
+@import './../../variables.scss';
+
+@mixin small-icon {
+    height: 50%;
+}
+
+.login-page {
+    @include box-container;
+    flex-direction: row !important;
+    height: calc(100vh - $footer-height) !important;
+}
+
+#login-illustration {
+    @include box-40-100;
+}
+
+#login-form {
+    @include box-40-100;
+    flex-direction: column;
+}
+
+#credenziali {
+    @include flex;
+    flex-direction: column;
+    height: 100px;
+    width: 300px;
+    background-color: $col-white;
+    margin-top: 50px;
+
+    .credenziali-input {
+        @include flex;
+        justify-content: space-evenly;
+        height: 50%;
+        width: 100%;
+
+        input {
+            width: 80%;
+            background-color: $col-white;
+            appearance: none;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        img {
+            @include small-icon;
+        }
+    }
+}
+
+.active {
+    background-color: $col-white-l !important;
+}
+
+#options {
+    @include flex;
+    justify-content: space-between;
+    width: 300px;
+    margin-top: 10px;
+    font-size: 0.8rem;
+    padding: 0 10px;
+
+    #ricordami-container {
+        @include flex;
+    }
+
+    p {
+        margin-left: 7px;
+    }
+
+    a {
+        color: $col-black;
+    }
+}
+
+#login-buttons {
+    @include flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 100px;
+    width: 300px;
+
+    button {
+        font-size: 1.5rem;
+        padding: 15px 40px;
+        background-color: $col-olive;
+        color: $col-white;
+
+        &:last-child {
+            margin-top: 15px;
+        }
+    }
+}

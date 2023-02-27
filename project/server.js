@@ -32,6 +32,16 @@ app.get("/images/place-holder-500.png", (req, res) => {
   res.sendFile(__dirname + "/public/images/place-holder-500.png");
 });
 
+
+app.get("/images/email.png", (req, res) => {
+  res.sendFile(__dirname + "/public/images/email.png");
+});
+
+
+app.get("/images/password.png", (req, res) => {
+  res.sendFile(__dirname + "/public/images/password.png");
+});
+
 app.get("/*", function (req, res) {
   res.sendFile(__dirname + "/public/index.html");
 });

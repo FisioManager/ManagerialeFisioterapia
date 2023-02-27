@@ -7,6 +7,7 @@ $screen-xxl: 1200px;
 
 /* COLORS */
 $col-white: #f4f4f4;
+$col-white-l: lighten($col-white, 25%);
 $col-white-r: $col-white;
 $col-white-d: darken($col-white, 25%);
 
@@ -41,6 +42,7 @@ $col-resin-black: #272932;
 $col-coral: #FF8552;
 $col-citron: #D8D174;
 $col-uranian-blue: #BCE7FD;
+$col-olive: #9fb18e;
 
 $--background-primary: $col-uranian-blue;
 $--background-secondary: $col-coral;
@@ -62,10 +64,19 @@ $--font-primary: $font-source-sans-pro;
     align-items: center;
 }
 
+@mixin box-container {
+    @include flex;
+    height: 100vh;
+    width: 100%;
+}
+
+@mixin box-40-100 {
+    @include flex;
+    width: 40%;
+    height: 100%;
+}
+
 /* DIMENSION */
 $header-height: 100px;
 $footer-height: 200px;
 $introuduction-height: 400px;
-
-/* MISC */ 
-$section-amoun: 2;

@@ -1,14 +1,10 @@
 @import './../../variables.scss';
 
 #section {
-    height: 100%;
-    width: 100%;
-    @include flex;
+    @include box-container;
 
     #illustration {
-        width: 40%;
-        height: 100%;
-        @include flex;
+        @include box-40-100;
 
         img {
             width: 50%;
@@ -16,9 +12,7 @@
     }
 
     #description {
-        width: 40%;
-        height: 100%;
-        @include flex;
+        @include box-40-100;
         flex-direction: column;
 
         p {

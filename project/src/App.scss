@@ -30,7 +30,7 @@ body {
 }
 
 #body {
-    height: calc($section-amoun*100vh + $introuduction-height - $header-height);
+    height: auto;
     width: 100vw;
     padding-top: $header-height;
     margin: auto;
