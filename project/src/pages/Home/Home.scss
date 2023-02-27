@@ -2,8 +2,10 @@
 
 #body {
     height: calc(100vh - $header-height);
-    width: 80vw;
+    width: 100vw;
+    padding-top: $header-height;
     margin: auto;
     color: $--text-secondary;
     @include flex;
+    flex-direction: column;
 }

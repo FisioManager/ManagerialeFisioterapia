@@ -1,7 +1,7 @@
 @import './../../variables.scss';
 
 #footer {
-    height: 200px;
+    height: $footer-height;
     background-color: $--background-tertiary;
     display: flex;
     justify-content: space-evenly;
