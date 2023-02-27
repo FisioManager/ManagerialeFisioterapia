@@ -28,3 +28,13 @@ body {
 	color: $--text-primary;
 	transition: color .4s, background-color .4s;
 }
+
+#body {
+    height: calc($section-amoun*100vh + $introuduction-height - $header-height);
+    width: 100vw;
+    padding-top: $header-height;
+    margin: auto;
+    color: $--text-secondary;
+    @include flex;
+    flex-direction: column;
+}

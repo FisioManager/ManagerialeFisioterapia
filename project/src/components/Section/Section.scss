@@ -2,11 +2,11 @@
 
 #section {
     height: 100%;
-    width: 80%;
+    width: 100%;
     @include flex;
 
     #illustration {
-        width: 50%;
+        width: 40%;
         height: 100%;
         @include flex;
 
@@ -16,7 +16,7 @@
     }
 
     #description {
-        width: 50%;
+        width: 40%;
         height: 100%;
         @include flex;
         flex-direction: column;
@@ -25,5 +25,13 @@
             margin-top: 5vh;
             padding: 0 10% 0 10%;
         }
+    }
+
+    &.light {
+        background-color: $col-white;
+    }
+
+    &.darak {
+        background-color: $--background-primary;
     }
 }
