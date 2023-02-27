@@ -17,35 +17,15 @@
         display: flex;
         align-items: center;
 
-        ul {
-            list-style-type: none;
+        .link {
+            text-decoration: none;
+            margin-right: 60px;
+            font: 400 1.3rem $--font-primary;
+            color: $--text-primary;
+            transition: all .4s;
 
-            li {
-                display: inline;
-                margin-right: 60px;
-
-                a {
-                    text-decoration: none;
-                    font: 400 1.3rem $--font-primary;
-                    color: $col-white !important;
-                    color: $--text-primary;
-                    transition: all .4s;
-
-                    &:hover {
-                        color: $col-resin-black !important;
-                    }
-                }
-
-                .link {
-                    text-decoration: none;
-                    font: 400 1.3rem $--font-primary;
-                    color: $--text-primary;
-                    transition: all .4s;
-
-                    &:hover {
-                        color: $col-resin-black !important;
-                    }
-                }
+            &:hover {
+                color: $col-resin-black !important;
             }
         }
     }
