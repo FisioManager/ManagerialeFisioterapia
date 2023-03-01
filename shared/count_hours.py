@@ -11,10 +11,10 @@ def check_file(path):
     print(f"... looking for the file {path}:")
 
     if os.path.exists(path):
-        print(" file {path} found!")
+        print(f" file {path} found!")
         return True
     else:
-        print(" file {path} not found!")
+        print(f" file {path} not found!")
         return False
 
 
