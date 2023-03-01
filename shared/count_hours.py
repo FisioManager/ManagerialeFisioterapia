@@ -78,8 +78,11 @@ def main():
     print("A basic script to count coding hours\n")
 
     if check_file(path_session):
+        if not check_file(path_csv):
+            csv = open(path_csv, "w")
+            csv.write("Name,Surname,Date,HH:mm")
+            csv.close()
         end_session()
-        # todo: se file csv non esiste la creazione è da fare
         print_res()
         return
 
