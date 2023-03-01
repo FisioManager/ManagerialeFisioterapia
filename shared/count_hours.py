@@ -2,9 +2,9 @@ import os, pandas, re
 from datetime import datetime as dt, timedelta as td
 from time import sleep
 
-path_csv = ".\count_hours\count_hour.csv"
-path_session = ".\count_hours\session.txt"
-format = "%a %b %d %H:%M:%S %Y"
+path_csv = "./count_hours/count_hour.csv"
+path_session = "./count_hours/session.txt"
+#format = "%a %b %d %H:%M:%S %Y"
 
 
 def check_file(path):
@@ -23,12 +23,13 @@ def write_file(hours_minutes):
 
     try:
         file = open(path_csv, "a")
-        file.write(f"\nLorenzo,D'Angelo,{dt.now().ctime()},{hours_minutes}")
+        name = input("Nome,Cognome: ")
+        file.write(f"\n{name},{dt.now().ctime()},{hours_minutes}")
         file.close()
 
         print(" .csv file written successfully")
-    except:
-        print(" unable to write .csv file")
+    except Exception as e:
+        print(f" unable to write .csv file: {e}")
 
     sleep(1)
 
@@ -40,8 +41,8 @@ def init_session():
         session.close()
 
         print("Session file created successfully")
-    except:
-        print("Session file could not be created")
+    except Exception as e:
+        print(f"Session file could not be created: {e}")
 
     sleep(1)
 
@@ -63,8 +64,8 @@ def end_session():
         os.remove(path_session)
 
         print("Session file processed successfully")
-    except:
-        print("Session file could not be processed")
+    except Exception as e:
+        print(f"Session file could not be processed: {e}")
 
     sleep(1)
 
