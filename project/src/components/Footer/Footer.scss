@@ -1,27 +1,13 @@
-@import './../../variables.scss';
+footer {
+  background-color: var(--background-secondary);
 
-#footer {
-    height: $footer-height;
-    background-color: $--background-tertiary;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-
-    ul {
-        list-style-type: none;
-
-        li {
-            margin-top: 10px;
-
-            .link {
-                text-decoration: none;
-                color: $--text-primary;
-            }
-
-            &:first-child {
-                margin-top: 0px !important;
-                color: $col-lavender-d;
-            }
-        }
+  // todo codice uguale in Header.scss
+  nav {
+    a {
+      color: var(--text-link);
+      &:hover {
+        color: var(--text-invert);
+      }
     }
+  } // fine codice uguale
 }
