@@ -1,0 +1,12 @@
+@use "./light-theme" as *;
+@use "./dark-theme" as *;
+
+:root {
+  @media (prefers-color-scheme: light) {
+    @include light-theme;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    @include dark-theme;
+  }
+}

@@ -1,0 +1,42 @@
+/* SCREEN */
+$screen-sm: 320px;
+$screen-md: 480px;
+$screen-lg: 768px;
+$screen-xl: 1024px;
+$screen-xxl: 1200px;
+
+/* FONT */
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+
+/* COLORS */
+$col-white: #f4f4f4;
+$col-white-r: $col-white;
+$col-white-d: darken($col-white, 25%);
+
+$col-black: #1e1e1e;
+$col-black-l: lighten($col-black, 25%);
+$col-black-r: $col-black;
+
+$col-yellow: #fff3ac;
+$col-yellow-l: lighten($col-yellow, 25%);
+$col-yellow-r: $col-yellow;
+$col-yellow-d: darken($col-yellow, 25%);
+
+$col-blue: #00b0f0;
+$col-blue-l: lighten($col-blue, 25%);
+$col-blue-r: $col-blue;
+$col-blue-d: darken($col-blue, 25%);
+
+$col-cyan: #00a5ff;
+$col-cyan-l: lighten($col-cyan, 25%);
+$col-cyan-r: $col-cyan;
+$col-cyan-d: darken($col-cyan, 25%);
+
+$col-green: #30e770;
+$col-green-l: lighten($col-green, 25%);
+$col-green-r: $col-green;
+$col-green-d: darken($col-green, 25%);
+
+$col-coral: #ff8552;
+$col-citron: #d8d174;
+$col-olive: #8b997d;

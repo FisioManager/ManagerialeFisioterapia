@@ -1,0 +1,33 @@
+@use "../variables" as *;
+
+@mixin light-theme {
+  --text-primary: #{$col-black-r};
+  //--text-secondary: #{$col-};
+  --text-inactive: #{$col-black-l};
+  --text-link: #{$col-blue-d};
+  --text-invert: #{$col-white-r};
+
+  --background-primary: #{$col-white-r};
+  --background-secondary: #{$col-blue-l};
+  --background-tertiary: #{$col-yellow-r};
+  //--background-toc-active: #{$col-};
+
+  //--code-token-tag: #{$col-};
+  //--code-token-punctuation: #{$col-};
+  //--code-token-attribute-name: #{$col-};
+  //--code-token-attribute-value: #{$col-};
+  //--code-token-comment: #{$col-};
+  //--code-token-default: #{$col-};
+  //--code-token-selector: #{$col-};
+  //--code-background-inline: #{$col-};
+  //--code-background-block: #{$col-};
+
+  --scrollbar-bg: transparent;
+  --scrollbar-color: rgba(0, 0, 0, 0.25);
+
+  color-scheme: light;
+}
+
+.light {
+  @include light-theme;
+}

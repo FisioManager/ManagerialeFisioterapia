@@ -1,40 +1,71 @@
 /* PAGES */
-@import './pages/Home/Home.scss';
-@import './pages/Login/Login.scss';
-@import './pages/Prodotti/Prodotti.scss';
-@import './pages/Documentazione/Documentazione.scss';
+@import "./pages/Home/Home.scss";
+@import "./pages/Login/Login.scss";
+@import "./pages/Prodotti/Prodotti.scss";
+@import "./pages/Documentazione/Documentazione.scss";
 
 /* COMPONENTS */
-@import './components/Header/Header.scss';
-@import './components/Footer/Footer.scss';
-@import './components/Section/Section.scss';
-@import './components/Introduction/Introduction.scss';
+@import "./components/Section/Section.scss";
+@import "./components/Introduction/Introduction.scss";
 
 /* ASSETS */
-@import './variables.scss';
+@import "./assets/themes/themes.scss";
 
 * {
-	margin: 0;
-	border: 0;
-	padding: 0;
-	scroll-behavior: smooth;
-	box-sizing: border-box;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  text-decoration: none;
+  transition: 0.5s;
 }
 
 body {
-	cursor: default;
-	font: 400 16px $--font-primary;
-	background-color: $--background-primary;
-	color: $--text-primary;
-	transition: color .4s, background-color .4s;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  cursor: default;
+  font: 400 16px "Source Sans Pro";
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+  transition: color 0.5s, background-color 0.5s;
+
+  scroll-behavior: smooth;
 }
 
-#body {
-    height: auto;
-    width: 100vw;
-    padding-top: $header-height;
-    margin: auto;
-    color: $--text-secondary;
-    @include flex;
+.empty {
+  margin: auto;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+
+  padding: 0.4em 1em;
+
+  &.col {
     flex-direction: column;
+  }
+
+  &.center {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.gap {
+  gap: 1em;
+
+  &-2 {
+    gap: 2em;
+  }
+  &-3 {
+    gap: 3em;
+  }
+  &-4 {
+    gap: 4em;
+  }
+  &-5 {
+    gap: 5em;
+  }
 }
