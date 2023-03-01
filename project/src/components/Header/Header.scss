@@ -1,32 +1,14 @@
-@import './../../variables.scss';
+header {
+  background-color: var(--background-secondary);
+  font-size: 1.4rem;
 
-#header {
-    height: $header-height;
-    width: 100vw;
-    background-color: $--background-secondary;
-    position: fixed;
-    display: flex;
-    justify-content: space-between;
-
-    /* mette img sulla estrema sinistra e navbar sulla estrema destra */
-    img {
-        padding: 30px;
+  // todo codice uguale in Footer.scss
+  nav {
+    a {
+      color: var(--text-link);
+      &:hover {
+        color: var(--text-invert);
+      }
     }
-
-    #navbar {
-        display: flex;
-        align-items: center;
-
-        a {
-            text-decoration: none;
-            margin-right: 60px;
-            font: 400 1.3rem $--font-primary;
-            color: $col-white;
-            transition: all .4s;
-
-            &:hover {
-                color: $col-resin-black !important;
-            }
-        }
-    }
+  } // fine codice uguale
 }
