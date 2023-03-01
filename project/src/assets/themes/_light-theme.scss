@@ -1,14 +1,14 @@
 @use "../variables" as *;
 
 @mixin light-theme {
-  --text-primary: #{$col-black-r};
+  --text-primary: #{$col-black-d};
   //--text-secondary: #{$col-};
   --text-inactive: #{$col-black-l};
-  --text-link: #{$col-blue-d};
-  --text-invert: #{$col-white-r};
+  --text-link: #{$col-black-l};
+  --text-invert: #{$col-white-l};
 
   --background-primary: #{$col-white-r};
-  //--background-secondary: #{$col-};
+  --background-secondary: #{col-lapis-lazuli-r};
   //--background-tertiary: #{$col-};
   //--background-toc-active: #{$col-};
 

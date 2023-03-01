@@ -1,14 +1,14 @@
 @use "../variables" as *;
 
 @mixin dark-theme {
-  --text-primary: #{$col-white-r};
+  --text-primary: #{$col-white-l};
   //--text-secondary: #{$col-};
   --text-inactive: #{$col-white-d};
-  --text-link: #{$col-blue-l};
-  --text-invert: #{$col-black-r};
+  --text-link: #{$col-white-d};
+  --text-invert: #{$col-black-d};
 
   --background-primary: #{$col-black-r};
-  //--background-secondary: #{$col-};
+  --background-secondary: #{$col-keppel-r};
   //--background-tertiary: #{$col-};
   //--background-toc-active: #{$col-};
 

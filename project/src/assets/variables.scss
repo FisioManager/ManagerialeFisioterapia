@@ -9,27 +9,65 @@ $screen-xxl: 1200px;
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
 
 /* COLORS */
-$col-white: #f4f4f4;
+$col-white: #f4f4f4ff;
 $col-white-l: #ffffff;
 $col-white-r: $col-white;
 $col-white-d: darken($col-white, 25%);
 
-$col-black: #1e1e1e;
+$col-black: #1e1e1eff;
 $col-black-l: lighten($col-black, 25%);
 $col-black-r: $col-black;
 $col-black-d: #000000;
 
-/* SCSS HEX */
 $mindaro: #d9ed92ff;
+$col-mindaro-l: lighten($mindaro, 25%);
+$col-mindaro-r: $mindaro;
+$col-mindaro-d: darken($mindaro, 25%);
+
 $light-green: #b5e48cff;
-$light-green-2: #99d98cff;
+$col-light-green-l: lighten($light-green, 25%);
+$col-light-green-r: $light-green;
+$col-light-green-d: darken($light-green, 25%);
+
+$ubertini: #99d98cff;
+$col-ubertini-l: lighten($ubertini, 25%);
+$col-ubertini-r: $ubertini;
+$col-ubertini-d: darken($ubertini, 25%);
+
 $emerald: #76c893ff;
+$col-emerald-l: lighten($emerald, 25%);
+$col-emerald-r: $emerald;
+$col-emerald-d: darken($emerald, 25%);
+
 $keppel: #52b69aff;
+$col-keppel-l: lighten($keppel, 25%);
+$col-keppel-r: $keppel;
+$col-keppel-d: darken($keppel, 25%);
+
 $verdigris: #34a0a4ff;
+$col-verdigris-l: lighten($verdigris, 25%);
+$col-verdigris-r: $verdigris;
+$col-verdigris-d: darken($verdigris, 25%);
+
 $bondi-blue: #168aadff;
+$col-bondi-blue-l: lighten($bondi-blue, 25%);
+$col-bondi-blue-r: $bondi-blue;
+$col-bondi-blue-d: darken($bondi-blue, 25%);
+
 $cerulean: #1a759fff;
+$col-cerulean-l: lighten($cerulean, 25%);
+$col-cerulean-r: $cerulean;
+$col-cerulean-d: darken($cerulean, 25%);
+
 $lapis-lazuli: #1e6091ff;
+$col-lapis-lazuli-l: lighten($lapis-lazuli, 25%);
+$col-lapis-lazuli-r: $lapis-lazuli;
+$col-lapis-lazuli-d: darken($lapis-lazuli, 25%);
+
 $indigo-dye: #184e77ff;
+$col-indigo-dye-l: lighten($indigo-dye, 25%);
+$col-indigo-dye-r: $indigo-dye;
+$col-indigo-dye-d: darken($indigo-dye, 25%);
 
 /* SCSS Gradient */
 $gradient-top: linear-gradient(
