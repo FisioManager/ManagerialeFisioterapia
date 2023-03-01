@@ -2,9 +2,10 @@ import os, pandas, re
 from datetime import datetime as dt, timedelta as td
 from time import sleep
 
-path_csv = "./count_hours/count_hour.csv"
-path_session = "./count_hours/session.txt"
-#format = "%a %b %d %H:%M:%S %Y"
+path_csv = "./count_hour.csv"
+path_session = "./session.txt"
+# format = "%a %b %d %H:%M:%S %Y"
+
 
 def check_file(path):
     print(f"... looking for the file {path}:")
@@ -29,6 +30,8 @@ def write_file(hours_minutes):
         print(" .csv file written successfully")
     except Exception as e:
         print(f" unable to write .csv file: {e}")
+
+    # todo aggiungere messaggio
 
     sleep(1)
 
