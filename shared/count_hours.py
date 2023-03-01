@@ -6,7 +6,6 @@ path_csv = "./count_hours/count_hour.csv"
 path_session = "./count_hours/session.txt"
 #format = "%a %b %d %H:%M:%S %Y"
 
-
 def check_file(path):
     print(f"... looking for the file {path}:")
 
