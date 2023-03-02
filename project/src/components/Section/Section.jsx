@@ -6,7 +6,7 @@ const Section = ({ src, titolo, testo, mode }) => {
       {mode ? (
         <>
           <div id="illustration">
-            <img src={src} alt="illustration"/>
+            <img src={src} alt="illustration" />
           </div>
           <div id="description">
             <h1>{titolo}</h1>

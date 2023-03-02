@@ -1,31 +1,19 @@
-@import './../../variables.scss';
-
 #section {
-    @include box-container;
-
-    #illustration {
-        @include box-40-100;
-
-        img {
-            width: 50%;
-        }
+  @include box-container;
+  #illustration {
+    @include box-40-100;
+    img {
+      width: 50%;
     }
+  }
 
-    #description {
-        @include box-40-100;
-        flex-direction: column;
+  #description {
+    @include box-40-100;
+    flex-direction: column;
 
-        p {
-            margin-top: 5vh;
-            padding: 0 10% 0 10%;
-        }
+    p {
+      margin-top: 5vh;
+      padding: 0 10% 0 10%;
     }
-
-    &.light {
-        background-color: $col-white;
-    }
-
-    &.darak {
-        background-color: $--background-primary;
-    }
+  }
 }

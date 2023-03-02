@@ -1,5 +1,7 @@
 import React from "react";
 
+import "./Login.scss";
+
 const Login = () => {
   return (
     <div id="body" className="login-page">
@@ -11,17 +13,21 @@ const Login = () => {
         <div id="credenziali">
           <div className="credenziali-input active">
             <img src="images/email.png" alt="email" />
-            <input className="active" type="email" placeholder="example@gmail.com"/>
+            <input
+              className="active"
+              type="email"
+              placeholder="example@gmail.com"
+            />
           </div>
           <div className="credenziali-input">
             <img src="images/password.png" alt="psw" />
-          <input type="password" placeholder="password"/>
+            <input type="password" placeholder="password" />
           </div>
         </div>
         <div id="options">
           <div id="ricordami-container">
-          <input type="checkbox" id="ricordami" name="ricordami" value="0"/>
-          <p>ricordami</p>
+            <input type="checkbox" id="ricordami" name="ricordami" value="0" />
+            <p>ricordami</p>
           </div>
           <a href="/">ho dimenticato la password</a>
         </div>
