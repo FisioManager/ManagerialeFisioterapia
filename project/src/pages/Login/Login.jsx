@@ -1,5 +1,3 @@
-import React from "react";
-
 const Login = () => {
   return (
     <div id="body" className="login-page">

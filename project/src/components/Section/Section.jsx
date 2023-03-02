@@ -1,5 +1,3 @@
-import React from "react";
-
 const Section = ({ src, titolo, testo, mode }) => {
   return (
     <div id="section" className={mode ? "dark" : "light"}>
