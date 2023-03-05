@@ -1,27 +1,18 @@
 @import './../../variables.scss';
 
-#footer {
+footer {
     height: $footer-height;
     background-color: $--background-tertiary;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
 
-    ul {
-        list-style-type: none;
+    div {
+        align-items: flex-start !important;
+    }
 
-        li {
-            margin-top: 10px;
+    a {
+        color: $--text-primary;
 
-            .link {
-                text-decoration: none;
-                color: $--text-primary;
-            }
-
-            &:first-child {
-                margin-top: 0px !important;
-                color: $col-lavender-d;
-            }
+        &:first-child {
+            color: $col-lavender-d;
         }
     }
 }

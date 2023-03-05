@@ -17,8 +17,9 @@
 	margin: 0;
 	border: 0;
 	padding: 0;
-	scroll-behavior: smooth;
 	box-sizing: border-box;
+	text-decoration: none;
+	transition: 0.5s;
 }
 
 body {
@@ -26,15 +27,74 @@ body {
 	font: 400 16px $--font-primary;
 	background-color: $--background-primary;
 	color: $--text-primary;
-	transition: color .4s, background-color .4s;
+	transition: color 0.5s, background-color 0.5s;
+	scroll-behavior: smooth;
 }
 
-#body {
-    height: auto;
-    width: 100vw;
-    padding-top: $header-height;
-    margin: auto;
-    color: $--text-secondary;
-    @include flex;
-    flex-direction: column;
+#main-container {
+	padding-top: $header-height;
+	color: $--text-secondary;
+}
+
+.flex {
+	display: flex;
+	align-items: center;
+
+	&.col {
+		flex-direction: column;
+	}
+
+	&.center {
+		justify-content: center;
+	}
+
+	&.space-between {
+		justify-content: space-between;
+		padding: 0 2em;
+	}
+
+	&.space-evenly {
+		justify-content: space-evenly;
+	}
+
+}
+
+.gap {
+	gap: 1em;
+
+	&-05 {
+		gap: 0.5em;
+	}
+
+	&-2 {
+		gap: 2em;
+	}
+
+	&-3 {
+		gap: 3em;
+	}
+
+	&-4 {
+		gap: 4em;
+	}
+
+	&-5 {
+		gap: 5em;
+	}
+
+	&-10 {
+		gap: 10em;
+	}
+}
+
+.box-container {
+    height: 100vh;
+    width: 100%
+}
+
+.box {
+    width: 50%;
+    &-40 {
+        width: 40%;
+    }
 }

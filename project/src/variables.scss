@@ -57,25 +57,6 @@ $font-source-sans-pro: "Source Sans Pro";
 
 $--font-primary: $font-source-sans-pro;
 
-/* MIXIN */
-@mixin flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-@mixin box-container {
-    @include flex;
-    height: 100vh;
-    width: 100%;
-}
-
-@mixin box-40-100 {
-    @include flex;
-    width: 40%;
-    height: 100%;
-}
-
 /* DIMENSION */
 $header-height: 100px;
 $footer-height: 200px;

@@ -3,7 +3,7 @@ import Introduction from "./../../components/Introduction/Introduction";
 
 const Home = () => {
   return (
-    <div id="body">
+    <div id="main-container" className="flex col">
       <Introduction />
       <Section
         src={"/images/place-holder-500.png"}

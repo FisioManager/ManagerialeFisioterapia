@@ -1,28 +1,18 @@
 @import './../../variables.scss';
 
-#header {
+header {
     height: $header-height;
     width: 100vw;
     background-color: $--background-secondary;
     position: fixed;
-    display: flex;
-    justify-content: space-between;
 
     /* mette img sulla estrema sinistra e navbar sulla estrema destra */
-    img {
-        padding: 30px;
-    }
 
-    #navbar {
-        display: flex;
-        align-items: center;
+    nav {
 
         a {
-            text-decoration: none;
-            margin-right: 60px;
             font: 400 1.3rem $--font-primary;
             color: $col-white;
-            transition: all .4s;
 
             &:hover {
                 color: $col-resin-black !important;

@@ -1,24 +1,15 @@
 @import './../../variables.scss';
 
 #section {
-    @include box-container;
 
-    #illustration {
-        @include box-40-100;
+    text-align: center;
 
-        img {
-            width: 50%;
-        }
+    img {
+        width: 50%;
     }
 
-    #description {
-        @include box-40-100;
-        flex-direction: column;
-
-        p {
-            margin-top: 5vh;
-            padding: 0 10% 0 10%;
-        }
+    p {
+        padding: 0 10% 0 10%;
     }
 
     &.light {

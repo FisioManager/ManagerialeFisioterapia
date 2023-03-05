@@ -1,29 +1,33 @@
 const Login = () => {
   return (
-    <div id="body" className="login-page">
-      <div id="#login-illustration">
+    <div id="main-container" className="flex center box-container">
+      <div className="flex center box-40">
         <img src="/images/place-holder-500.png" alt="login" />
       </div>
-      <div id="login-form">
+      <div className="flex col center box-40 gap-5">
         <h1>Buongiorno Dottore</h1>
-        <div id="credenziali">
-          <div className="credenziali-input active">
+        <div className="credenziali flex col">
+          <div className="credenziali-input flex gap active">
             <img src="images/email.png" alt="email" />
-            <input className="active" type="email" placeholder="example@gmail.com"/>
+            <input
+              className="active"
+              type="email"
+              placeholder="example@gmail.com"
+            />
           </div>
-          <div className="credenziali-input">
+          <div className="credenziali-input flex gap">
             <img src="images/password.png" alt="psw" />
-          <input type="password" placeholder="password"/>
+            <input type="password" placeholder="password" />
+          </div>
+          <div className="options flex space-between">
+            <div className="flex gap-05">
+              <input type="checkbox" id="ricordami" name="ricordami" value="0"/>
+              <p>ricordami</p>
+            </div>
+            <a href="/">ho dimenticato la password</a>
           </div>
         </div>
-        <div id="options">
-          <div id="ricordami-container">
-          <input type="checkbox" id="ricordami" name="ricordami" value="0"/>
-          <p>ricordami</p>
-          </div>
-          <a href="/">ho dimenticato la password</a>
-        </div>
-        <div id="login-buttons">
+        <div className="flex center col gap">
           <button type="submit">Log In</button>
           <button type="submit">Crea un Account</button>
         </div>

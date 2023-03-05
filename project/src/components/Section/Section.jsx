@@ -1,23 +1,23 @@
 const Section = ({ src, titolo, testo, mode }) => {
   return (
-    <div id="section" className={mode ? "dark" : "light"}>
+    <div id="section" className={"flex center box-container " + (mode ? "dark" : "light")}>
       {mode ? (
         <>
-          <div id="illustration">
+          <div className="flex center box-40">
             <img src={src} alt="illustration"/>
           </div>
-          <div id="description">
+          <div className="flex col box-40 gap-3">
             <h1>{titolo}</h1>
             <p>{testo}</p>
           </div>
         </>
       ) : (
         <>
-          <div id="description">
+          <div className="flex col box-40 gap-3">
             <h1>{titolo}</h1>
             <p>{testo}</p>
           </div>
-          <div id="illustration">
+          <div className="flex center box-40">
             <img src={src} alt="illustration" />
           </div>
         </>
