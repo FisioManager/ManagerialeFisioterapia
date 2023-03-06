@@ -1,9 +1,9 @@
-@import './../../variables.scss';
+@import './../../assets/dimensions.scss';
 
 header {
     height: $header-height;
     width: 100vw;
-    background-color: $--background-secondary;
+    background-color: var(--background-secondary) !important;
     position: fixed;
 
     /* mette img sulla estrema sinistra e navbar sulla estrema destra */
@@ -11,11 +11,11 @@ header {
     nav {
 
         a {
-            font: 400 1.3rem $--font-primary;
-            color: $col-white;
+            //font: 400 1.3rem $--font-primary;
+            color: var(--text-primary);
 
             &:hover {
-                color: $col-resin-black !important;
+                color: var(--text-invert) !important;
             }
         }
     }

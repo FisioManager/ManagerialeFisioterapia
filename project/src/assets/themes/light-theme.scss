@@ -1,0 +1,35 @@
+@use "../colors.scss" as *;
+
+@mixin light-theme {
+  --text-primary: #{$col-white-r};
+  --text-secondary: #{$col-black-r};
+  --text-tertiary: #{$col-ubertini-r};
+  //--text-inactive: #{$col-black-r};
+  //--text-link: #{$col-black-r};
+  --text-invert: #{$col-white-d};
+
+  --background-primary: #{$col-mindaro-r};
+  --background-secondary: #{$col-lapis-lazuli-r};
+  --background-tertiary: #{$col-indigo-dye-d};
+  --background-theme: #($col-white-d);
+  //--background-toc-active: #{$col-};
+
+  //--code-token-tag: #{$col-};
+  //--code-token-punctuation: #{$col-};
+  //--code-token-attribute-name: #{$col-};
+  //--code-token-attribute-value: #{$col-};
+  //--code-token-comment: #{$col-};
+  //--code-token-default: #{$col-};
+  //--code-token-selector: #{$col-};
+  //--code-background-inline: #{$col-};
+  //--code-background-block: #{$col-};
+
+  --scrollbar-bg: transparent;
+  --scrollbar-color: rgba(0, 0, 0, 0.25);
+
+  color-scheme: light;
+}
+
+.light {
+  @include light-theme;
+}

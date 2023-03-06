@@ -1,9 +1,7 @@
-@import './../../variables.scss';
-
 #introduction {
     height: $introuduction-height;
     width: 100%;
-    background-color: $col-white;
+    background-color: var(--background-theme);
 
     h1 {
         font-size: 3rem;

@@ -1,5 +1,3 @@
-@import './../../variables.scss';
-
 #section {
 
     text-align: center;
@@ -13,10 +11,10 @@
     }
 
     &.light {
-        background-color: $col-white;
+        background-color: var(--background-theme);
     }
 
     &.darak {
-        background-color: $--background-primary;
+        background-color: var(--background-primary);
     }
 }

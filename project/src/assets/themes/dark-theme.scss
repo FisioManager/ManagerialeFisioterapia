@@ -1,0 +1,33 @@
+@use "../colors.scss" as *;
+
+@mixin dark-theme {
+  --text-primary: #{$col-white-r};
+  --text-secondary: #{$col-white-r};
+  --text-inactive: #{$col-white-r};
+  --text-link: #{$col-white-r};
+  --text-invert: #{$col-black-r};
+
+  --background-primary: #{$col-black-r};
+  --background-secondary: #{$col-keppel-r};
+  //--background-tertiary: #{$col-};
+  //--background-toc-active: #{$col-};
+
+  //--code-token-tag: #{$col-};
+  //--code-token-punctuation: #{$col-};
+  //--code-token-attribute-name: #{$col-};
+  //--code-token-attribute-value: #{$col-};
+  //--code-token-comment: #{$col-};
+  //--code-token-default: #{$col-};
+  //--code-token-selector: #{$col-};
+  //--code-background-inline: #{$col-};
+  //--code-background-block: #{$col-};
+
+  --scrollbar-bg: transparent;
+  --scrollbar-color: rgba(255, 255, 255, 0.25);
+
+  color-scheme: dark;
+}
+
+.dark {
+  @include dark-theme;
+}

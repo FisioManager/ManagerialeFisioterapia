@@ -1,18 +1,16 @@
-@import './../../variables.scss';
-
 footer {
     height: $footer-height;
-    background-color: $--background-tertiary;
+    background-color: var(--background-tertiary);
 
     div {
         align-items: flex-start !important;
     }
 
     a {
-        color: $--text-primary;
+        color: var(--text-primary);
 
         &:first-child {
-            color: $col-lavender-d;
+            color: var(--text-tertiary);
         }
     }
 }

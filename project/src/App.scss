@@ -11,7 +11,9 @@
 @import './components/Introduction/Introduction.scss';
 
 /* ASSETS */
-@import './variables.scss';
+@import './assets/themes/themes.scss';
+@import './assets/fonts.scss';
+@import './assets/dimensions.scss';
 
 * {
 	margin: 0;
@@ -24,16 +26,16 @@
 
 body {
 	cursor: default;
-	font: 400 16px $--font-primary;
-	background-color: $--background-primary;
-	color: $--text-primary;
+	font: 400 16px "Source Sans Pro";
+	background-color: var(--background-primary);
+	color: var(--text-primary);
 	transition: color 0.5s, background-color 0.5s;
 	scroll-behavior: smooth;
 }
 
 #main-container {
 	padding-top: $header-height;
-	color: $--text-secondary;
+	color: var(--text-secondary);
 }
 
 .flex {

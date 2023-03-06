@@ -1,11 +1,9 @@
-@import './../../variables.scss';
-
 .credenziali {
     width: 400px;
 
     .credenziali-input {
         width: 100%;
-        background-color: $col-white-l;
+        background-color: var(--background-theme);
         padding: 1em;
     }
 
@@ -13,21 +11,21 @@
         margin-top: 1em;
         width: 100%;
         font-size: 0.8rem;
-        background-color: $--background-primary !important;
+        background-color: var(--background-primary) !important;
     
         a {
-            color: $col-black;
+            color: var(--text-secondary);
         }
     }
     
     .active {
-        background-color: $col-white !important;
+        background-color: var(--background-theme) !important;
     }
 }
 
 button {
     font-size: 1.5rem;
     padding: 15px 40px;
-    background-color: $col-olive;
-    color: $col-white;
+    background-color: var(--background-secondary);
+    color: var(--text-primary);
 }
