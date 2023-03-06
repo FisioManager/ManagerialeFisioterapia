@@ -1,9 +1,5 @@
 const ChiSiamo = () => {
-  return (
-    <>
-      <p>Inserire qua il contenuto della pagina chi siamo</p>
-    </>
-  );
+  return <></>;
 };
 
 export default ChiSiamo;

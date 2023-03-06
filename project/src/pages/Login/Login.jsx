@@ -1,33 +1,97 @@
+import { useState } from "react";
+
 const Login = () => {
+  const [focusedElement, setFocusedElement] = useState("email");
+
+  const handleFocus = (event, isBlur = false) => {
+    if (event.target.id === "email") {
+      setFocusedElement(isBlur ? event.target.id : "email");
+    } else if (event.target.id === "password") {
+      setFocusedElement(isBlur ? event.target.id : "password");
+    }
+
+    const emailContainer = document.getElementById("email-container");
+    const passwordContainer = document.getElementById("password-container");
+
+    emailContainer.addEventListener("click", () => {
+      emailContainer.classList.add("active");
+      setFocusedElement("email");
+    });
+
+    emailContainer.addEventListener("blur", () => {
+      emailContainer.classList.remove("active");
+    });
+
+    passwordContainer.addEventListener("click", () => {
+      passwordContainer.classList.add("active");
+      setFocusedElement("password");
+    });
+
+    passwordContainer.addEventListener("blur", () => {
+      passwordContainer.classList.remove("active");
+    });
+  };
+
   return (
-    <div id="main-container" className="flex center box-container">
-      <div className="flex center box-40">
+    <div id="main-container" className="flex box-container">
+      <div className="flex box-40">
         <img src="/images/place-holder-500.png" alt="login" />
       </div>
-      <div className="flex col center box-40 gap-5">
+      <div className="flex col box-40 gap-5">
         <h1>Buongiorno Dottore</h1>
         <div className="credenziali flex col">
-          <div className="credenziali-input flex gap active">
-            <img src="images/email.png" alt="email" />
+          <div
+            className={
+              "credenziali-input flex gap " +
+              (focusedElement === "email" ? "active" : " ")
+            }
+            onFocus={handleFocus}
+            onBlur={(event) => handleFocus(event, true)}
+            id="email-container"
+          >
+            <img src="images/icons/email.png" alt="email" />
             <input
-              className="active"
+              className={focusedElement === "email" ? "active" : ""}
+              onFocus={handleFocus}
+              onBlur={(event) => handleFocus(event, true)}
+              id="email"
               type="email"
               placeholder="example@gmail.com"
             />
           </div>
-          <div className="credenziali-input flex gap">
-            <img src="images/password.png" alt="psw" />
-            <input type="password" placeholder="password" />
+          <div
+            className={
+              "credenziali-input flex gap " +
+              (focusedElement === "password" ? "active" : " ")
+            }
+            onFocus={handleFocus}
+            onBlur={(event) => handleFocus(event, true)}
+            id="password-container"
+          >
+            <img src="images/icons/password.png" alt="psw" />
+            <input
+              className={focusedElement === "password" ? "active" : ""}
+              onFocus={handleFocus}
+              onBlur={(event) => handleFocus(event, true)}
+              id="password"
+              type="password"
+              placeholder="password"
+            />
           </div>
           <div className="options flex space-between">
             <div className="flex gap-05">
-              <input type="checkbox" id="ricordami" name="ricordami" value="0"/>
+              <input
+                type="checkbox"
+                id="ricordami"
+                name="ricordami"
+                value="0"
+              />
               <p>ricordami</p>
             </div>
             <a href="/">ho dimenticato la password</a>
           </div>
         </div>
-        <div className="flex center col gap">
+        <div className="flex col gap">
           <button type="submit">Log In</button>
           <button type="submit">Crea un Account</button>
         </div>

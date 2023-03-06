@@ -3,11 +3,25 @@
 
     .credenziali-input {
         width: 100%;
-        background-color: var(--background-light);
+        background-color: var(--background-inactive);
         padding: 1em;
+        border: solid 1px black;
+
+        &:first-child {
+            border-bottom: none;
+        }
+
+        &:nth-child(2) {
+            border-top: none;
+        }
 
         input {
-            background-color: var(--background-light);
+            background-color: var(--background-inactive);
+            width: 80%;
+
+            &:focus {
+                outline: none;
+            }
         }
     }
 
@@ -23,7 +37,7 @@
     }
 
     .active {
-        background-color: var(--background-light-l) !important;
+        background-color: var(--background-active) !important;
     }
 }
 

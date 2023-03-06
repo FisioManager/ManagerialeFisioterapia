@@ -4,6 +4,11 @@ $col-white-l: #ffffff;
 $col-white-r: $col-white;
 $col-white-d: darken($col-white, 25%);
 
+$col-gray: #dddddd;
+$col-gray-l: lighten($col-gray, 25%);
+$col-gray-r: $col-gray;
+$col-gray-d: darken($col-gray, 25%);
+
 $col-black: #1e1e1eff;
 $col-black-l: lighten($col-black, 25%);
 $col-black-r: $col-black;

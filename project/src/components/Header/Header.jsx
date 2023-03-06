@@ -5,7 +5,7 @@ const Header = () => {
     <>
       <header className="flex space-between">
         <img src="/images/logo.svg" alt="logo" />
-        <nav className="flex center gap-4">
+        <nav className="flex gap-4">
           <Link to="/">Home</Link>
           <Link to="/chi-siamo">Chi Siamo</Link>
           <Link to="/contattaci">Contattaci</Link>

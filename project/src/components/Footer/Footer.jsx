@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="flex center">
+    <footer className="flex">
       <nav className="flex gap-10">
         <div className="flex col">
           <Link to="">GDPR</Link>

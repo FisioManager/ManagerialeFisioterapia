@@ -1,0 +1,29 @@
+.form {
+    width: 400px;
+    border: solid 1px black;
+
+    .form-input {
+        width: 100%;
+        background-color: var(--background-light);
+        padding: 1em;
+
+        input, textarea {
+            background-color: var(--background-light);
+            width: 80%;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        textarea {
+            height: 400px;
+            resize: none;
+            padding-top: 8px;
+        }
+    }
+
+    .active {
+        background-color: var(--background-light-l) !important;
+    }
+}

@@ -8,6 +8,8 @@
 @use './pages/Login/Login.scss';
 @use './pages/Prodotti/Prodotti.scss';
 @use './pages/Documentazione/Documentazione.scss';
+@use './pages/ChiSiamo/ChiSiamo.scss';
+@use './pages/Contattaci/Contattaci.scss';
 
 /* COMPONENTS */
 @use './components/Header/Header.scss';
@@ -33,6 +35,10 @@ body {
 	scroll-behavior: smooth;
 }
 
+input, textarea, a, p {
+	font: 400 16px "Source Sans Pro";
+}
+
 #main-container {
 	padding-top: dim.$header-height;
 	color: var(--text-secondary);
@@ -41,13 +47,14 @@ body {
 .flex {
 	display: flex;
 	align-items: center;
+	justify-content: center;
 
 	&.col {
 		flex-direction: column;
 	}
 
-	&.center {
-		justify-content: center;
+	&.v-top {
+		align-items: flex-start;
 	}
 
 	&.space-between {
