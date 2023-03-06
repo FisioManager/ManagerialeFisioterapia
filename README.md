@@ -41,6 +41,11 @@ La possibilità di costruire tabelle di esercizi da proporre al paziente.
 Il programma permette la creazione automatica di fatture e l’eventuale invio di tali a commercialisti/ufficio delle entrate (SdI) e ricevere eventuali notifiche da parte dell’SdI sugli esiti dei controlli.
 Il sistema si occuperà solo di fatture attive.
 
+### **Gestione dei dipendenti per società**
+
+La funzionalità prevede che l'utente riesca ad assegnare slot orari ai suoi dipendenti e che alla chiusura di una cartella venga fatto il conto del numero di
+ore per ciascun dipendente in modo tale da facilitare il pagamento di ciascuno
+
 ### **Modulistaica GDPR e consensi informativi**
 
 Preocompilazione di tutti i moduli per il trattamento dei dati e della privacy:
