@@ -1,5 +1,7 @@
+@use './../../assets/dimensions.scss' as dim;
+
 #introduction {
-    height: $introuduction-height;
+    height: dim.$introuduction-height;
     width: 100%;
     background-color: var(--background-light);
 

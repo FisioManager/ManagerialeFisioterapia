@@ -1,5 +1,7 @@
+@use './../../assets/dimensions.scss' as dim;
+
 footer {
-    height: $footer-height;
+    height: dim.$footer-height;
     background-color: var(--background-secondary);
 
     div {

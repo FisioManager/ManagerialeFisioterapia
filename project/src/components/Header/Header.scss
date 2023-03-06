@@ -1,7 +1,7 @@
-@import './../../assets/dimensions.scss';
+@use './../../assets/dimensions.scss' as dim;
 
 header {
-    height: $header-height;
+    height: dim.$header-height;
     width: 100vw;
     background-color: var(--background-secondary) !important;
     position: fixed;

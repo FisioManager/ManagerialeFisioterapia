@@ -1,19 +1,19 @@
+/* ASSETS */
+@use './assets/fonts.scss';
+@use './assets/dimensions.scss' as dim;
+@use './assets/themes/themes.scss';
+
 /* PAGES */
-@import './pages/Home/Home.scss';
-@import './pages/Login/Login.scss';
-@import './pages/Prodotti/Prodotti.scss';
-@import './pages/Documentazione/Documentazione.scss';
+@use './pages/Home/Home.scss';
+@use './pages/Login/Login.scss';
+@use './pages/Prodotti/Prodotti.scss';
+@use './pages/Documentazione/Documentazione.scss';
 
 /* COMPONENTS */
-@import './components/Header/Header.scss';
-@import './components/Footer/Footer.scss';
-@import './components/Section/Section.scss';
-@import './components/Introduction/Introduction.scss';
-
-/* ASSETS */
-@import './assets/themes/themes.scss';
-@import './assets/fonts.scss';
-@import './assets/dimensions.scss';
+@use './components/Header/Header.scss';
+@use './components/Footer/Footer.scss';
+@use './components/Section/Section.scss';
+@use './components/Introduction/Introduction.scss';
 
 * {
 	margin: 0;
@@ -34,7 +34,7 @@ body {
 }
 
 #main-container {
-	padding-top: $header-height;
+	padding-top: dim.$header-height;
 	color: var(--text-secondary);
 }
 
