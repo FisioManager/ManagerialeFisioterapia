@@ -32,14 +32,20 @@ app.get("/images/place-holder-500.png", (req, res) => {
   res.sendFile(__dirname + "/public/images/place-holder-500.png");
 });
 
-
-app.get("/images/email.png", (req, res) => {
-  res.sendFile(__dirname + "/public/images/email.png");
+app.get("/images/icons/email.png", (req, res) => {
+  res.sendFile(__dirname + "/public/images/icons/email.png");
 });
 
+app.get("/images/icons/password.png", (req, res) => {
+  res.sendFile(__dirname + "/public/images/icons/password.png");
+});
 
-app.get("/images/password.png", (req, res) => {
-  res.sendFile(__dirname + "/public/images/password.png");
+app.get("/images/icons/user.png", (req, res) => {
+  res.sendFile(__dirname + "/public/images/icons/user.png");
+});
+
+app.get("/images/icons/pencil.png", (req, res) => {
+  res.sendFile(__dirname + "/public/images/icons/pencil.png");
 });
 
 app.get("/*", function (req, res) {

@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 const Login = () => {
   const [focusedElement, setFocusedElement] = useState("email");
+  const location = useLocation();
 
   const handleFocus = (event, isBlur = false) => {
     if (event.target.id === "email") {
@@ -9,7 +11,9 @@ const Login = () => {
     } else if (event.target.id === "password") {
       setFocusedElement(isBlur ? event.target.id : "password");
     }
+  };
 
+  useEffect(() => {
     const emailContainer = document.getElementById("email-container");
     const passwordContainer = document.getElementById("password-container");
 
@@ -30,14 +34,14 @@ const Login = () => {
     passwordContainer.addEventListener("blur", () => {
       passwordContainer.classList.remove("active");
     });
-  };
+  }, [location]);
 
   return (
     <div id="main-container" className="flex box-container">
       <div className="flex box-40">
         <img src="/images/place-holder-500.png" alt="login" />
       </div>
-      <div className="flex col box-40 gap-5">
+      <div className="flex col box-40 gap-4">
         <h1>Buongiorno Dottore</h1>
         <div className="credenziali flex col">
           <div
@@ -46,7 +50,6 @@ const Login = () => {
               (focusedElement === "email" ? "active" : " ")
             }
             onFocus={handleFocus}
-            onBlur={(event) => handleFocus(event, true)}
             id="email-container"
           >
             <img src="images/icons/email.png" alt="email" />
@@ -65,7 +68,6 @@ const Login = () => {
               (focusedElement === "password" ? "active" : " ")
             }
             onFocus={handleFocus}
-            onBlur={(event) => handleFocus(event, true)}
             id="password-container"
           >
             <img src="images/icons/password.png" alt="psw" />
