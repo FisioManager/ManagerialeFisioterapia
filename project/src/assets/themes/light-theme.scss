@@ -6,12 +6,12 @@
   --text-tertiary: #{$col-ubertini-r};
   //--text-inactive: #{$col-black-r};
   //--text-link: #{$col-black-r};
-  --text-invert: #{$col-white-d};
+  --text-invert: #{$col-mindaro-r};
 
   --background-primary: #{$col-mindaro-r};
-  --background-secondary: #{$col-lapis-lazuli-r};
-  --background-tertiary: #{$col-indigo-dye-d};
-  --background-theme: #($col-white-d);
+  --background-secondary: #{$col-indigo-dye-d};
+  --background-light: #{$col-white-r};
+  --background-light-l: #{$col-white-l};
   //--background-toc-active: #{$col-};
 
   //--code-token-tag: #{$col-};

@@ -11,7 +11,8 @@ header {
     nav {
 
         a {
-            //font: 400 1.3rem $--font-primary;
+            font-size: 1.3rem;
+            font-weight: 400;
             color: var(--text-primary);
 
             &:hover {

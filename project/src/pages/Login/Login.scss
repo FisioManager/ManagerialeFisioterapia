@@ -3,8 +3,12 @@
 
     .credenziali-input {
         width: 100%;
-        background-color: var(--background-theme);
+        background-color: var(--background-tertiary);
         padding: 1em;
+
+        input {
+            background-color: var(--background-tertiary);
+        }
     }
 
     .options {
@@ -19,7 +23,7 @@
     }
     
     .active {
-        background-color: var(--background-theme) !important;
+        background-color: var(--background-light-l) !important;
     }
 }
 
