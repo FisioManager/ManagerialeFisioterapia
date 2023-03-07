@@ -16,7 +16,7 @@ const Plan = ({ title, pro, cons, price, method, onPlanSelect, isSelected }) => 
       ))}
       <div className="flex price">
         <h1>
-            {(price === "Free" ? "Free" : price) + (method === "Annuali" ? " €/anno" : " €/mese")} 
+            {(price === "Free" ? "Free" : price + (method === "Annuali" ? " €/anno" : " €/mese")) } 
         </h1>
       </div>
       <button type="submit" onClick={() => onPlanSelect(title)}>Scegli</button>
