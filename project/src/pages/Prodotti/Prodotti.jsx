@@ -53,7 +53,7 @@ const Prodotti = () => {
             title={"Standard"}
             pro={["Funzionalità A", "Funzionalità B"]}
             cons={["Funzionalità C", "Funzionalità D", "Funzionalità E"]}
-            price={"99"}
+            price={"99.00"}
             method={selectedMethod}
             onPlanSelect={handlePlanSelect}
             isSelected={selectedPlan === "Standard"}
@@ -68,7 +68,7 @@ const Prodotti = () => {
               "Funzionalità E",
             ]}
             cons={[]}
-            price={"99"}
+            price={"149.00"}
             method={selectedMethod}
             onPlanSelect={handlePlanSelect}
             isSelected={selectedPlan === "Premium"}
