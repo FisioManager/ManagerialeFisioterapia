@@ -1,3 +1,5 @@
+import './Plan.scss'
+
 const Plan = ({ title, pro, cons, price, method, onPlanSelect, isSelected }) => {
     return (
     <div className={"plan flex col h-top gap " + (isSelected ? "selected" : "")}>

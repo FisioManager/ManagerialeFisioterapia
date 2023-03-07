@@ -1,3 +1,4 @@
+import './Home.scss'
 import Section from "./../../components/Section/Section";
 import Introduction from "./../../components/Introduction/Introduction";
 

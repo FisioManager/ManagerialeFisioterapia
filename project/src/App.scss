@@ -3,23 +3,6 @@
 @use './assets/dimensions.scss' as dim;
 @use './assets/themes/themes.scss';
 
-/* PAGES */
-@use './pages/Home/Home.scss';
-@use './pages/Login/Login.scss';
-@use './pages/Prodotti/Prodotti.scss';
-@use './pages/Documentazione/Documentazione.scss';
-@use './pages/ChiSiamo/ChiSiamo.scss';
-@use './pages/Contattaci/Contattaci.scss';
-
-/* COMPONENTS */
-@use './components/Header/Header.scss';
-@use './components/Footer/Footer.scss';
-@use './components/Section/Section.scss';
-@use './components/Introduction/Introduction.scss';
-@use './components/Plan/Plan.scss';
-@use './components/Switch/Switch.scss';
-
-
 * {
 	margin: 0;
 	border: 0;

@@ -1,3 +1,4 @@
+import './Prodotti.scss'
 import Introduction from "./../../components/Introduction/Introduction";
 import Plan from "./../../components/Plan/Plan";
 import Switch from "./../../components/Switch/Switch";

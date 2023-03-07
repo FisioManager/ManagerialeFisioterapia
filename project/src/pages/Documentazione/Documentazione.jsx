@@ -1,3 +1,5 @@
+import './Documentazione.scss'
+
 const Documentazione = () => {
   return (
     <>

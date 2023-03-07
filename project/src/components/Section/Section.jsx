@@ -1,3 +1,5 @@
+import './Section.scss'
+
 const Section = ({ src, titolo, testo, mode }) => {
   return (
     <div id="section" className={"flex box-container " + (mode ? "left-to-right" : "right-to-left")}>

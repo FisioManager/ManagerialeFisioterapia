@@ -1,3 +1,5 @@
+import './Switch.scss'
+
 const Switch = ({methods, index, onMethodSelect}) => {
   
   const changeState = () => {

@@ -1,3 +1,5 @@
+import './ChiSiamo.scss'
+
 const ChiSiamo = () => {
   return (
     <div id="main-conent" className="flex box-container">

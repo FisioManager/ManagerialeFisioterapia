@@ -1,3 +1,4 @@
+import './Login.scss'
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
@@ -35,6 +36,10 @@ const Login = () => {
       passwordContainer.classList.remove("active");
     });
   }, [location]);
+
+  const openManageriale = () => {
+    window.open('/manageriale', '_blank');
+  }
 
   return (
     <div id="main-container" className="flex box-container">
@@ -94,8 +99,8 @@ const Login = () => {
           </div>
         </div>
         <div className="flex col gap">
-          <button type="submit">Log In</button>
-          <button type="submit">Crea un Account</button>
+          <button onClick={openManageriale}>Log In</button>
+          <button>Crea un Account</button>
         </div>
       </div>
     </div>

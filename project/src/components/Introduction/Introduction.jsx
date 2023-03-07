@@ -1,3 +1,5 @@
+import './Introduction.scss'
+
 const Introduction = ({titolo, testo}) => {
   return (
     <div id="introduction" className="flex col gap-3">
