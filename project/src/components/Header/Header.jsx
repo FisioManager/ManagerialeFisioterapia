@@ -4,7 +4,9 @@ const Header = () => {
   return (
     <>
       <header className="flex space-between">
-        <img src="/images/logo.svg" alt="logo" />
+        <Link to="/">
+          <img src="/images/logo.svg" alt="logo" />
+        </Link>
         <nav className="flex gap-4">
           <Link to="/">Home</Link>
           <Link to="/chi-siamo">Chi Siamo</Link>

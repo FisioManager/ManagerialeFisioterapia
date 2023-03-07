@@ -1,11 +1,8 @@
-const Introduction = () => {
+const Introduction = ({titolo, testo}) => {
   return (
     <div id="introduction" className="flex col gap-3">
-      <h1>Mega Titolo catchy che introduce il sito</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vel
-        ligula venenatis, vehicula velit id, aliquet nibh.
-      </p>
+      <h1>{titolo}</h1>
+      <p>{testo}</p>
     </div>
   );
 };

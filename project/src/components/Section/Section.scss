@@ -10,11 +10,11 @@
         padding: 0 10% 0 10%;
     }
 
-    &.light {
-        background-color: var(--background-light);
+    &.left-to-right {
+        background-color: var(--background-primary);
     }
 
-    &.darak {
-        background-color: var(--background-primary);
+    &.right-to-left {
+        background-color: var(--background-light);
     }
 }

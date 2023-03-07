@@ -1,6 +1,6 @@
 const Section = ({ src, titolo, testo, mode }) => {
   return (
-    <div id="section" className={"flex box-container " + (mode ? "dark" : "light")}>
+    <div id="section" className={"flex box-container " + (mode ? "left-to-right" : "right-to-left")}>
       {mode ? (
         <>
           <div className="flex box-40">

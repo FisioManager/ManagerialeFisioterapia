@@ -16,6 +16,8 @@
 @use './components/Footer/Footer.scss';
 @use './components/Section/Section.scss';
 @use './components/Introduction/Introduction.scss';
+@use './components/Plan/Plan.scss';
+
 
 * {
 	margin: 0;
@@ -42,6 +44,14 @@ p {
 	font: 300 16px "Source Sans Pro";
 }
 
+button {
+	font-size: 1.5rem;
+    padding: 15px 40px;
+    background-color: var(--background-secondary);
+    color: var(--text-primary);
+	border-radius: 10px;
+}
+
 #main-container {
 	padding-top: dim.$header-height;
 	color: var(--text-secondary);
@@ -60,6 +70,10 @@ p {
 		align-items: flex-start;
 	}
 
+	&.h-top {
+		justify-content: flex-start;
+	}
+
 	&.space-between {
 		justify-content: space-between;
 		padding: 0 2em;
@@ -72,26 +86,26 @@ p {
 }
 
 .gap {
-	gap: 1em;
+	gap: 1rem;
 
 	&-05 {
-		gap: 0.5em;
+		gap: 0.5rem;
 	}
 
 	&-2 {
-		gap: 2em;
+		gap: 2rem;
 	}
 
 	&-3 {
-		gap: 3em;
+		gap: 3rem;
 	}
 
 	&-4 {
-		gap: 4em;
+		gap: 4rem;
 	}
 
 	&-5 {
-		gap: 5em;
+		gap: 5rem;
 	}
 
 	&-10 {

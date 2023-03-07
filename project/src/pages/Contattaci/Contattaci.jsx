@@ -102,7 +102,7 @@ const Contattaci = () => {
               className={focusedElement === "message" ? "active" : ""}
               onFocus={handleFocus}
               onBlur={(event) => handleFocus(event, true)}
-              maxLength={200}
+              maxLength={500}
               type="text"
               placeholder="Scrivici qua tutto quello che desideri"
             />

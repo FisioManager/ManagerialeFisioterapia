@@ -1,0 +1,23 @@
+.plan {
+    height: 65vh;
+    width: 20vw;
+    background-color: var(--background-light);
+    border-radius: 25px;
+    padding: 40px;
+    
+    h1 {
+        padding: 20px 0;
+    }
+
+    .price {
+        height: 100%;
+        
+        h1 {
+            font-weight: 900 !important;
+        }
+    }
+
+    &.selected {
+        background-color: var(--background-active);
+    }
+}

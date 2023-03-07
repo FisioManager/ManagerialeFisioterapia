@@ -48,6 +48,14 @@ app.get("/images/icons/pencil.png", (req, res) => {
   res.sendFile(__dirname + "/public/images/icons/pencil.png");
 });
 
+app.get("/images/icons/check.png", (req, res) => {
+  res.sendFile(__dirname + "/public/images/icons/check.png");
+});
+
+app.get("/images/icons/cross.png", (req, res) => {
+  res.sendFile(__dirname + "/public/images/icons/cross.png");
+});
+
 app.get("/*", function (req, res) {
   res.sendFile(__dirname + "/public/index.html");
 });
