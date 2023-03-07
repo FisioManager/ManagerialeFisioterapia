@@ -5,7 +5,8 @@ import React, { useState } from "react";
 
 const Prodotti = () => {
   const [selectedPlan, setSelectedPlan] = useState("Standard");
-  const [selectedMethod, setSelectedMethod] = useState("Annuali");
+  const [selectedMethod, setSelectedMethod] = useState("Mensili");
+  const methods = ["Annuali", "Mensili"];
 
   const handlePlanSelect = (planTitle) => {
     setSelectedPlan(planTitle);
@@ -26,7 +27,11 @@ const Prodotti = () => {
       <div id="prodotti" className="flex col gap-5">
         <div id="mensili-annuali" className="flex gap">
           <p>Mensili</p>
-          <Switch method={selectedMethod} onMethodSelect={handleMethodSelect} />
+          <Switch
+            methods={methods}
+            index={methods.indexOf(selectedMethod)}
+            onMethodSelect={handleMethodSelect}
+          />
           <p>Annuali</p>
         </div>
         <div className="flex gap-5">
