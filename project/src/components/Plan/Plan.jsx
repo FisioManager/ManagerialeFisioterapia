@@ -1,4 +1,4 @@
-const Plan = ({ title, pro, cons, price, onPlanSelect, isSelected }) => {
+const Plan = ({ title, pro, cons, price, method, onPlanSelect, isSelected }) => {
     return (
     <div className={"plan flex col h-top gap " + (isSelected ? "selected" : "")}>
       <h1>{title}</h1>
@@ -16,7 +16,7 @@ const Plan = ({ title, pro, cons, price, onPlanSelect, isSelected }) => {
       ))}
       <div className="flex price">
         <h1>
-            {price === "Free" ? "Free" : price + " €/anno"} 
+            {(price === "Free" ? "Free" : price) + (method === "Annuali" ? " €/anno" : " €/mese")} 
         </h1>
       </div>
       <button type="submit" onClick={() => onPlanSelect(title)}>Scegli</button>

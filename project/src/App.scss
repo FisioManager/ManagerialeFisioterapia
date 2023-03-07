@@ -17,6 +17,7 @@
 @use './components/Section/Section.scss';
 @use './components/Introduction/Introduction.scss';
 @use './components/Plan/Plan.scss';
+@use './components/Switch/Switch.scss';
 
 
 * {
@@ -50,6 +51,7 @@ button {
     background-color: var(--background-secondary);
     color: var(--text-primary);
 	border-radius: 10px;
+	cursor: pointer;
 }
 
 #main-container {

@@ -5,6 +5,7 @@ header {
     width: 100vw;
     background-color: var(--background-secondary) !important;
     position: fixed;
+    z-index: 999;
 
     /* mette img sulla estrema sinistra e navbar sulla estrema destra */
 
