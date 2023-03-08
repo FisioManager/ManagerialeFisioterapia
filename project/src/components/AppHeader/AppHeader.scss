@@ -1,0 +1,24 @@
+@use './../../assets/dimensions.scss' as dim;
+
+header {
+    height: dim.$header-height;
+    width: 100vw;
+    background-color: var(--background-secondary) !important;
+    position: fixed;
+    z-index: 999;
+
+    /* mette img sulla estrema sinistra e navbar sulla estrema destra */
+
+    nav {
+
+        a {
+            font-size: 1.3rem;
+            font-weight: 400;
+            color: var(--text-primary);
+
+            &:hover {
+                color: var(--text-invert) !important;
+            }
+        }
+    }
+}

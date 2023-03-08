@@ -1,18 +1,16 @@
 import './Switch.scss'
 
-const Switch = ({methods, index, onMethodSelect}) => {
-  
+const Switch = ({methods, index, setSelectedMethod}) => {
+
   const changeState = () => {
-    index === 0 ? onMethodSelect(methods[1]) : onMethodSelect(methods[0])
-  }
+    index === 0 ? setSelectedMethod(methods[1]) : setSelectedMethod(methods[0])
+  };
 
   return (
-    <>
-      <label className="switch">
-        <input type="checkbox" onClick={changeState}/>
-        <span className="slider round"></span>
-      </label>
-    </>
+    <label className="switch">
+      <input type="checkbox" onClick={changeState}/>
+      <span className="slider round"></span>
+    </label>
   );
 };
 

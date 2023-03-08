@@ -1,6 +1,6 @@
 import './Plan.scss'
 
-const Plan = ({ title, pro, cons, price, method, onPlanSelect, isSelected }) => {
+const Plan = ({ title, pro, cons, price, method, setSelectedPlan, isSelected }) => {
     return (
     <div className={"plan flex col h-top gap " + (isSelected ? "selected" : "")}>
       <h1>{title}</h1>
@@ -21,7 +21,7 @@ const Plan = ({ title, pro, cons, price, method, onPlanSelect, isSelected }) => 
             {(price === "Free" ? "Free" : (method === "Annuali" ? price + " €/anno" : (Math.round(price*100/9)/100).toFixed(2) + " €/mese")) } 
         </h1>
       </div>
-      <button type="submit" onClick={() => onPlanSelect(title)}>Scegli</button>
+      <button type="submit" onClick={() => {setSelectedPlan(title);}}>Scegli</button>
     </div>
   );
 };

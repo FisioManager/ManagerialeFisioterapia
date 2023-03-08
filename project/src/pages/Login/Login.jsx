@@ -1,8 +1,8 @@
-import './Login.scss'
+import "./Login.scss";
 import { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 
-const Login = () => {
+const Login = ({ setShowAppHeader }) => {
   const [focusedElement, setFocusedElement] = useState("email");
   const location = useLocation();
 
@@ -38,8 +38,8 @@ const Login = () => {
   }, [location]);
 
   const openManageriale = () => {
-    window.open('/manageriale', '_blank');
-  }
+    setShowAppHeader(true);
+  };
 
   return (
     <div id="main-container" className="flex box-container">
@@ -99,7 +99,9 @@ const Login = () => {
           </div>
         </div>
         <div className="flex col gap">
-          <button onClick={openManageriale}>Log In</button>
+          <Link to="/manageriale">
+            <button onClick={openManageriale}>Log In</button>
+          </Link>
           <button>Crea un Account</button>
         </div>
       </div>

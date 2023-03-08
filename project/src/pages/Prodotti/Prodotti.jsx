@@ -2,20 +2,12 @@ import './Prodotti.scss'
 import Introduction from "./../../components/Introduction/Introduction";
 import Plan from "./../../components/Plan/Plan";
 import Switch from "./../../components/Switch/Switch";
-import React, { useState } from "react";
+import { useState } from "react";
 
 const Prodotti = () => {
   const [selectedPlan, setSelectedPlan] = useState("Standard");
   const [selectedMethod, setSelectedMethod] = useState("Mensili");
   const methods = ["Annuali", "Mensili"];
-
-  const handlePlanSelect = (planTitle) => {
-    setSelectedPlan(planTitle);
-  };
-
-  const handleMethodSelect = (method) => {
-    setSelectedMethod(method);
-  };
 
   return (
     <div id="main-container" className="flex col">
@@ -31,7 +23,7 @@ const Prodotti = () => {
           <Switch
             methods={methods}
             index={methods.indexOf(selectedMethod)}
-            onMethodSelect={handleMethodSelect}
+            setSelectedMethod={setSelectedMethod}
           />
           <p>Annuali</p>
         </div>
@@ -47,7 +39,7 @@ const Prodotti = () => {
             ]}
             price={"Free"}
             method={selectedMethod}
-            onPlanSelect={handlePlanSelect}
+            setSelectedPlan={setSelectedPlan}
             isSelected={selectedPlan === "Limitata"}
           />
           <Plan
@@ -56,7 +48,7 @@ const Prodotti = () => {
             cons={["Funzionalità C", "Funzionalità D", "Funzionalità E"]}
             price={"99.00"}
             method={selectedMethod}
-            onPlanSelect={handlePlanSelect}
+            setSelectedPlan={setSelectedPlan}
             isSelected={selectedPlan === "Standard"}
           />
           <Plan
@@ -71,7 +63,7 @@ const Prodotti = () => {
             cons={[]}
             price={"149.00"}
             method={selectedMethod}
-            onPlanSelect={handlePlanSelect}
+            setSelectedPlan={setSelectedPlan}
             isSelected={selectedPlan === "Premium"}
           />
         </div>
