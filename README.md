@@ -16,9 +16,10 @@
 ### **Gestione della cartella clinica dei pazienti**
 
 Per ogni paziente si ha la possibilità di:
-• Generalità (nome, cognome, sesso, età, residenza)
-• Conoscere storia passata del paziente (documenti passati)
-• Stato della cartella, sapere se il paziente ha appuntamenti in vista, se deve pagare o se ha già pagato, visualizzazione della fattura e possibilità di stamparla
+
+- Generalità `nome, cognome, sesso, età, residenza`
+- Conoscere storia passata del paziente `documenti passati`
+- `Stato della cartella`, sapere se il paziente ha appuntamenti in vista, se deve pagare o se ha già pagato, visualizzazione della fattura e possibilità di stamparla
 
 ### **Calendario/Agenda**
 
@@ -63,22 +64,23 @@ L’applicativo deve notificare i seguenti eventi:
 - Scadenza di licenza d’utilizzo
 - Aggiornamenti del software
 
-## <u>*Web Application UI*</u>
+## <u>*Mappa del sito*</u>
 
-- Main Page
+- Home
 - Log In
-- Chi siamo
-- Assistenza (Contattaci)
 - Prodotti
-- Termini di servizio
-- Privacy policy
-- Home Page manageriale
-- Triage
-- Pazienti
-- Fatture
-- Agenda
-- Libreria di esercizi
-- Aiuto (Documentazione)
+- Contattaci
+- Chi Siamo
+- Documentazione
+- Mangeriale
+  - Pazienti
+  - Agenda
+  - Fatture
+  - Dipendenti
+  - Triage
+  - Exercises
+  - GDPR
+
 
 ## <u>*Framework e tecnologie*</u>
 
@@ -89,18 +91,10 @@ I framework utilizzati sono scelti per fornire due soluzioni:
 
 ### **Web**
 
-#### <u>Front-end</u>
 
-- React (Interfaccia utente)
-- Scss (Sassy css)
-- Webpack e Babel (Per fare il bundle di tutti gli assets)
+`React` `Scss` `Webpack` `Babel`
 
-#### <u>Back-end</u>
-
-- NodeJS (Runtime system) + nvm, npm
-- MongoDB (Database non relazionale)
-- Nginx (Web server)
-- AWS (Hosting del server)
+`NodeJS` `MongoDB` `Nginx` `AWS`
 
 ### **Mobile app**
 
@@ -139,6 +133,6 @@ Per le prestazioni sanitarie non si deve emettere nessuna fattura elettronica ma
 
 Gestionali già sul mercato che hanno le stesse funzionalità:
 
-- Fisiodate
-- Fisiodesk
-- Physiotools
+- [Fisiodate](https://www.fisiodate.com/web/)
+- [Fisiodesk](https://fisioterapistafacile.it/)
+- [Physiotools](https://www.physiotools.com/)
