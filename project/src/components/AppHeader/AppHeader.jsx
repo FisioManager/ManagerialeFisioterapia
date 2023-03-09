@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import './AppHeader.scss'
 
-const AppHeader = ({setShowAppHeader}) => {
+const AppHeader = () => {
   return (
     <>
       <header className="flex">
-        <Link onClick={() => setShowAppHeader(false)} to="/">
+        <Link to="/">
           <img src="/images/logo.svg" alt="logo" />
         </Link>
       </header>

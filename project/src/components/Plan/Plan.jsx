@@ -5,13 +5,13 @@ const Plan = ({ title, pro, cons, price, method, setSelectedPlan, isSelected }) 
     <div className={"plan flex col h-top gap " + (isSelected ? "selected" : "")}>
       <h1>{title}</h1>
       {pro.map((func) => (
-        <div key={func} className="funzionalità flex gap-2">
+        <div key={func} className="flex gap-2">
           <img src="images/icons/check.png" alt="check" />
           <p>{func}</p>
         </div>
       ))}
       {cons.map((func) => (
-        <div key={func} className="funzionalità flex gap-2">
+        <div key={func} className="flex gap-2">
           <img src="images/icons/cross.png" alt="cross" />
           <p>{func}</p>
         </div>

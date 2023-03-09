@@ -8,6 +8,7 @@ import Documentazione from "./pages/Documentazione/Documentazione";
 import Prodotti from "./pages/Prodotti/Prodotti";
 import Manageriale from "./pages/Manageriale/Manageriale";
 import Login from "./pages/Login/Login";
+import Layout from "./Layout";
 
 export {
   AppHeader,
@@ -19,5 +20,6 @@ export {
   Documentazione,
   Prodotti,
   Login,
-  Manageriale
+  Manageriale,
+  Layout
 };

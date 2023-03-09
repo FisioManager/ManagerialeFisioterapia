@@ -2,10 +2,11 @@ import "./Login.scss";
 import { useState, useEffect } from "react";
 import { useLocation, Link } from "react-router-dom";
 
-const Login = ({ setShowAppHeader }) => {
+const Login = () => {
   const [focusedElement, setFocusedElement] = useState("email");
   const location = useLocation();
 
+  // handle focus/blur of inputs components email and password
   const handleFocus = (event, isBlur = false) => {
     if (event.target.id === "email") {
       setFocusedElement(isBlur ? event.target.id : "email");
@@ -14,19 +15,21 @@ const Login = ({ setShowAppHeader }) => {
     }
   };
 
+  // useEffect is called every time the location variable change (that is passed as second parameter with [location])
   useEffect(() => {
     const emailContainer = document.getElementById("email-container");
     const passwordContainer = document.getElementById("password-container");
 
+    // add events when clicking the div, it should add class 'add'
     emailContainer.addEventListener("click", () => {
       emailContainer.classList.add("active");
       setFocusedElement("email");
     });
-
     emailContainer.addEventListener("blur", () => {
       emailContainer.classList.remove("active");
     });
 
+    // add events when clicking the div, it should add class 'add'
     passwordContainer.addEventListener("click", () => {
       passwordContainer.classList.add("active");
       setFocusedElement("password");
@@ -37,10 +40,6 @@ const Login = ({ setShowAppHeader }) => {
     });
   }, [location]);
 
-  const openManageriale = () => {
-    setShowAppHeader(true);
-  };
-
   return (
     <div id="main-container" className="flex box-container">
       <div className="flex box-40">
@@ -49,11 +48,8 @@ const Login = ({ setShowAppHeader }) => {
       <div className="flex col box-40 gap-4">
         <h1>Buongiorno Dottore</h1>
         <div className="credenziali flex col">
-          <div
-            className={
-              "credenziali-input flex gap " +
-              (focusedElement === "email" ? "active" : " ")
-            }
+          <div 
+            className={"credenziali-input flex gap " + (focusedElement === "email" ? "active" : " ")}
             onFocus={handleFocus}
             id="email-container"
           >
@@ -68,10 +64,7 @@ const Login = ({ setShowAppHeader }) => {
             />
           </div>
           <div
-            className={
-              "credenziali-input flex gap " +
-              (focusedElement === "password" ? "active" : " ")
-            }
+            className={"credenziali-input flex gap " + (focusedElement === "password" ? "active" : " ")}
             onFocus={handleFocus}
             id="password-container"
           >
@@ -100,7 +93,7 @@ const Login = ({ setShowAppHeader }) => {
         </div>
         <div className="flex col gap">
           <Link to="/manageriale">
-            <button onClick={openManageriale}>Log In</button>
+            <button>Log In</button>
           </Link>
           <button>Crea un Account</button>
         </div>

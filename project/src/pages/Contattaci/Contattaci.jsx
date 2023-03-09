@@ -52,7 +52,7 @@ const Contattaci = () => {
   return (
     <div id="main-content" className="flex box-container">
       <div className="flex col gap-4 box-40">
-        <div className="form flex col">
+        <form className="flex col">
           <div
             className={
               "form-input flex gap " +
@@ -108,7 +108,7 @@ const Contattaci = () => {
               placeholder="Scrivici qua tutto quello che desideri"
             />
           </div>
-        </div>
+        </form>
         <div className="flex">
           <button type="submit">Invia</button>
         </div>

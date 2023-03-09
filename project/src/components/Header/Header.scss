@@ -7,7 +7,9 @@ header {
     position: fixed;
     z-index: 999;
 
-    /* mette img sulla estrema sinistra e navbar sulla estrema destra */
+    img {
+        width: 100%;
+    }
 
     nav {
 

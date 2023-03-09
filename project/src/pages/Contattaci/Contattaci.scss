@@ -1,5 +1,5 @@
-.form {
-    width: 400px;
+form {
+    width: 500px;
     border: solid 1px black;
 
     .form-input {
@@ -10,7 +10,7 @@
         input,
         textarea {
             background-color: var(--background-inactive);
-            width: 80%;
+            width: 100%;
 
             &:focus {
                 outline: none;
