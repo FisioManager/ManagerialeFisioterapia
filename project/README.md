@@ -1,26 +1,21 @@
 # Guida
 
 - [Build e Debug](#build-e-debug)
-- [Documentazione React](#documentazione-react)
 - [MongoDB](#mongodb)
 
 ## <u>Build e Debug</u>
 
-- npx webpack
-- npm start
-- npm run server
-
-## <u>Documentazione React</u>
-
-- [React Router](https://blog.webdevsimplified.com/2022-07/react-router/)
+- `npx webpack`, build
+- `npm start`, debug react
+- `npm run server`, run server
 
 ## <u>MongoDB</u>
 
-- mongod --dbpath . (all'interno di /db)
-- mongo (entrare nella shell di mongodb)
-- use ***databaseName***
+- `mongod --dbpath .`, runnare all'interno di /db per far partire il server
+- `mongo`, entrare nella shell di mongodb
+- `use databaseName`, selezionare database
 
-***projectDB:***
+***projectDB:*** (database name)
 
 - Utenti
 - altre tabelle...
