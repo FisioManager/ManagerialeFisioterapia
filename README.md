@@ -1,14 +1,9 @@
 # Manageriale fisioterapia - Analisi per lo sviluppo
 
-- [Funzionalità principali](#funzionalità-principali)
-- [Web application UI](#web-application-ui)
-- [Framework e tecnologie](#framework-e-tecnologie)
-- [Sicurezza dei dati]()
-- [Gestione dei dati offline]()
+- [Funzionalità Principali](#funzionalità-principali)
+- [Mappa del Sito](#mappa-del-sito)
+- [Framework e Tecnologie](#framework-e-tecnologie)
 - [Politiche per la fatturazione](#politiche-per-la-fatturazione)
-- [Gestione degli account utente]()
-- [Recensioni]()
-- [Vendita]()
 - [Competitors](#competitors)
 
 ## <u>*Funzionalità principali*</u>
