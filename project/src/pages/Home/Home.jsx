@@ -1,4 +1,4 @@
-import './Home.scss'
+import "./Home.scss";
 import Section from "./../../components/Section/Section";
 import Introduction from "./../../components/Introduction/Introduction";
 
@@ -7,9 +7,7 @@ const Home = () => {
     <div id="main-container" className="flex col">
       <Introduction
         titolo={"Mega Titolo catchy che introduce il sito"}
-        testo={
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam velligula venenatis, vehicula velit id, aliquet nibh."
-        }
+        testo={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam velligula venenatis, vehicula velit id, aliquet nibh."}
       />
       <Section
         src={"/images/place-holder-500.png"}

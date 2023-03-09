@@ -2,6 +2,9 @@
 
 - [Build e Debug](#build-e-debug)
 - [MongoDB](#mongodb)
+- [Requisiti Funzionali](#requisiti-funzionali)
+- [Requisiti non Funzionali](#requisiti-non-funzionali)
+- [Interfacce](#interfacce)
 
 ## <u>Build e Debug</u>
 
@@ -19,3 +22,37 @@
 
 - Utenti
 - altre tabelle...
+
+## <u>Requisiti Funzionali</u>
+
+- [ ] Log In with database
+- [ ] Registrazione al sito
+- [ ] Ricezione email contattaci
+- [ ] Scelta del piano di pagamento
+- [ ] CRUD pazienti
+- [ ] CRUD eventi su calendario
+- [ ] CRUD fatture
+- [ ] CRUD dipendenti
+- [ ] CRUD esercizi fisici
+- [ ] Compilazione, Stampa di GDPR
+- [ ] Triage + redazione del documento finale
+- [ ] Creazione di schede con esercizi
+- [ ] Area notifiche
+
+## <u>Requisiti non Funzionali</u>
+
+- [ ] Documentazione
+- [ ] Mappa del sito
+- [ ] Cookies
+- [ ] Termini di servizio
+- [ ] Privacy Policy
+- [ ] Politiche di fatturazione
+- [ ] Separazione dei dati per ogni cliente
+
+## <u>Interfacce</u>
+
+- [ ] Servizio di pagamento
+- [ ] AdE e SdI
+- [ ] Sistema tessera sanitaria
+- [ ] Google Calendar
+- [ ] What's App

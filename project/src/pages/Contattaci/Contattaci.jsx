@@ -1,4 +1,4 @@
-import './Contattaci.scss'
+import "./Contattaci.scss";
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
@@ -53,14 +53,7 @@ const Contattaci = () => {
     <div id="main-content" className="flex box-container">
       <div className="flex col gap-4 box-40">
         <form className="flex col">
-          <div
-            className={
-              "form-input flex gap " +
-              (focusedElement === "user" ? "active" : "")
-            }
-            onFocus={handleFocus}
-            id="user-container"
-          >
+          <div className={"form-input flex gap " + (focusedElement === "user" ? "active" : "")} onFocus={handleFocus} id="user-container">
             <img src="images/icons/user.png" alt="user" />
             <input
               className={focusedElement === "user" ? "active" : ""}
@@ -71,14 +64,7 @@ const Contattaci = () => {
               id="user"
             />
           </div>
-          <div
-            className={
-              "form-input flex gap " +
-              (focusedElement === "email" ? "active" : "")
-            }
-            onFocus={handleFocus}
-            id="email-container"
-          >
+          <div className={"form-input flex gap " + (focusedElement === "email" ? "active" : "")} onFocus={handleFocus} id="email-container">
             <img src="images/icons/email.png" alt="email" />
             <input
               type="email"
@@ -89,14 +75,7 @@ const Contattaci = () => {
               onBlur={(event) => handleFocus(event, true)}
             />
           </div>
-          <div
-            className={
-              "form-input flex v-top gap " +
-              (focusedElement === "message" ? "active" : "")
-            }
-            onFocus={handleFocus}
-            id="message-container"
-          >
+          <div className={"form-input flex v-top gap " + (focusedElement === "message" ? "active" : "")} onFocus={handleFocus} id="message-container">
             <img src="images/icons/pencil.png" alt="pencil" />
             <textarea
               id="message"

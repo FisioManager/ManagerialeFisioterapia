@@ -1,7 +1,7 @@
-import './Plan.scss'
+import "./Plan.scss";
 
 const Plan = ({ title, pro, cons, price, method, setSelectedPlan, isSelected }) => {
-    return (
+  return (
     <div className={"plan flex col h-top gap " + (isSelected ? "selected" : "")}>
       <h1>{title}</h1>
       {pro.map((func) => (
@@ -17,11 +17,16 @@ const Plan = ({ title, pro, cons, price, method, setSelectedPlan, isSelected }) 
         </div>
       ))}
       <div className="flex price">
-        <h1>
-            {(price === "Free" ? "Free" : (method === "Annuali" ? price + " €/anno" : (Math.round(price*100/9)/100).toFixed(2) + " €/mese")) } 
-        </h1>
+        <h1>{price === "Free" ? "Free" : method === "Annuali" ? price + " €/anno" : (Math.round((price * 100) / 9) / 100).toFixed(2) + " €/mese"}</h1>
       </div>
-      <button type="submit" onClick={() => {setSelectedPlan(title);}}>Scegli</button>
+      <button
+        type="submit"
+        onClick={() => {
+          setSelectedPlan(title);
+        }}
+      >
+        Scegli
+      </button>
     </div>
   );
 };
