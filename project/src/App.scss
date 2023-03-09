@@ -37,6 +37,10 @@ button {
 	cursor: pointer;
 }
 
+img {
+    width: 50%;
+}
+
 #main-container {
 	padding-top: dim.$header-height;
 	color: var(--text-secondary);
