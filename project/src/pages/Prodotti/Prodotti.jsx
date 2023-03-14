@@ -5,9 +5,9 @@ import Switch from "./../../components/Switch/Switch";
 import { useState } from "react";
 
 const Prodotti = () => {
-  const [selectedPlan, setSelectedPlan] = useState("Standard");
-  const [selectedMethod, setSelectedMethod] = useState("Mensili");
-  const methods = ["Annuali", "Mensili"];
+  const [selectedPlan, setSelectedPlan] = useState("Standard"); // control the state of the selected plan (handle change of background of selected plan)
+  const [selectedMethod, setSelectedMethod] = useState("Mensili"); // control the state of the selected method (handle /mese /anno depending on the switch position)
+  const methods = ["Annuali", "Mensili"]; // this is needed by the switch component to set the correspoonding method when clicked
 
   return (
     <div id="main-container" className="flex col">
@@ -18,18 +18,20 @@ const Prodotti = () => {
       <div id="prodotti" className="flex col gap-5">
         <div id="mensili-annuali" className="flex gap">
           <p>Mensili</p>
+          {/* we pass to the switch the methods array, the index of the selected method, the function(method) to change the state */}
           <Switch methods={methods} index={methods.indexOf(selectedMethod)} setSelectedMethod={setSelectedMethod} />
           <p>Annuali</p>
         </div>
         <div className="flex gap-5">
+          {/* for each plan we pass the selected method in order to choose between /mese /anno, the plan in order to handle the background and the function to change the plan */}
           <Plan
             title={"Limitata"}
             pro={["Funzionalità A"]}
             cons={["Funzionalità B", "Funzionalità C", "Funzionalità D", "Funzionalità E"]}
             price={"Free"}
             method={selectedMethod}
+            plan={selectedPlan}
             setSelectedPlan={setSelectedPlan}
-            isSelected={selectedPlan === "Limitata"}
           />
           <Plan
             title={"Standard"}
@@ -37,8 +39,8 @@ const Prodotti = () => {
             cons={["Funzionalità C", "Funzionalità D", "Funzionalità E"]}
             price={"99.00"}
             method={selectedMethod}
+            plan={selectedPlan}
             setSelectedPlan={setSelectedPlan}
-            isSelected={selectedPlan === "Standard"}
           />
           <Plan
             title={"Premium"}
@@ -46,8 +48,8 @@ const Prodotti = () => {
             cons={[]}
             price={"149.00"}
             method={selectedMethod}
+            plan={selectedPlan}
             setSelectedPlan={setSelectedPlan}
-            isSelected={selectedPlan === "Premium"}
           />
         </div>
       </div>

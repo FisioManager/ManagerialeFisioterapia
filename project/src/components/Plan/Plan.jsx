@@ -1,8 +1,17 @@
 import "./Plan.scss";
 
-const Plan = ({ title, pro, cons, price, method, setSelectedPlan, isSelected }) => {
+/*
+  title: the title of the plan
+  pro: the list of the functionalities that the plan provide
+  cons: the list of the functionalities that the plan does not provide
+  price: the cost of the plan per year (it will eventually be divided to take the monthly amount)
+  method: it tells the method (yearly or monthly)
+  plan: it contains the currently selected plan
+  setSelectedPlan: it's the function that can change the state of plan 
+*/
+const Plan = ({ title, pro, cons, price, method, plan, setSelectedPlan }) => {
   return (
-    <div className={"plan flex col h-top gap " + (isSelected ? "selected" : "")}>
+    <div className={"plan flex col h-top gap " + (plan === title ? "selected" : "")}>
       <h1>{title}</h1>
       {pro.map((func) => (
         <div key={func} className="flex gap-2">
