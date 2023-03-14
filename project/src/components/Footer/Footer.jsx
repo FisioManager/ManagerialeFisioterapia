@@ -14,7 +14,7 @@ const Footer = () => {
         <div className="flex col">
           <Link to="">Aiuto</Link>
           <Link to="">Email</Link>
-          <Link to="/documentazione">Documentazione</Link>
+          <Link to="/documentation">Documentazione</Link>
           <Link to="">Mappa Del Sito</Link>
         </div>
         <div className="flex col">

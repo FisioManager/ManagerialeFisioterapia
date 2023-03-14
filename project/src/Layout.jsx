@@ -10,7 +10,7 @@ const Layout = () => {
 
     return (
       <>
-        {!(location.pathname === "/manageriale") ? <Header /> : <AppHeader/>}
+        {!(location.pathname === "/manager") ? <Header /> : <AppHeader/>}
         <Outlet />
         <Footer />
       </>

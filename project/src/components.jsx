@@ -2,11 +2,11 @@ import AppHeader from "./components/AppHeader/AppHeader";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Home from "./pages/Home/Home";
-import ChiSiamo from "./pages/ChiSiamo/ChiSiamo";
-import Contattaci from "./pages/Contattaci/Contattaci";
-import Documentazione from "./pages/Documentazione/Documentazione";
-import Prodotti from "./pages/Prodotti/Prodotti";
-import Manageriale from "./pages/Manageriale/Manageriale";
+import AboutUs from "./pages/AboutUs/AboutUs";
+import ContactUs from "./pages/ContactUs/ContactUs";
+import Documentation from "./pages/Documentation/Documentation";
+import Products from "./pages/Products/Products";
+import Manager from "./pages/Manager/Manager";
 import Login from "./pages/Login/Login";
 import Layout from "./Layout";
 
@@ -15,11 +15,11 @@ export {
   Header,
   Footer,
   Home,
-  ChiSiamo,
-  Contattaci,
-  Documentazione,
-  Prodotti,
+  AboutUs,
+  ContactUs,
+  Documentation,
+  Products,
   Login,
-  Manageriale,
+  Manager,
   Layout
 };

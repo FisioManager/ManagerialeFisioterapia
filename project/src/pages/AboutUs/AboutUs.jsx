@@ -1,4 +1,4 @@
-import "./ChiSiamo.scss";
+import "./AboutUs.scss";
 
 const ChiSiamo = () => {
   return (

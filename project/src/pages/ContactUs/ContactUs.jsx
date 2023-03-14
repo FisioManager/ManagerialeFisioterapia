@@ -1,4 +1,4 @@
-import "./Contattaci.scss";
+import "./ContactUs.scss";
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 

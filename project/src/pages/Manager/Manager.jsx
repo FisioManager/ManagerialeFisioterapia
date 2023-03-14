@@ -1,6 +1,6 @@
-import './Manageriale.scss'
+import './Manager.scss'
 
-const Manageriale = () => {
+const Manager = () => {
     return (
       <>
         <p>Inserire qua il contenuto della home del manageriale</p>
@@ -8,5 +8,5 @@ const Manageriale = () => {
     );
   };
   
-  export default Manageriale;
+  export default Manager;
   

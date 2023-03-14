@@ -1,6 +1,6 @@
-import './Documentazione.scss'
+import './Documentation.scss'
 
-const Documentazione = () => {
+const Documentation = () => {
   return (
     <>
       <p>Inserire qua il contenuto della pagina della documentazione</p>
@@ -8,4 +8,4 @@ const Documentazione = () => {
   );
 };
 
-export default Documentazione;
+export default Documentation;
