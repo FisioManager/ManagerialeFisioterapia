@@ -2,7 +2,7 @@ import "./ContactUs.scss";
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
-const Contattaci = () => {
+const ContactUs = () => {
   const [focusedElement, setFocusedElement] = useState("user");
   const location = useLocation();
 
@@ -99,4 +99,4 @@ const Contattaci = () => {
   );
 };
 
-export default Contattaci;
+export default ContactUs;

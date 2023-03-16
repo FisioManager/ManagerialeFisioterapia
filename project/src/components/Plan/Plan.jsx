@@ -26,7 +26,7 @@ const Plan = ({ title, pro, cons, price, method, plan, setSelectedPlan }) => {
         </div>
       ))}
       <div className="flex price">
-        <h1>{price === "Free" ? "Free" : method === "Annuali" ? price + " €/anno" : (Math.round((price * 100) / 9) / 100).toFixed(2) + " €/mese"}</h1>
+        <h1>{price === "Free" ? "Free" : method === "Year" ? price + " €/anno" : (Math.round((price * 100) / 9) / 100).toFixed(2) + " €/mese"}</h1>
       </div>
       <button
         type="submit"

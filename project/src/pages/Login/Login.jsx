@@ -47,8 +47,8 @@ const Login = () => {
       </div>
       <div className="flex col box-40 gap-4">
         <h1>Buongiorno Dottore</h1>
-        <div className="credenziali flex col">
-          <div className={"credenziali-input flex gap " + (focusedElement === "email" ? "active" : " ")} onFocus={handleFocus} id="email-container">
+        <div className="credential flex col">
+          <div className={"credential-input flex gap " + (focusedElement === "email" ? "active" : " ")} onFocus={handleFocus} id="email-container">
             <img src="images/icons/email.png" alt="email" />
             <input
               className={focusedElement === "email" ? "active" : ""}
@@ -60,7 +60,7 @@ const Login = () => {
             />
           </div>
           <div
-            className={"credenziali-input flex gap " + (focusedElement === "password" ? "active" : " ")}
+            className={"credential-input flex gap " + (focusedElement === "password" ? "active" : " ")}
             onFocus={handleFocus}
             id="password-container"
           >

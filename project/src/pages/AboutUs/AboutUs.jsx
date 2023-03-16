@@ -1,9 +1,9 @@
 import "./AboutUs.scss";
 
-const ChiSiamo = () => {
+const AboutUs = () => {
   return (
     <div id="main-conent" className="flex box-container">
-      <div id="chi-siamo-container" className="flex col gap-3 box-40">
+      <div id="about-us-container" className="flex col gap-3 box-40">
         <h1>Chi Siamo</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vestibulum at turpis sed elementum. Sed sem lacus, congue ut ante at,
@@ -31,4 +31,4 @@ const ChiSiamo = () => {
   );
 };
 
-export default ChiSiamo;
+export default AboutUs;

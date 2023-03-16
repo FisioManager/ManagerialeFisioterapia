@@ -4,10 +4,10 @@ import Plan from "./../../components/Plan/Plan";
 import Switch from "./../../components/Switch/Switch";
 import { useState } from "react";
 
-const Prodotti = () => {
+const Products = () => {
   const [selectedPlan, setSelectedPlan] = useState("Standard"); // control the state of the selected plan (handle change of background of selected plan)
-  const [selectedMethod, setSelectedMethod] = useState("Mensili"); // control the state of the selected method (handle /mese /anno depending on the switch position)
-  const methods = ["Annuali", "Mensili"]; // this is needed by the switch component to set the correspoonding method when clicked
+  const [selectedMethod, setSelectedMethod] = useState("Month"); // control the state of the selected method (handle /mese /anno depending on the switch position)
+  const methods = ["Year", "Month"]; // this is needed by the switch component to set the correspoonding method when clicked
 
   return (
     <div id="main-container" className="flex col">
@@ -15,8 +15,8 @@ const Prodotti = () => {
         titolo={"Scegli un piano tra quelli disponibili"}
         testo={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam velligula venenatis, vehicula velit id, aliquet nibh."}
       />
-      <div id="prodotti" className="flex col gap-5">
-        <div id="mensili-annuali" className="flex gap">
+      <div id="products" className="flex col gap-5">
+        <div id="month-year" className="flex gap">
           <p>Mensili</p>
           {/* we pass to the switch the methods array, the index of the selected method, the function(method) to change the state */}
           <Switch methods={methods} index={methods.indexOf(selectedMethod)} setSelectedMethod={setSelectedMethod} />
@@ -57,4 +57,4 @@ const Prodotti = () => {
   );
 };
 
-export default Prodotti;
+export default Products;
