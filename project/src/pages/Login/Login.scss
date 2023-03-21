@@ -4,14 +4,14 @@
     .credential-input {
         width: 100%;
         background-color: var(--background-inactive);
-        padding: 1em;
+        padding: 1rem;
         border: solid 1px black;
 
         &:first-child {
             border-bottom: none;
         }
 
-        &:last-child {
+        &:nth-child(2) {
             border-top: none;
         }
 
@@ -30,7 +30,7 @@
     }
 
     .options {
-        margin-top: 1em;
+        margin-top: 1rem;
         width: 100%;
         font-size: 0.8rem;
         background-color: var(--background-primary) !important;

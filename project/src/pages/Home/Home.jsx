@@ -4,7 +4,7 @@ import Introduction from "./../../components/Introduction/Introduction";
 
 const Home = () => {
   return (
-    <div id="main-container" className="flex col">
+    <div id="main-container">
       <Introduction
         titolo={"Mega Titolo catchy che introduce il sito"}
         testo={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam velligula venenatis, vehicula velit id, aliquet nibh."}
