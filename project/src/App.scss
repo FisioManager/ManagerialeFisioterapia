@@ -43,7 +43,6 @@ img {
 
 #main-container {
 	padding-top: dim.$header-height;
-	color: var(--text-secondary);
 }
 
 .flex {
@@ -103,12 +102,33 @@ img {
 }
 
 .box-container {
-	height: 100vh;
-	width: 100%
+	height: auto;
+	width: 100%;
+	padding: 150px 0;
+
+	&-p100 {
+		padding: 100px 0;
+	}
+
+	&-p200 {
+		padding: 200px 0;
+	}
+
+	&-p250 {
+		padding: 250px 0;
+	}
 }
 
 .box {
-	width: 50%;
+	width: 100%;
+
+	&-100 {
+		width: 100%;
+	}
+
+	&-50 {
+		width: 50%;
+	}
 
 	&-40 {
 		width: 40%;

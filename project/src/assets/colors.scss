@@ -64,6 +64,11 @@ $col-indigo-dye-l: lighten($indigo-dye, 25%);
 $col-indigo-dye-r: $indigo-dye;
 $col-indigo-dye-d: darken($indigo-dye, 25%);
 
+$bubble: #dcacbaff;
+$col-bubble-l:  lighten($bubble, 25%);
+$col-bubble-r: $bubble;
+$col-bubble-d: lighten($bubble, 25%);
+
 /* SCSS Gradient */
 $gradient-top: linear-gradient(
   0deg,

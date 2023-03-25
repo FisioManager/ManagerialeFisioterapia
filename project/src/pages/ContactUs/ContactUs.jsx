@@ -50,7 +50,8 @@ const ContactUs = () => {
   }, [location]);
 
   return (
-    <div id="main-content" className="flex box-container">
+    <div id="main-container">
+      <div className="flex box-container">
       <div className="flex col gap-4 box-40">
         <form className="flex col">
           <div className={"form-input flex gap " + (focusedElement === "user" ? "active" : "")} onFocus={handleFocus} id="user-container">
@@ -94,6 +95,7 @@ const ContactUs = () => {
       </div>
       <div className="flex box-40">
         <img src="/images/place-holder-500.png" alt="contattaci" />
+      </div>
       </div>
     </div>
   );

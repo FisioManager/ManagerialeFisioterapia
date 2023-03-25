@@ -1,12 +1,8 @@
-#products {
-    height: 100vh;
+#month-year {
+    font-weight: 600;
+    color: var(--text-primary) !important;
 
-    #month-year {
-        font-weight: 600;
-        color: var(--text-primary) !important;
-
-        p {
-            font-size: 1.5rem;
-        }
+    p {
+        font-size: 1.5rem;
     }
 }

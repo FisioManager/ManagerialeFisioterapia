@@ -2,13 +2,17 @@
 
 @mixin dark-theme {
   --text-primary: #{$col-white-r};
-  --text-secondary: #{$col-white-r};
-  --text-inactive: #{$col-white-r};
-  --text-link: #{$col-white-r};
-  --text-invert: #{$col-black-r};
+  --text-secondary: #{$col-black-r};
+  --text-tertiary: #{$col-ubertini-r};
+  //--text-inactive: #{$col-black-r};
+  //--text-link: #{$col-black-r};
+  --text-invert: #{$col-keppel-r};
 
-  --background-primary: #{$col-black-r};
-  --background-secondary: #{$col-keppel-r};
+  --background-primary: #{$col-lapis-lazuli-r};
+  --background-secondary: #{$col-indigo-dye-d};
+  --background-tertiary: #{$col-white-r};
+  --background-active: #{$col-keppel-l};
+  --background-inactive: #{$col-white-r};
   //--background-tertiary: #{$col-};
   //--background-toc-active: #{$col-};
 

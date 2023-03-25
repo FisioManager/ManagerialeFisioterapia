@@ -1,13 +1,12 @@
 @use './../../assets/dimensions.scss' as dim;
 
 #introduction {
-    height: dim.$introuduction-height;
-    width: 100%;
     background-color: var(--background-light);
+    color: var(--text-secondary);
 
     h1 {
         font-size: 3rem;
-        width: 30%;
+        width: 60%;
         text-align: center;
     }
 

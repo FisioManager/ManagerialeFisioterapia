@@ -10,13 +10,13 @@ const Products = () => {
   const methods = ["Year", "Month"]; // this is needed by the switch component to set the correspoonding method when clicked
 
   return (
-    <div id="main-container" className="flex col">
+    <div id="main-container">
       <Introduction
         titolo={"Scegli un piano tra quelli disponibili"}
         testo={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam velligula venenatis, vehicula velit id, aliquet nibh."}
       />
-      <div id="products" className="flex col gap-5">
-        <div id="month-year" className="flex gap">
+      <div className="box-container flex col gap-5">
+        <div id="month-year" className="box-100 flex gap">
           <p>Mensili</p>
           {/* we pass to the switch the methods array, the index of the selected method, the function(method) to change the state */}
           <Switch methods={methods} index={methods.indexOf(selectedMethod)} setSelectedMethod={setSelectedMethod} />
