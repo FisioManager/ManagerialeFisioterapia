@@ -4,7 +4,7 @@ const AboutUs = () => {
   return (
     <div id="main-container">
       <div className="flex box-container">
-        <div id="about-us-container" className="flex col gap-3 box-40">
+        <div id="about-us-container" className="flex col gap-3 box-30">
           <h1>Chi Siamo</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vestibulum at turpis sed elementum. Sed sem lacus, congue ut ante at,
@@ -27,7 +27,7 @@ const AboutUs = () => {
             <img src="/images/place-holder-500.png" alt="dani" />
           </div>
         </div>
-        <div className="flex box-40">
+        <div className="flex box-30">
           <img src="/images/place-holder-500.png" alt="contattaci" />
         </div>
       </div>

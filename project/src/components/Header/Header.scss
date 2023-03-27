@@ -9,19 +9,13 @@ header {
     z-index: 999;
 
     img {
-        width: 100%;
+        width: 80%;
     }
 
     nav {
 
-        a {
-            font-size: 1.3rem;
-            font-weight: 400;
-            color: var(--text-primary);
-
-            &:hover {
-                color: var(--text-invert) !important;
-            }
+        a:hover {
+            color: var(--text-invert) !important;
         }
     }
 }

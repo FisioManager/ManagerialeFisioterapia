@@ -43,10 +43,10 @@ const Login = () => {
   return (
     <div id="main-container">
       <div className="flex box-container-p200">
-        <div className="flex box-40">
+        <div className="flex box-30">
           <img src="/images/place-holder-500.png" alt="login" />
         </div>
-        <div className="flex col box-40 gap-4">
+        <div className="flex col box-30 gap-4">
           <h1>Buongiorno Dottore</h1>
           <div className="credential flex col">
             <div className={"credential-input flex gap " + (focusedElement === "email" ? "active" : " ")} onFocus={handleFocus} id="email-container">

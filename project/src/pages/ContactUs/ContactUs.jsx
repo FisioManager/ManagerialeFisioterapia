@@ -52,7 +52,7 @@ const ContactUs = () => {
   return (
     <div id="main-container">
       <div className="flex box-container">
-      <div className="flex col gap-4 box-40">
+      <div className="flex col gap-4 box-30">
         <form className="flex col">
           <div className={"form-input flex gap " + (focusedElement === "user" ? "active" : "")} onFocus={handleFocus} id="user-container">
             <img src="images/icons/user.png" alt="user" />
@@ -93,7 +93,7 @@ const ContactUs = () => {
           <button type="submit">Invia</button>
         </div>
       </div>
-      <div className="flex box-40">
+      <div className="flex box-30">
         <img src="/images/place-holder-500.png" alt="contattaci" />
       </div>
       </div>

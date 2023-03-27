@@ -10,11 +10,11 @@
 	box-sizing: border-box;
 	text-decoration: none;
 	transition: 0.5s;
+	font-family: "Montserrat";
 }
 
 body {
 	cursor: default;
-	font: 300 16px "Roboto";
 	background-color: var(--background-primary);
 	color: var(--text-primary);
 	transition: color 0.5s, background-color 0.5s;
@@ -23,16 +23,15 @@ body {
 
 input,
 textarea,
-a,
-p {
-	font: 300 16px "Roboto";
+a, p {
+	font: 300 16px "Montserrat" !important;
+	color: var(--text-primary) !important;
 }
 
 button {
-	font-size: 1.5rem;
-    padding: 15px 40px;
+	font-size: 1.2rem;
+    padding: 10px 30px;
     background-color: var(--background-secondary);
-    color: var(--text-primary);
 	border-radius: 10px;
 	border: 1px solid rgba(grey, 0.3);
 	cursor: pointer;
@@ -133,5 +132,9 @@ img {
 
 	&-40 {
 		width: 40%;
+	}
+
+	&-30 {
+		width: 30%;
 	}
 }

@@ -12,13 +12,4 @@ footer {
     img {
         width: 100%;
     }
-
-    a {
-        color: var(--text-primary);
-
-        &:first-child {
-            color: var(--text-tertiary);
-            margin-bottom: 0.5rem;
-        }
-    }
 }
