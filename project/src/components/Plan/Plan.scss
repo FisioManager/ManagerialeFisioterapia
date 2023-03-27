@@ -4,7 +4,7 @@
     background-color: var(--background-secondary);
     color: var(--text-secondary);
     border-radius: 25px;
-    border: 1px solid rgba(grey, 0.3);
+    border: 1px solid var(--delimiter);
     padding: 40px;
     
     h1 {

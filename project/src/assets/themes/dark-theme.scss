@@ -2,19 +2,21 @@
 
 @mixin dark-theme {
   --text-primary: #{$col-white-r};
-  --text-secondary: #{$col-black-r};
-  --text-tertiary: #{$col-ubertini-r};
+  --text-secondary: #{$col-white-r};
+  --text-tertiary: #{$col-white-r};
   //--text-inactive: #{$col-black-r};
   //--text-link: #{$col-black-r};
-  --text-invert: #{$col-keppel-r};
+  --text-invert: #{$col-auburn-r};
 
-  --background-primary: #{$col-lapis-lazuli-r};
-  --background-secondary: #{$col-indigo-dye-d};
-  --background-tertiary: #{$col-white-r};
-  --background-active: #{$col-keppel-l};
-  --background-inactive: #{$col-white-r};
+  --background-primary: #{$col-parka-l};
+  --background-secondary: #{$col-parka-r};
+  --background-tertiary: #{$col-lapis-lazuli-r};
+  --background-active: #{$col-lapis-lazuli-r};
+  --background-inactive: #{$col-parka-r};
   //--background-tertiary: #{$col-};
   //--background-toc-active: #{$col-};
+
+  --delimiter: transparent;
 
   //--code-token-tag: #{$col-};
   //--code-token-punctuation: #{$col-};

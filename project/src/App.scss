@@ -33,8 +33,14 @@ button {
     padding: 10px 30px;
     background-color: var(--background-secondary);
 	border-radius: 10px;
-	border: 1px solid rgba(grey, 0.3);
+	border: 1px solid var(--delimiter);
 	cursor: pointer;
+}
+
+@media (prefers-color-scheme: dark) {
+	button {
+		border: 1px solid white;
+	};
 }
 
 img {

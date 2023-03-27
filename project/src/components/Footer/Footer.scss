@@ -3,7 +3,7 @@
 footer {
     height: dim.$footer-height;
     background-color: var(--background-secondary);
-    border-top: 1px solid rgba(grey, 0.2);
+    border-top: 1px solid var(--delimiter);
 
     div {
         align-items: flex-start !important;

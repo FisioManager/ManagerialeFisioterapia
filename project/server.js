@@ -36,16 +36,32 @@ app.get("/images/icons/email.png", (req, res) => {
   res.sendFile(__dirname + "/public/images/icons/email.png");
 });
 
+app.get("/images/icons/email-negative.png", (req, res) => {
+  res.sendFile(__dirname + "/public/images/icons/email-negative.png");
+});
+
 app.get("/images/icons/password.png", (req, res) => {
   res.sendFile(__dirname + "/public/images/icons/password.png");
+});
+
+app.get("/images/icons/password-negative.png", (req, res) => {
+  res.sendFile(__dirname + "/public/images/icons/password-negative.png");
 });
 
 app.get("/images/icons/user.png", (req, res) => {
   res.sendFile(__dirname + "/public/images/icons/user.png");
 });
 
+app.get("/images/icons/user-negative.png", (req, res) => {
+  res.sendFile(__dirname + "/public/images/icons/user-negative.png");
+});
+
 app.get("/images/icons/pencil.png", (req, res) => {
   res.sendFile(__dirname + "/public/images/icons/pencil.png");
+});
+
+app.get("/images/icons/pencil-negative.png", (req, res) => {
+  res.sendFile(__dirname + "/public/images/icons/pencil-negative.png");
 });
 
 app.get("/images/icons/check.png", (req, res) => {

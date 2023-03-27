@@ -5,6 +5,7 @@ import { useLocation } from "react-router-dom";
 
 const ContactUs = () => {
   const [focusedElement, setFocusedElement] = useState("user");
+  const [theme, setTheme] = useState("light");
   const location = useLocation();
 
   const handleFocus = (event, isBlur = false) => {
@@ -48,6 +49,14 @@ const ContactUs = () => {
     messageContainer.addEventListener("blur", () => {
       messageContainer.classList.remove("active");
     });
+
+    window.matchMedia("(prefers-color-scheme: dark)").matches ? setTheme("dark") : setTheme("light")
+    window.matchMedia('(prefers-color-scheme: dark)')
+      .addEventListener('change', event => {
+        const colorScheme = event.matches ? "dark" : "light";
+        setTheme(colorScheme);
+    });
+
   }, [location]);
 
   return (
@@ -60,7 +69,7 @@ const ContactUs = () => {
       <div className="flex col gap-4 box-30">
         <form className="flex col">
           <div className={"form-input flex gap " + (focusedElement === "user" ? "active" : "")} onFocus={handleFocus} id="user-container">
-            <img src="images/icons/user.png" alt="user" />
+            <img src={theme === "dark" ? "images/icons/user-negative.png" : "images/icons/user.png"} alt="user" />
             <input
               className={focusedElement === "user" ? "active" : ""}
               onFocus={handleFocus}
@@ -71,7 +80,7 @@ const ContactUs = () => {
             />
           </div>
           <div className={"form-input flex gap " + (focusedElement === "email" ? "active" : "")} onFocus={handleFocus} id="email-container">
-            <img src="images/icons/email.png" alt="email" />
+            <img src={theme === "dark" ? "images/icons/email-negative.png" : "images/icons/email.png"} alt="email" />
             <input
               type="email"
               placeholder="example@gmail.com"
@@ -82,7 +91,7 @@ const ContactUs = () => {
             />
           </div>
           <div className={"form-input flex v-top gap " + (focusedElement === "message" ? "active" : "")} onFocus={handleFocus} id="message-container">
-            <img src="images/icons/pencil.png" alt="pencil" />
+            <img src={theme === "dark" ? "images/icons/pencil-negative.png" : "images/icons/pencil.png"} alt="pencil" />
             <textarea
               id="message"
               className={focusedElement === "message" ? "active" : ""}

@@ -4,6 +4,7 @@ import { useLocation, Link } from "react-router-dom";
 
 const Login = () => {
   const [focusedElement, setFocusedElement] = useState("email");
+  const [theme, setTheme] = useState("light");
   const location = useLocation();
 
   // handle focus/blur of inputs components email and password
@@ -38,6 +39,13 @@ const Login = () => {
     passwordContainer.addEventListener("blur", () => {
       passwordContainer.classList.remove("active");
     });
+
+    window.matchMedia("(prefers-color-scheme: dark)").matches ? setTheme("dark") : setTheme("light")
+    window.matchMedia('(prefers-color-scheme: dark)')
+      .addEventListener('change', event => {
+        const colorScheme = event.matches ? "dark" : "light";
+        setTheme(colorScheme);
+    });
   }, [location]);
 
   return (
@@ -50,7 +58,7 @@ const Login = () => {
           <h1>Buongiorno Dottore</h1>
           <div className="credential flex col">
             <div className={"credential-input flex gap " + (focusedElement === "email" ? "active" : " ")} onFocus={handleFocus} id="email-container">
-              <img src="images/icons/email.png" alt="email" />
+              <img src={theme === "dark" ? "images/icons/email-negative.png" : "images/icons/email.png"} alt="email" />
               <input
                 className={focusedElement === "email" ? "active" : ""}
                 onFocus={handleFocus}
@@ -65,7 +73,7 @@ const Login = () => {
               onFocus={handleFocus}
               id="password-container"
             >
-              <img src="images/icons/password.png" alt="psw" />
+              <img src={theme === "dark" ? "images/icons/password-negative.png" : "images/icons/password.png"} alt="psw" />
               <input
                 className={focusedElement === "password" ? "active" : ""}
                 onFocus={handleFocus}

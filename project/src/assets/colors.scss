@@ -11,6 +11,7 @@ $col-gray-r: $col-gray;
 $col-gray-d: darken($col-gray, 25%);
 
 $col-black: #1e1e1eff;
+$col-black-t: rgba($col-black, 0.2);
 $col-black-l: lighten($col-black, 25%);
 $col-black-r: $col-black;
 $col-black-d: #000000;
@@ -77,7 +78,7 @@ $col-water-r: $water;
 $col-water-d: darken($water, 6%);
 
 $parka: #002942;
-$col-parka-l:  lighten($parka, 25%);
+$col-parka-l:  lighten($parka, 10%);
 $col-parka-r: $parka;
 $col-parka-d: darken($parka, 25%);
 

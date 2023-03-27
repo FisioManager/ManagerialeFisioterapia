@@ -4,7 +4,7 @@ header {
     height: dim.$header-height;
     width: 100vw;
     background-color: var(--background-secondary) !important;
-    border-bottom: 1px solid rgba(grey, 0.2);
+    border-bottom: 1px solid var(--delimiter);
     position: fixed;
     z-index: 999;
 
