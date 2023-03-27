@@ -1,9 +1,10 @@
 .plan {
     height: 65vh;
     width: 20vw;
-    background-color: var(--background-light);
+    background-color: var(--background-secondary);
     color: var(--text-secondary);
     border-radius: 25px;
+    border: 1px solid rgba(grey, 0.3);
     padding: 40px;
     
     h1 {

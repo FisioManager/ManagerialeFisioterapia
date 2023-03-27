@@ -89,6 +89,13 @@ $col-canary-d: darken($canary, 10%);
 $dark-olive: #404501;
 $col-dark-olive-r: $dark-olive;
 
+$peach: #ffefe0;
+$col-peach-r: $peach;
+$col-peach-d: darken($peach, 5%);
+
+$auburn: #4d1f00;
+$col-auburn-r: $auburn;
+
 /* SCSS Gradient */
 $gradient-top: linear-gradient(
   0deg,
