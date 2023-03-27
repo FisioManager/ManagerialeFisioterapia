@@ -15,7 +15,7 @@ const Products = () => {
         titolo={"Scegli un piano tra quelli disponibili"}
         testo={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam velligula venenatis, vehicula velit id, aliquet nibh."}
       />
-      <div className="box-container flex col gap-5">
+      <div className="box-container-p100 flex col gap-5">
         <div id="month-year" className="box-100 flex gap">
           <p>Mensili</p>
           {/* we pass to the switch the methods array, the index of the selected method, the function(method) to change the state */}
