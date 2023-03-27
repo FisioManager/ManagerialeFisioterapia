@@ -1,5 +1,6 @@
 /* COLORS */
-$col-white: #f4f4f4ff;
+$col-white: #fffdfa;
+$col-white-t: rgba($col-white, 0.95);
 $col-white-l: #ffffff;
 $col-white-r: $col-white;
 $col-white-d: darken($col-white, 25%);
@@ -15,6 +16,7 @@ $col-black-r: $col-black;
 $col-black-d: #000000;
 
 $mindaro: #d9ed92ff;
+$col-mindaro-t: rgba($mindaro, 0.95);
 $col-mindaro-l: lighten($mindaro, 25%);
 $col-mindaro-r: $mindaro;
 $col-mindaro-d: darken($mindaro, 25%);
@@ -67,7 +69,25 @@ $col-indigo-dye-d: darken($indigo-dye, 25%);
 $bubble: #dcacbaff;
 $col-bubble-l:  lighten($bubble, 25%);
 $col-bubble-r: $bubble;
-$col-bubble-d: lighten($bubble, 25%);
+$col-bubble-d: darken($bubble, 25%);
+
+$water: rgb(209, 237, 239);
+$col-water-l:  lighten($water, 25%);
+$col-water-r: $water;
+$col-water-d: darken($water, 25%);
+
+$parka: rgb(0, 50, 80);
+$col-parka-l:  lighten($parka, 25%);
+$col-parka-r: $parka;
+$col-parka-d: darken($parka, 25%);
+
+$canary: #f6f7e3;
+$col-canary-l:  lighten($canary, 25%);
+$col-canary-r: $canary;
+$col-canary-d: darken($canary, 10%);
+
+$dark-olive: #404501;
+$col-dark-olive-r: $dark-olive;
 
 /* SCSS Gradient */
 $gradient-top: linear-gradient(

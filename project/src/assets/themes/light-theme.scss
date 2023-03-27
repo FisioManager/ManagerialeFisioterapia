@@ -1,17 +1,16 @@
 @use "../colors.scss" as *;
 
 @mixin light-theme {
-  --text-primary: #{$col-white-r};
-  --text-secondary: #{$col-black-r};
-  --text-tertiary: #{$col-ubertini-r};
+  --text-primary: #{$col-dark-olive-r};
+  --text-secondary: #{$col-dark-olive-r};
+  --text-tertiary: #{$col-black-r};
   //--text-inactive: #{$col-black-r};
   //--text-link: #{$col-black-r};
-  --text-invert: #{$col-keppel-r};
+  --text-invert: #{$col-canary-d};
 
-  --background-primary: #{$col-keppel-r};
-  --background-secondary: #{$col-indigo-dye-d};
-  --background-light: #{$col-white-r};
-  --background-active: #{$col-keppel-l};
+  --background-primary: #{$col-canary-r};
+  --background-secondary: #{$col-white-t};
+  --background-active: #{$col-canary-d};
   --background-inactive: #{$col-white-r};
   //--background-toc-active: #{$col-};
 
