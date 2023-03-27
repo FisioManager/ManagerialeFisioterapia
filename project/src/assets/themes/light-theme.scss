@@ -1,17 +1,17 @@
 @use "../colors.scss" as *;
 
 @mixin light-theme {
-  --text-primary: #{$col-parka-r};
-  --text-secondary: #{$col-parka-r};
-  --text-tertiary: #{$col-parka-r};
+  --text-primary: #{$col-chinese-violet-r};
+  --text-secondary: #{$col-chinese-violet-r};
+  --text-tertiary: #{$col-chinese-violet-r};
   //--text-inactive: #{$col-black-r};
   //--text-link: #{$col-black-r};
-  --text-invert: #{$col-parka-l};
+  --text-invert: #{$col-auburn-r};
 
-  --background-primary: #{$water-gradient};
+  --background-primary: #{$col-water-r};
   --background-secondary: #{$col-white-t};
-  --background-tertiary: #{$water-gradient};
-  --background-active: #{$col-water-d};
+  --background-tertiary: #{$col-mask-r};
+  --background-active: #{$col-mask-r};
   --background-inactive: #{$col-white-r};
   //--background-toc-active: #{$col-};
 

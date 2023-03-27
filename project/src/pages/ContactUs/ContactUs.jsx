@@ -1,4 +1,5 @@
 import "./ContactUs.scss";
+import Introduction from "./../../components/Introduction/Introduction";
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
@@ -51,6 +52,10 @@ const ContactUs = () => {
 
   return (
     <div id="main-container">
+      <Introduction
+        titolo={"Scrivi nel form sotto qualcosa"}
+        testo={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam velligula venenatis, vehicula velit id, aliquet nibh."}
+      />
       <div className="flex box-container">
       <div className="flex col gap-4 box-30">
         <form className="flex col">

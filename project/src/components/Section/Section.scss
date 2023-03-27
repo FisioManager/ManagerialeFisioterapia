@@ -11,11 +11,11 @@
     }
 
     &.left-to-right {
-        background-color: var(--background-secondary);
+        background-color: var(--background-primary);
     }
 
     &.right-to-left {
-        background: var(--background-tertiary);
+        background-color: var(--background-tertiary);
         color: var(--text-secondary);
     }
 }

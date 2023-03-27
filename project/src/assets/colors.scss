@@ -93,11 +93,29 @@ $peach: #ffefe0;
 $col-peach-r: $peach;
 $col-peach-d: darken($peach, 5%);
 
-$auburn: #4d1f00;
+$auburn: #FF6700;
 $col-auburn-r: $auburn;
 
+$chinese-violet: #344b47;
+$col-chinese-violet-r: $chinese-violet;
+
+$mask: #c3e2dc;
+$col-mask-r: $mask;
+
+$ash-grey: #DEE5CD;
+$col-ash-grey-r: $ash-grey;
+
+$sage: #B4C4B4;
+$col-sage-r: $sage;
+
+$papaya: #FFEBCA;
+$col-papaya-r: $papaya;
+
+$light-orange: #F3DBC1;
+$col-light-orange-r: $light-orange;
+
 /* SCSS Gradient */
-$water-gradient: linear-gradient(180deg, rgb(191, 218, 219) 0%, rgba(222,242,243,1) 50%, rgb(232, 240, 240) 100%);
+$water-gradient: linear-gradient(180deg, rgb(219, 252, 253) 0%, rgba(222,242,243,1) 50%, rgb(146, 206, 223) 100%);
 
 $gradient-top: linear-gradient(
   0deg,
