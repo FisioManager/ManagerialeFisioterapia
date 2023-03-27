@@ -1,7 +1,7 @@
 @use './../../assets/dimensions.scss' as dim;
 
 #introduction {
-    background-color: var(--background-primary);
+    background: var(--background-tertiary);
     color: var(--text-secondary);
 
     h1 {

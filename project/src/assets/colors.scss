@@ -71,12 +71,12 @@ $col-bubble-l:  lighten($bubble, 25%);
 $col-bubble-r: $bubble;
 $col-bubble-d: darken($bubble, 25%);
 
-$water: rgb(222, 242, 243);
+$water: #def2f3;
 $col-water-l:  lighten($water, 25%);
 $col-water-r: $water;
 $col-water-d: darken($water, 6%);
 
-$parka: rgb(0, 41, 66);
+$parka: #002942;
 $col-parka-l:  lighten($parka, 25%);
 $col-parka-r: $parka;
 $col-parka-d: darken($parka, 25%);
@@ -97,6 +97,8 @@ $auburn: #4d1f00;
 $col-auburn-r: $auburn;
 
 /* SCSS Gradient */
+$water-gradient: linear-gradient(180deg, rgb(191, 218, 219) 0%, rgba(222,242,243,1) 50%, rgb(232, 240, 240) 100%);
+
 $gradient-top: linear-gradient(
   0deg,
   #d9ed92ff,
