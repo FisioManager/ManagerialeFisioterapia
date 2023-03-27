@@ -88,11 +88,11 @@ const Login = () => {
                 <input type="checkbox" id="ricordami" name="ricordami" value="0" />
                 <p>ricordami</p>
               </div>
-              <a href="/">ho dimenticato la password</a>
+              <a href="/">dimenticato la password?</a>
             </div>
           </div>
           <div className="flex col gap">
-            <Link to="/manageriale">
+            <Link to="/manager">
               <button>Log In</button>
             </Link>
             <button>Crea un Account</button>

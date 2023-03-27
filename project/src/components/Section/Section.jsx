@@ -1,26 +1,26 @@
 import './Section.scss'
 
-const Section = ({ src, titolo, testo, mode }) => {
+const Section = (props) => {
   return (
-    <div id="section" className={"flex box-container " + (mode ? "left-to-right" : "right-to-left")}>
-      {mode ? (
+    <div id="section" className={"flex box-container " + (props.mode ? "left-to-right" : "right-to-left")}>
+      {props.mode ? (
         <>
           <div className="flex box-30">
-            <img src={src} alt="illustration"/>
+            <img src={props.src} alt="illustration"/>
           </div>
           <div className="flex col box-30 gap-3">
-            <h1>{titolo}</h1>
-            <p>{testo}</p>
+            <h1>{props.titolo}</h1>
+            <p>{props.testo}</p>
           </div>
         </>
       ) : (
         <>
           <div className="flex col box-30 gap-3">
-            <h1>{titolo}</h1>
-            <p>{testo}</p>
+            <h1>{props.titolo}</h1>
+            <p>{props.testo}</p>
           </div>
           <div className="flex box-30">
-            <img src={src} alt="illustration" />
+            <img src={props.src} alt="illustration" />
           </div>
         </>
       )}

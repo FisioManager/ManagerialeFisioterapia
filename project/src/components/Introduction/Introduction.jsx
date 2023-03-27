@@ -1,10 +1,10 @@
 import './Introduction.scss'
 
-const Introduction = ({titolo, testo}) => {
+const Introduction = (props) => {
   return (
     <div id="introduction" className="box-container-p100 flex col gap-3">
-      <h1>{titolo}</h1>
-      <p>{testo}</p>
+      <h1>{props.titolo}</h1>
+      <p>{props.testo}</p>
     </div>
   );
 };

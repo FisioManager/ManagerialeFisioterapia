@@ -9,29 +9,29 @@ import "./Plan.scss";
   plan: it contains the currently selected plan
   setSelectedPlan: it's the function that can change the state of plan 
 */
-const Plan = ({ title, pro, cons, price, method, plan, setSelectedPlan }) => {
+const Plan = (props) => {
   return (
-    <div className={"plan flex col h-top gap " + (plan === title ? "selected" : "")}>
-      <h1>{title}</h1>
-      {pro.map((func) => (
+    <div className={"plan flex col h-top gap " + (props.plan === props.title ? "selected" : "")}>
+      <h1>{props.title}</h1>
+      {props.pro.map((func) => (
         <div key={func} className="flex gap-2">
           <img src="images/icons/check.png" alt="check" />
           <p>{func}</p>
         </div>
       ))}
-      {cons.map((func) => (
+      {props.cons.map((func) => (
         <div key={func} className="flex gap-2">
           <img src="images/icons/cross.png" alt="cross" />
           <p>{func}</p>
         </div>
       ))}
       <div className="flex price">
-        <h1>{price === "Free" ? "Free" : method === "Year" ? price + " €/anno" : (Math.round((price * 100) / 9) / 100).toFixed(2) + " €/mese"}</h1>
+        <h1>{props.price === "Free" ? "Free" : props.method === "Year" ? props.price + " €/anno" : (Math.round((props.price * 100) / 9) / 100).toFixed(2) + " €/mese"}</h1>
       </div>
       <button
         type="submit"
         onClick={() => {
-          setSelectedPlan(title);
+          props.setSelectedPlan(props.title);
         }}
       >
         Scegli

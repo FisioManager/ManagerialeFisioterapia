@@ -6,19 +6,4 @@ header {
     background-color: var(--background-secondary) !important;
     position: fixed;
     z-index: 999;
-
-    /* mette img sulla estrema sinistra e navbar sulla estrema destra */
-
-    nav {
-
-        a {
-            font-size: 1.3rem;
-            font-weight: 400;
-            color: var(--text-secondary);
-
-            &:hover {
-                color: var(--text-invert) !important;
-            }
-        }
-    }
 }
