@@ -7,6 +7,9 @@ const __dirname = dirname(__filename);
 const app = express();
 const port = 3000;
 
+// Set the MIME type explicitly
+express.static.mime.define({'text/javascript': ['js']});
+
 app.listen(port, function (error) {
   if (error) {
     console.log("Something went wrong", error);
@@ -15,9 +18,8 @@ app.listen(port, function (error) {
   }
 });
 
-app.get("/bundle.jsx", (req, res) => {
-  res.type("text/jsx");
-  res.sendFile(__dirname + "/public/bundle.jsx");
+app.get("/bundle.js", (req, res) => {
+  res.sendFile(__dirname + "/public/bundle.js");
 });
 
 app.get("/favicon.ico", (req, res) => {

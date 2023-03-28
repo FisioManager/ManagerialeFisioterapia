@@ -3,3 +3,4 @@
 # dependencies
 /node_modules
 /public/bundle.jsx
+/public/bundle.js

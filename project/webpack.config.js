@@ -9,7 +9,7 @@ export default {
   entry: "./src/index.jsx",
   output: {
     path: join(__dirname, "public"),
-    filename: "bundle.jsx",
+    filename: "bundle.js",
   },
   module: {
     rules: [
