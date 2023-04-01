@@ -5,10 +5,10 @@ import './Switch.scss'
   index: it's the index of the selected method inside the methods array
   setSelectedMethod: function that is able to change the state of the selected method (that is in the parent component)
 */
-const Switch = (props) => {
+const Switch = ({methods, index, setSelectedMethod}) => {
   return (
     <label className="switch">
-      <input type="checkbox" onClick={() => {props.index === 0 ? props.setSelectedMethod(props.methods[1]) : props.setSelectedMethod(props.methods[0])}}/>
+      <input type="checkbox" onClick={() => {index === 0 ? setSelectedMethod(methods[1]) : setSelectedMethod(methods[0])}}/>
       <span className="slider round"></span>
     </label>
   );
