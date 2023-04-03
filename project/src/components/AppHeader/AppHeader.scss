@@ -1,9 +1,0 @@
-@use './../../assets/dimensions.scss' as dim;
-
-header {
-    height: dim.$header-height;
-    width: 100vw;
-    background-color: var(--background-secondary) !important;
-    position: fixed;
-    z-index: 999;
-}

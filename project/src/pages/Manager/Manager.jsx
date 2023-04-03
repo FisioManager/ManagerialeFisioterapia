@@ -2,9 +2,11 @@ import './Manager.scss'
 
 const Manager = () => {
     return (
-      <>
-        <p>Inserire qua il contenuto della home del manageriale</p>
-      </>
+      <div id="main-container">
+        <div className="flex box-container">
+          <p>Manager here</p>
+        </div>
+      </div>
     );
   };
   

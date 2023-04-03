@@ -50,7 +50,7 @@ const Login = () => {
 
   return (
     <div id="main-container">
-      <div className="flex box-container-p200">
+      <div className="flex box-container">
         <div className="flex box-30">
           <img src="/images/place-holder-500.png" alt="login" />
         </div>
@@ -83,7 +83,7 @@ const Login = () => {
                 placeholder="password"
               />
             </div>
-            <div className="options flex space-between">
+            <div className="options flex space-evenly">
               <div className="flex gap-05">
                 <input type="checkbox" id="ricordami" name="ricordami" value="0" />
                 <p>ricordami</p>
@@ -95,7 +95,9 @@ const Login = () => {
             <Link to="/manager">
               <button>Log In</button>
             </Link>
-            <button>Crea un Account</button>
+            <Link to="/register">
+              <button>Crea un Account</button>
+            </Link>
           </div>
         </div>
       </div>
