@@ -5,22 +5,9 @@
     color: var(--text-secondary);
     border-radius: 25px;
     border: 1px solid var(--delimiter);
-    padding: 40px;
-    
-    h1 {
-        padding: 20px 0;
-    }
 
     img {
         width: auto;
-    }
-
-    .price {
-        height: 100%;
-        
-        h1 {
-            font-weight: 900 !important;
-        }
     }
 
     &.selected {

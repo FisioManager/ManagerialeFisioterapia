@@ -2,12 +2,22 @@ import "./Products.scss";
 import Introduction from "./../../components/Introduction/Introduction";
 import Plan from "./../../components/Plan/Plan";
 import Switch from "./../../components/Switch/Switch";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Products = () => {
   const [selectedPlan, setSelectedPlan] = useState("Standard"); // control the state of the selected plan (handle change of background of selected plan)
   const [selectedMethod, setSelectedMethod] = useState("Month"); // control the state of the selected method (handle /mese /anno depending on the switch position)
   const methods = ["Year", "Month"]; // this is needed by the switch component to set the correspoonding method when clicked
+
+  useEffect(() => {
+      const plans = document.querySelectorAll(".plan");
+  
+      plans.forEach(p => p.addEventListener("click", () => {
+          const title = p.getElementsByTagName("h1")[0].innerHTML
+          setSelectedPlan(title)
+      })) 
+  })
 
   return (
     <div id="main-container">
@@ -15,7 +25,7 @@ const Products = () => {
         titolo={"Scegli un piano tra quelli disponibili"}
         testo={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam velligula venenatis, vehicula velit id, aliquet nibh."}
       />
-      <div className="box-container-p100 flex col gap-5">
+      <div className="box-container flex col gap-5">
         <div id="month-year" className="box-100 flex gap">
           <p>Mensili</p>
           {/* we pass to the switch the methods array, the index of the selected method, the function(method) to change the state */}
@@ -31,7 +41,6 @@ const Products = () => {
             price={"Free"}
             method={selectedMethod}
             plan={selectedPlan}
-            setSelectedPlan={setSelectedPlan}
           />
           <Plan
             title={"Standard"}
@@ -40,7 +49,6 @@ const Products = () => {
             price={"99.00"}
             method={selectedMethod}
             plan={selectedPlan}
-            setSelectedPlan={setSelectedPlan}
           />
           <Plan
             title={"Premium"}
@@ -49,9 +57,11 @@ const Products = () => {
             price={"149.00"}
             method={selectedMethod}
             plan={selectedPlan}
-            setSelectedPlan={setSelectedPlan}
           />
         </div>
+        <Link to="/checkout">
+              <button>Continua</button>
+        </Link>
       </div>
     </div>
   );
