@@ -1,13 +1,18 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import {
+  Layout,
+
   Home,
+  Login,
+  Register,
+
   AboutUs,
   ContactUs,
-  Documentation,
   Products,
-  Login,
+  Checkout,
+
   Manager,
-  Layout
+  Documentation,
 } from "./components";
 
 import "./App.scss";
@@ -19,12 +24,16 @@ function App() {
       <Routes>
         <Route element={<Layout />}>
           <Route exact path="/" element={<Home />} />
+          <Route exact path="/log-in" element={<Login />} />
+          <Route exact path="/register" element={<Register />} />
+
           <Route exact path="/about-us" element={<AboutUs />} />
           <Route exact path="/contact-us" element={<ContactUs />} />
           <Route exact path="/products" element={<Products />} />
-          <Route exact path="/log-in" element={<Login />} />
-          <Route exact path="/documentation" element={<Documentation />} />
+          <Route exact path="/checkout" element={<Checkout />} />
+
           <Route exact path="/manager" element={<Manager />} />
+          <Route exact path="/documentation" element={<Documentation />} />
         </Route>
       </Routes>
     </BrowserRouter>

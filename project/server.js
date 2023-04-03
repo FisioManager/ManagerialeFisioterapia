@@ -1,11 +1,14 @@
 import express from "express";
-import { dirname } from "path";
+import { join, dirname } from "path";
 import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
+
 const app = express();
 const port = 3000;
+
+const publicPath = join(__dirname, "public");
 
 // Set the MIME type explicitly
 express.static.mime.define({'text/javascript': ['js']});
@@ -18,60 +21,10 @@ app.listen(port, function (error) {
   }
 });
 
-app.get("/bundle.js", (req, res) => {
-  res.sendFile(__dirname + "/public/bundle.js");
-});
-
-app.get("/favicon.ico", (req, res) => {
-  res.sendFile(__dirname + "/public/favicon.ico");
-});
-
-app.get("/images/logo.svg", (req, res) => {
-  res.sendFile(__dirname + "/public/images/logo.svg");
-});
-
-app.get("/images/place-holder-500.png", (req, res) => {
-  res.sendFile(__dirname + "/public/images/place-holder-500.png");
-});
-
-app.get("/images/icons/email.png", (req, res) => {
-  res.sendFile(__dirname + "/public/images/icons/email.png");
-});
-
-app.get("/images/icons/email-negative.png", (req, res) => {
-  res.sendFile(__dirname + "/public/images/icons/email-negative.png");
-});
-
-app.get("/images/icons/password.png", (req, res) => {
-  res.sendFile(__dirname + "/public/images/icons/password.png");
-});
-
-app.get("/images/icons/password-negative.png", (req, res) => {
-  res.sendFile(__dirname + "/public/images/icons/password-negative.png");
-});
-
-app.get("/images/icons/user.png", (req, res) => {
-  res.sendFile(__dirname + "/public/images/icons/user.png");
-});
-
-app.get("/images/icons/user-negative.png", (req, res) => {
-  res.sendFile(__dirname + "/public/images/icons/user-negative.png");
-});
-
-app.get("/images/icons/pencil.png", (req, res) => {
-  res.sendFile(__dirname + "/public/images/icons/pencil.png");
-});
-
-app.get("/images/icons/pencil-negative.png", (req, res) => {
-  res.sendFile(__dirname + "/public/images/icons/pencil-negative.png");
-});
-
-app.get("/images/icons/check.png", (req, res) => {
-  res.sendFile(__dirname + "/public/images/icons/check.png");
-});
-
-app.get("/images/icons/cross.png", (req, res) => {
-  res.sendFile(__dirname + "/public/images/icons/cross.png");
+app.get("/:filePath(*)", (req, res) => {
+  const filePath = req.params.filePath;
+  const fileToSend = join(publicPath, filePath);
+  res.sendFile(fileToSend);
 });
 
 app.get("/*", function (req, res) {

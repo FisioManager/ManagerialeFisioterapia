@@ -109,19 +109,16 @@ img {
 
 .box-container {
 	height: auto;
+	min-height: calc(100vh - dim.$header-height);
 	width: 100%;
 	padding: 150px 0;
 
-	&-p100 {
-		padding: 100px 0;
+	&-h30 {
+		min-height: 30vh;
 	}
 
-	&-p200 {
-		padding: 200px 0;
-	}
-
-	&-p250 {
-		padding: 250px 0;
+	&-h40 {
+		min-height: 40vh;
 	}
 }
 
