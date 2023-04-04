@@ -3,7 +3,7 @@ import {
     Header,
     Footer,
     AppHeader
-  } from "./components";
+  } from "../components/components";
 
 const Layout = () => {
     const location = useLocation()

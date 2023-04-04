@@ -13,7 +13,7 @@ import {
 
   Manager,
   Documentation,
-} from "./components";
+} from "./pages/pages";
 
 import "./App.scss";
 

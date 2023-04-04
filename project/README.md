@@ -5,6 +5,7 @@
 - [Requisiti Funzionali](#requisiti-funzionali)
 - [Requisiti non Funzionali](#requisiti-non-funzionali)
 - [Interfacce](#interfacce)
+- [Risorse](#risorse)
 
 ## <u>Build e Debug</u>
 
@@ -56,3 +57,7 @@
 - [ ] Sistema tessera sanitaria
 - [ ] Google Calendar
 - [ ] What's App
+
+## <u>Risorse</u>
+
+- [Register+Login](https://www.youtube.com/watch?v=Ejg7es3ba2k)
