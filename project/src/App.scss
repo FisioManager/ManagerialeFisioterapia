@@ -37,6 +37,41 @@ button {
 	cursor: pointer;
 }
 
+form {
+    width: 500px;
+    border: solid 1px var(--delimiter);
+
+    .form-field {
+        width: 100%;
+        background-color: var(--background-inactive);
+        padding: 1rem;
+
+        input,
+        textarea {
+            background-color: var(--background-inactive);
+            width: 100%;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        textarea {
+            height: 300px;
+            resize: none;
+            padding-top: 8px;
+        }
+
+        img {
+            width: auto;
+        }
+    }
+
+    .active {
+        background-color: var(--background-active) !important;
+    }
+}
+
 @media (prefers-color-scheme: dark) {
 	button {
 		border: 1px solid white;

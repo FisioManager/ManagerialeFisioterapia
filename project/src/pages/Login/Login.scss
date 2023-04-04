@@ -1,46 +1,10 @@
-.credential {
-    width: 400px;
+ .options {
+    margin-top: 1rem;
+    width: 100%;
+    font-size: 0.8rem;
+    background-color: var(--background-primary) !important;
 
-    .credential-input {
-        width: 100%;
-        background-color: var(--background-inactive);
-        padding: 1rem;
-        border: solid 1px var(--delimiter);
-
-        &:first-child {
-            border-bottom: none;
-        }
-
-        &:nth-child(2) {
-            border-top: none;
-        }
-
-        input {
-            background-color: var(--background-inactive);
-            width: 80%;
-
-            &:focus {
-                outline: none;
-            }
-        }
-
-        img {
-            width: auto;
-        }
-    }
-
-    .options {
-        margin-top: 1rem;
-        width: 100%;
-        font-size: 0.8rem;
-        background-color: var(--background-primary) !important;
-
-        a {
-            color: var(--text-secondary);
-        }
-    }
-
-    .active {
-        background-color: var(--background-active) !important;
+    a {
+        color: var(--text-secondary);
     }
 }

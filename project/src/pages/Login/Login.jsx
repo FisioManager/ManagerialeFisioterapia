@@ -7,15 +7,6 @@ const Login = () => {
   const [theme, setTheme] = useState("light");
   const location = useLocation();
 
-  // handle focus/blur of inputs components email and password
-  const handleFocus = (event, isBlur = false) => {
-    if (event.target.id === "email") {
-      setFocusedElement(isBlur ? event.target.id : "email");
-    } else if (event.target.id === "password") {
-      setFocusedElement(isBlur ? event.target.id : "password");
-    }
-  };
-
   // useEffect is called every time the location variable change (that is passed as second parameter with [location])
   useEffect(() => {
     const emailContainer = document.getElementById("email-container");
@@ -56,40 +47,37 @@ const Login = () => {
         </div>
         <div className="flex col box-30 gap-4">
           <h1>Buongiorno Dottore</h1>
-          <div className="credential flex col">
-            <div className={"credential-input flex gap " + (focusedElement === "email" ? "active" : " ")} onFocus={handleFocus} id="email-container">
+          <div>
+          <form className="flex col">
+            <div className={"form-field flex gap " + (focusedElement === "email" ? "active" : " ")} id="email-container">
               <img src={theme === "dark" ? "images/icons/email-negative.png" : "images/icons/email.png"} alt="email" />
               <input
                 className={focusedElement === "email" ? "active" : ""}
-                onFocus={handleFocus}
-                onBlur={(event) => handleFocus(event, true)}
                 id="email"
                 type="email"
                 placeholder="example@gmail.com"
               />
             </div>
             <div
-              className={"credential-input flex gap " + (focusedElement === "password" ? "active" : " ")}
-              onFocus={handleFocus}
+              className={"form-field flex gap " + (focusedElement === "password" ? "active" : " ")}
               id="password-container"
             >
               <img src={theme === "dark" ? "images/icons/password-negative.png" : "images/icons/password.png"} alt="psw" />
               <input
                 className={focusedElement === "password" ? "active" : ""}
-                onFocus={handleFocus}
-                onBlur={(event) => handleFocus(event, true)}
                 id="password"
                 type="password"
                 placeholder="password"
               />
             </div>
-            <div className="options flex space-evenly">
+          </form>
+          <div className="options flex space-evenly">
               <div className="flex gap-05">
                 <input type="checkbox" id="ricordami" name="ricordami" value="0" />
                 <p>ricordami</p>
               </div>
               <a href="/">dimenticato la password?</a>
-            </div>
+          </div>
           </div>
           <div className="flex col gap">
             <Link to="/manager">

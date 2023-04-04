@@ -8,16 +8,6 @@ const ContactUs = () => {
   const [theme, setTheme] = useState("light");
   const location = useLocation();
 
-  const handleFocus = (event, isBlur = false) => {
-    if (event.target.id === "user") {
-      setFocusedElement(isBlur ? event.target.id : "user");
-    } else if (event.target.id === "email") {
-      setFocusedElement(isBlur ? event.target.id : "email");
-    } else if (event.target.id === "message") {
-      setFocusedElement(isBlur ? event.target.id : "message");
-    }
-  };
-
   useEffect(() => {
     const userContainer = document.getElementById("user-container");
     const emailContainer = document.getElementById("email-container");
@@ -68,35 +58,29 @@ const ContactUs = () => {
       <div className="flex box-container">
       <div className="flex col gap-4 box-30">
         <form className="flex col">
-          <div className={"form-input flex gap " + (focusedElement === "user" ? "active" : "")} onFocus={handleFocus} id="user-container">
+          <div className={"form-field flex gap " + (focusedElement === "user" ? "active" : "")} id="user-container">
             <img src={theme === "dark" ? "images/icons/user-negative.png" : "images/icons/user.png"} alt="user" />
             <input
               className={focusedElement === "user" ? "active" : ""}
-              onFocus={handleFocus}
-              onBlur={(event) => handleFocus(event, true)}
               type="text"
               placeholder="Nome Cognome"
               id="user"
             />
           </div>
-          <div className={"form-input flex gap " + (focusedElement === "email" ? "active" : "")} onFocus={handleFocus} id="email-container">
+          <div className={"form-field flex gap " + (focusedElement === "email" ? "active" : "")}  id="email-container">
             <img src={theme === "dark" ? "images/icons/email-negative.png" : "images/icons/email.png"} alt="email" />
             <input
               type="email"
               placeholder="example@gmail.com"
               id="email"
               className={focusedElement === "email" ? "active" : ""}
-              onFocus={handleFocus}
-              onBlur={(event) => handleFocus(event, true)}
             />
           </div>
-          <div className={"form-input flex v-top gap " + (focusedElement === "message" ? "active" : "")} onFocus={handleFocus} id="message-container">
+          <div className={"form-field flex v-top gap " + (focusedElement === "message" ? "active" : "")} id="message-container">
             <img src={theme === "dark" ? "images/icons/pencil-negative.png" : "images/icons/pencil.png"} alt="pencil" />
             <textarea
               id="message"
               className={focusedElement === "message" ? "active" : ""}
-              onFocus={handleFocus}
-              onBlur={(event) => handleFocus(event, true)}
               maxLength={500}
               type="text"
               placeholder="Scrivici qua tutto quello che desideri"
