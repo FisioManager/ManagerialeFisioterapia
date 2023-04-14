@@ -19,7 +19,7 @@
 - `mongo`, entrare nella shell di mongodb
 - `use databaseName`, selezionare database
 
-***projectDB:*** (database name)
+***fisiomanagerdb:*** (database name)
 
 - Utenti
 - altre tabelle...

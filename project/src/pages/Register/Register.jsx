@@ -2,12 +2,40 @@ import "./Register.scss";
 import Introduction from "../../components/Introduction/Introduction";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Register = () => {
   const [focusedElement, setFocusedElement] = useState("user");
   const [theme, setTheme] = useState("light");
   const location = useLocation();
+  const navigate = useNavigate()
+
+  // credential state
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  async function registerUser(event) {
+    event.preventDefault()
+
+    const response = await fetch('http://localhost:3000/api/register', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    }, 
+    body: JSON.stringify({
+        name,
+        email,
+        password,
+      }),
+    })
+
+    const data = await response.json()
+
+    if(data.status === 'ok') {
+      navigate('/log-in')
+    }
+  }
 
   // useEffect is called every time the location variable change (that is passed as second parameter with [location])
   useEffect(() => {
@@ -64,6 +92,8 @@ const Register = () => {
               <img src={theme === "dark" ? "images/icons/user-negative.png" : "images/icons/user.png"} alt="user" />
               <input
                 className={focusedElement === "user" ? "active" : ""}
+                value={name}
+                onChange={e => setName(e.target.value)}
                 type="text"
                 placeholder="Nome Cognome"
                 id="user"
@@ -72,6 +102,8 @@ const Register = () => {
             <div className={"form-field flex gap " + (focusedElement === "email" ? "active" : " ")} id="email-container">
               <img src={theme === "dark" ? "images/icons/email-negative.png" : "images/icons/email.png"} alt="email" />
               <input
+                value={email}
+                onChange={e => setEmail(e.target.value)}
                 className={focusedElement === "email" ? "active" : ""}
                 id="email"
                 type="email"
@@ -84,6 +116,8 @@ const Register = () => {
             >
               <img src={theme === "dark" ? "images/icons/password-negative.png" : "images/icons/password.png"} alt="psw" />
               <input
+                value={password}
+                onChange={e => setPassword(e.target.value)}
                 className={focusedElement === "password" ? "active" : ""}
                 id="password"
                 type="password"
@@ -92,7 +126,7 @@ const Register = () => {
             </div>
           </form>
           <Link to="/"> { /*add here api register*/ }
-            <button>Continua</button>
+            <button onClick={registerUser}>Continua</button>
           </Link>
         </div>
         <div className="flex box-30">

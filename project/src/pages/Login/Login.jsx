@@ -7,6 +7,35 @@ const Login = () => {
   const [theme, setTheme] = useState("light");
   const location = useLocation();
 
+  // credential state
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  async function loginUser(event) {
+    event.preventDefault()
+
+    const response = await fetch('http://localhost:3000/api/login', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    }, 
+    body: JSON.stringify({
+        email,
+        password,
+      }),
+    })
+
+    const data = await response.json()
+    
+    if(data.user) {
+      alert('Login successful')
+      window.location.href = '/manager'
+    }
+    else {
+      alert('Email or Password inccorect')
+    }
+  }
+
   // useEffect is called every time the location variable change (that is passed as second parameter with [location])
   useEffect(() => {
     const emailContainer = document.getElementById("email-container");
@@ -53,6 +82,8 @@ const Login = () => {
               <img src={theme === "dark" ? "images/icons/email-negative.png" : "images/icons/email.png"} alt="email" />
               <input
                 className={focusedElement === "email" ? "active" : ""}
+                value={email}
+                onChange={e => setEmail(e.target.value)}
                 id="email"
                 type="email"
                 placeholder="example@gmail.com"
@@ -65,6 +96,8 @@ const Login = () => {
               <img src={theme === "dark" ? "images/icons/password-negative.png" : "images/icons/password.png"} alt="psw" />
               <input
                 className={focusedElement === "password" ? "active" : ""}
+                value={password}
+                onChange={e => setPassword(e.target.value)}
                 id="password"
                 type="password"
                 placeholder="password"
@@ -80,9 +113,7 @@ const Login = () => {
           </div>
           </div>
           <div className="flex col gap">
-            <Link to="/manager">
-              <button>Log In</button>
-            </Link>
+            <button onClick={loginUser}>Log In</button>
             <Link to="/register">
               <button>Crea un Account</button>
             </Link>
