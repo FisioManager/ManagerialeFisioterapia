@@ -15,7 +15,7 @@ const port = 3000;
 
 app.use(express.json());
 
-mongoose.connect("mongodb://127.0.0.1:27017/fisiomanagerdb");
+mongoose.connect(process.env.MONGO_URI);
 
 // Set the MIME type explicitly
 express.static.mime.define({ "text/javascript": ["js"] });
@@ -57,7 +57,8 @@ app.post("/api/login", async (req, res) => {
           name: user.name,
           email: user.email,
         },
-        "secretToChange"
+        process.env.ACCESS_KEY,
+        { expiresIn: '1h' }
       );
 
       return res.json({ status: "ok", user: token });

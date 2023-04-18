@@ -5,3 +5,6 @@
 /db
 /public/bundle.jsx
 /public/bundle.js
+
+# environment vairables
+.env
