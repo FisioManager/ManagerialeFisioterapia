@@ -58,7 +58,7 @@ app.post("/api/login", async (req, res) => {
           email: user.email,
         },
         process.env.ACCESS_KEY,
-        { expiresIn: '1h' }
+        { expiresIn: "1h" }
       );
 
       return res.json({ status: "ok", user: token });

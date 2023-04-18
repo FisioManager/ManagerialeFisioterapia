@@ -8,42 +8,44 @@ const Login = () => {
   const location = useLocation();
 
   // credential state
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   async function loginUser(event) {
-    event.preventDefault()
+    event.preventDefault();
 
-    const response = await fetch('http://localhost:3000/api/login', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    }, 
-    body: JSON.stringify({
+    const response = await fetch("http://localhost:3000/api/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
         email,
         password,
       }),
-    })
+    });
 
-    const data = await response.json()
-    
-    if(data.user) {
-      alert('Login successful')
-      window.location.href = '/manager'
-    }
-    else {
-      alert('Email or Password inccorect')
+    const data = await response.json();
+
+    if (data.user) {
+      alert("Login successful");
+      window.location.href = "/manager";
+    } else {
+      alert("Email or Password inccorect");
     }
   }
 
   // useEffect is called every time the location variable change (that is passed as second parameter with [location])
   useEffect(() => {
-    window.matchMedia("(prefers-color-scheme: dark)").matches ? setTheme("dark") : setTheme("light")
-    window.matchMedia('(prefers-color-scheme: dark)')
-      .addEventListener('change', event => {
+    window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? setTheme("dark")
+      : setTheme("light");
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", (event) => {
         const colorScheme = event.matches ? "dark" : "light";
         setTheme(colorScheme);
-    });
+      });
   }, [location]);
 
   return (
@@ -55,41 +57,70 @@ const Login = () => {
         <div className="flex col box-30 gap-4">
           <h1>Buongiorno Dottore</h1>
           <div>
-          <form className="flex col">
-            <div className={"form-field flex gap " + (focusedElement === "email" ? "active" : " ")} id="email-container" onClick={() => setFocusedElement("user")}>
-              <img src={theme === "dark" ? "images/icons/email-negative.png" : "images/icons/email.png"} alt="email" />
-              <input 
-                className={focusedElement === "email" ? "active" : ""}
-                value={email}
-                onChange={e => setEmail(e.target.value)}
-                id="email"
-                type="email"
-                placeholder="example@gmail.com"
-              />
-            </div>
-            <div
-              className={"form-field flex gap " + (focusedElement === "password" ? "active" : " ")}
-              id="password-container"
-              onClick={() => setFocusedElement("password")}
-            >
-              <img src={theme === "dark" ? "images/icons/password-negative.png" : "images/icons/password.png"} alt="psw" />
-              <input
-                className={focusedElement === "password" ? "active" : ""}
-                value={password}
-                onChange={e => setPassword(e.target.value)}
-                id="password"
-                type="password"
-                placeholder="password"
-              />
-            </div>
-          </form>
-          <div className="options flex space-evenly">
+            <form className="flex col">
+              <div
+                className={
+                  "form-field flex gap " +
+                  (focusedElement === "email" ? "active" : " ")
+                }
+                id="email-container"
+                onClick={() => setFocusedElement("user")}
+              >
+                <img
+                  src={
+                    theme === "dark"
+                      ? "images/icons/email-negative.png"
+                      : "images/icons/email.png"
+                  }
+                  alt="email"
+                />
+                <input
+                  className={focusedElement === "email" ? "active" : ""}
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  id="email"
+                  type="email"
+                  placeholder="example@gmail.com"
+                />
+              </div>
+              <div
+                className={
+                  "form-field flex gap " +
+                  (focusedElement === "password" ? "active" : " ")
+                }
+                id="password-container"
+                onClick={() => setFocusedElement("password")}
+              >
+                <img
+                  src={
+                    theme === "dark"
+                      ? "images/icons/password-negative.png"
+                      : "images/icons/password.png"
+                  }
+                  alt="psw"
+                />
+                <input
+                  className={focusedElement === "password" ? "active" : ""}
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  id="password"
+                  type="password"
+                  placeholder="password"
+                />
+              </div>
+            </form>
+            <div className="options flex space-evenly">
               <div className="flex gap-05">
-                <input type="checkbox" id="ricordami" name="ricordami" value="0" />
+                <input
+                  type="checkbox"
+                  id="ricordami"
+                  name="ricordami"
+                  value="0"
+                />
                 <p>ricordami</p>
               </div>
               <a href="/">dimenticato la password?</a>
-          </div>
+            </div>
           </div>
           <div className="flex col gap">
             <button onClick={loginUser}>Log In</button>

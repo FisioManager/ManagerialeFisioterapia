@@ -1,4 +1,4 @@
-import './Documentation.scss'
+import "./Documentation.scss";
 
 const Documentation = () => {
   return (

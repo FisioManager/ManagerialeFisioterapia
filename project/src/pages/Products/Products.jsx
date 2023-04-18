@@ -14,13 +14,19 @@ const Products = () => {
     <div id="main-container">
       <Introduction
         titolo={"Scegli un piano tra quelli disponibili"}
-        testo={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam velligula venenatis, vehicula velit id, aliquet nibh."}
+        testo={
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam velligula venenatis, vehicula velit id, aliquet nibh."
+        }
       />
       <div className="box-container flex col gap-5">
         <div id="month-year" className="box-100 flex gap">
           <p>Mensili</p>
           {/* we pass to the switch the methods array, the index of the selected method, the function(method) to change the state */}
-          <Switch methods={methods} index={methods.indexOf(selectedMethod)} setSelectedMethod={setSelectedMethod} />
+          <Switch
+            methods={methods}
+            index={methods.indexOf(selectedMethod)}
+            setSelectedMethod={setSelectedMethod}
+          />
           <p>Annuali</p>
         </div>
         <div className="flex gap-5">
@@ -28,7 +34,12 @@ const Products = () => {
           <Plan
             title={"Limitata"}
             pro={["Funzionalità A"]}
-            cons={["Funzionalità B", "Funzionalità C", "Funzionalità D", "Funzionalità E"]}
+            cons={[
+              "Funzionalità B",
+              "Funzionalità C",
+              "Funzionalità D",
+              "Funzionalità E",
+            ]}
             price={"Free"}
             method={selectedMethod}
             plan={selectedPlan}
@@ -45,7 +56,13 @@ const Products = () => {
           />
           <Plan
             title={"Premium"}
-            pro={["Funzionalità A", "Funzionalità B", "Funzionalità C", "Funzionalità D", "Funzionalità E"]}
+            pro={[
+              "Funzionalità A",
+              "Funzionalità B",
+              "Funzionalità C",
+              "Funzionalità D",
+              "Funzionalità E",
+            ]}
             cons={[]}
             price={"149.00"}
             method={selectedMethod}
@@ -54,7 +71,7 @@ const Products = () => {
           />
         </div>
         <Link to="/checkout">
-              <button>Continua</button>
+          <button>Continua</button>
         </Link>
       </div>
     </div>

@@ -7,7 +7,9 @@ const Home = () => {
     <div id="main-container">
       <Introduction
         titolo={"Mega Titolo catchy che introduce il sito"}
-        testo={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam velligula venenatis, vehicula velit id, aliquet nibh."}
+        testo={
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam velligula venenatis, vehicula velit id, aliquet nibh."
+        }
       />
       <Section
         src={"/images/place-holder-500.png"}

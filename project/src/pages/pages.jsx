@@ -12,18 +12,15 @@ import Checkout from "./Checkout/Checkout";
 import Manager from "./Manager/Manager";
 import Documentation from "./Documentation/Documentation";
 
-export { 
-    Layout,
-    
-    Home,
-    Login,
-    Register,
-  
-    AboutUs,
-    ContactUs,
-    Products,
-    Checkout,
-  
-    Manager,
-    Documentation,
-  };
+export {
+  Layout,
+  Home,
+  Login,
+  Register,
+  AboutUs,
+  ContactUs,
+  Products,
+  Checkout,
+  Manager,
+  Documentation,
+};

@@ -12,6 +12,7 @@
 - `npx webpack`, build
 - `npm start`, debug react
 - `npm run server`, run server
+- `npm run pretty`, format all files
 
 ## <u>MongoDB</u>
 

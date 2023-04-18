@@ -1,16 +1,13 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import {
   Layout,
-
   Home,
   Login,
   Register,
-
   AboutUs,
   ContactUs,
   Products,
   Checkout,
-
   Manager,
   Documentation,
 } from "./pages/pages";
@@ -18,7 +15,6 @@ import {
 import "./App.scss";
 
 function App() {
-
   return (
     <BrowserRouter>
       <Routes>
