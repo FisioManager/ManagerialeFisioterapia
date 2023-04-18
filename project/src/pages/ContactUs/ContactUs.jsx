@@ -9,37 +9,6 @@ const ContactUs = () => {
   const location = useLocation();
 
   useEffect(() => {
-    const userContainer = document.getElementById("user-container");
-    const emailContainer = document.getElementById("email-container");
-    const messageContainer = document.getElementById("message-container");
-
-    emailContainer.addEventListener("click", () => {
-      emailContainer.classList.add("active");
-      setFocusedElement("email");
-    });
-
-    emailContainer.addEventListener("blur", () => {
-      emailContainer.classList.remove("active");
-    });
-
-    userContainer.addEventListener("click", () => {
-      userContainer.classList.add("active");
-      setFocusedElement("user");
-    });
-
-    userContainer.addEventListener("blur", () => {
-      userContainer.classList.remove("active");
-    });
-
-    messageContainer.addEventListener("click", () => {
-      messageContainer.classList.add("active");
-      setFocusedElement("message");
-    });
-
-    messageContainer.addEventListener("blur", () => {
-      messageContainer.classList.remove("active");
-    });
-
     window.matchMedia("(prefers-color-scheme: dark)").matches ? setTheme("dark") : setTheme("light")
     window.matchMedia('(prefers-color-scheme: dark)')
       .addEventListener('change', event => {
@@ -58,7 +27,7 @@ const ContactUs = () => {
       <div className="flex box-container">
       <div className="flex col gap-4 box-30">
         <form className="flex col">
-          <div className={"form-field flex gap " + (focusedElement === "user" ? "active" : "")} id="user-container">
+          <div className={"form-field flex gap " + (focusedElement === "user" ? "active" : "")} id="user-container" onClick={() => setFocusedElement("user")}>
             <img src={theme === "dark" ? "images/icons/user-negative.png" : "images/icons/user.png"} alt="user" />
             <input
               className={focusedElement === "user" ? "active" : ""}
@@ -67,7 +36,7 @@ const ContactUs = () => {
               id="user"
             />
           </div>
-          <div className={"form-field flex gap " + (focusedElement === "email" ? "active" : "")}  id="email-container">
+          <div className={"form-field flex gap " + (focusedElement === "email" ? "active" : "")}  id="email-container" onClick={() => setFocusedElement("email")}>
             <img src={theme === "dark" ? "images/icons/email-negative.png" : "images/icons/email.png"} alt="email" />
             <input
               type="email"
@@ -76,7 +45,7 @@ const ContactUs = () => {
               className={focusedElement === "email" ? "active" : ""}
             />
           </div>
-          <div className={"form-field flex v-top gap " + (focusedElement === "message" ? "active" : "")} id="message-container">
+          <div className={"form-field flex v-top gap " + (focusedElement === "message" ? "active" : "")} id="message-container" onClick={() => setFocusedElement("message")}>
             <img src={theme === "dark" ? "images/icons/pencil-negative.png" : "images/icons/pencil.png"} alt="pencil" />
             <textarea
               id="message"

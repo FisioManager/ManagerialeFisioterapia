@@ -38,28 +38,6 @@ const Login = () => {
 
   // useEffect is called every time the location variable change (that is passed as second parameter with [location])
   useEffect(() => {
-    const emailContainer = document.getElementById("email-container");
-    const passwordContainer = document.getElementById("password-container");
-
-    // add events when clicking the div, it should add class 'add'
-    emailContainer.addEventListener("click", () => {
-      emailContainer.classList.add("active");
-      setFocusedElement("email");
-    });
-    emailContainer.addEventListener("blur", () => {
-      emailContainer.classList.remove("active");
-    });
-
-    // add events when clicking the div, it should add class 'add'
-    passwordContainer.addEventListener("click", () => {
-      passwordContainer.classList.add("active");
-      setFocusedElement("password");
-    });
-
-    passwordContainer.addEventListener("blur", () => {
-      passwordContainer.classList.remove("active");
-    });
-
     window.matchMedia("(prefers-color-scheme: dark)").matches ? setTheme("dark") : setTheme("light")
     window.matchMedia('(prefers-color-scheme: dark)')
       .addEventListener('change', event => {
@@ -78,9 +56,9 @@ const Login = () => {
           <h1>Buongiorno Dottore</h1>
           <div>
           <form className="flex col">
-            <div className={"form-field flex gap " + (focusedElement === "email" ? "active" : " ")} id="email-container">
+            <div className={"form-field flex gap " + (focusedElement === "email" ? "active" : " ")} id="email-container" onClick={() => setFocusedElement("user")}>
               <img src={theme === "dark" ? "images/icons/email-negative.png" : "images/icons/email.png"} alt="email" />
-              <input
+              <input 
                 className={focusedElement === "email" ? "active" : ""}
                 value={email}
                 onChange={e => setEmail(e.target.value)}
@@ -92,6 +70,7 @@ const Login = () => {
             <div
               className={"form-field flex gap " + (focusedElement === "password" ? "active" : " ")}
               id="password-container"
+              onClick={() => setFocusedElement("password")}
             >
               <img src={theme === "dark" ? "images/icons/password-negative.png" : "images/icons/password.png"} alt="psw" />
               <input

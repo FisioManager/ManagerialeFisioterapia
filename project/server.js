@@ -1,13 +1,14 @@
 import express from "express";
 import mongoose from "mongoose";
 import jwt from "jsonwebtoken"
+import bcrypt from 'bcryptjs'
 import { join, dirname } from "path";
 import { fileURLToPath } from "url";
 import User from "./src/models/user.model.js"
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-const publicPath = join(__dirname, "public");
+const __publicPath = join(__dirname, "public");
 
 const app = express();
 const port = 3000;
@@ -29,24 +30,26 @@ app.listen(port, function (error) {
 
 app.post('/api/register', async (req, res) => {
   try {
+    const {name, email, password} = req.body
+    const hashedPassword = await bcrypt.hash(password, 12)
     await User.create({
-      name: req.body.name,
-      email: req.body.email,
-      password: req.body.password,
+      name: name,
+      email: email,
+      password: hashedPassword,
     })
-    res.json({status: 'ok'})    
+    res.status(200).json('user added successfully')    
   }
   catch(err) {
-    res.json({status: 'error', error: 'TODO: handle error'})
+    res.status(500).json(err)
   }
 })
 
 app.post('/api/login', async (req, res) => {
   try {
-    console.log(req.body)
+    const {email, password} = req.body
     const user = await User.findOne({ 
-      email: req.body.email, 
-      password: req.body.password,
+      email: email, 
+      password: password,
     })
 
     if(user) {
@@ -69,10 +72,11 @@ app.post('/api/login', async (req, res) => {
 
 app.get("/:filePath(*)", (req, res) => {
   const filePath = req.params.filePath;
-  const fileToSend = join(publicPath, filePath);
+  const fileToSend = join(__publicPath, filePath);
   res.sendFile(fileToSend);
 });
 
 app.get("/*", function (req, res) {
-  res.sendFile(__dirname + "/public/index.html");
+  const index = join(__publicPath, 'index.html')
+  res.sendFile(index);
 });
