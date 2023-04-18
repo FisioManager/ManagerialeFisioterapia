@@ -1,10 +1,10 @@
 import express from "express";
 import mongoose from "mongoose";
-import jwt from "jsonwebtoken"
-import bcrypt from 'bcryptjs'
+import jwt from "jsonwebtoken";
+import bcrypt from "bcryptjs";
 import { join, dirname } from "path";
 import { fileURLToPath } from "url";
-import User from "./src/models/user.model.js"
+import User from "./src/models/user.model.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -13,12 +13,12 @@ const __publicPath = join(__dirname, "public");
 const app = express();
 const port = 3000;
 
-app.use(express.json())
+app.use(express.json());
 
-mongoose.connect('mongodb://127.0.0.1:27017/fisiomanagerdb')
+mongoose.connect("mongodb://127.0.0.1:27017/fisiomanagerdb");
 
 // Set the MIME type explicitly
-express.static.mime.define({'text/javascript': ['js']});
+express.static.mime.define({ "text/javascript": ["js"] });
 
 app.listen(port, function (error) {
   if (error) {
@@ -28,47 +28,46 @@ app.listen(port, function (error) {
   }
 });
 
-app.post('/api/register', async (req, res) => {
+app.post("/api/register", async (req, res) => {
   try {
-    const {name, email, password} = req.body
-    const hashedPassword = await bcrypt.hash(password, 12)
+    const { name, email, password } = req.body;
+    const hashedPassword = await bcrypt.hash(password, 12);
     await User.create({
       name: name,
       email: email,
       password: hashedPassword,
-    })
-    res.status(200).json('user added successfully')    
+    });
+    res.status(200).json("user added successfully");
+  } catch (err) {
+    res.status(500).json(err);
   }
-  catch(err) {
-    res.status(500).json(err)
-  }
-})
+});
 
-app.post('/api/login', async (req, res) => {
+app.post("/api/login", async (req, res) => {
   try {
-    const {email, password} = req.body
-    const user = await User.findOne({ 
-      email: email, 
+    const { email, password } = req.body;
+    const user = await User.findOne({
+      email: email,
       password: password,
-    })
+    });
 
-    if(user) {
-      const token = jwt.sign({
-        name : user.name,
-        email: user.email,
-      }, 'secretToChange')
+    if (user) {
+      const token = jwt.sign(
+        {
+          name: user.name,
+          email: user.email,
+        },
+        "secretToChange"
+      );
 
-      return res.json({ status: 'ok', user: token })
+      return res.json({ status: "ok", user: token });
+    } else {
+      return res.json({ status: "error", user: false });
     }
-    else {
-      return res.json({ status: 'error',  user: false})
-    }
-
+  } catch (err) {
+    res.json({ status: "error", error: "TODO: handle error" });
   }
-  catch(err) {
-    res.json({status: 'error', error: 'TODO: handle error'})
-  }
-})
+});
 
 app.get("/:filePath(*)", (req, res) => {
   const filePath = req.params.filePath;
@@ -77,6 +76,6 @@ app.get("/:filePath(*)", (req, res) => {
 });
 
 app.get("/*", function (req, res) {
-  const index = join(__publicPath, 'index.html')
+  const index = join(__publicPath, "index.html");
   res.sendFile(index);
 });

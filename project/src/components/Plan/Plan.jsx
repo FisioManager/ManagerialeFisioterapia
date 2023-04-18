@@ -9,10 +9,10 @@ import "./Plan.scss";
   plan: it contains the currently selected plan
   setSelectedPlan: it's the function that can change the state of plan 
 */
-const Plan = ({ title, pro, cons, price, method, plan }) => {
+const Plan = ({ title, pro, cons, price, method, plan, changePlan }) => {
 
   return (
-    <div className={"plan flex space-evenly col " + (plan === title ? "selected" : "")}>
+    <div className={"plan flex space-evenly col " + (plan === title ? "selected" : "")} onClick={() => changePlan(title)}>
       <h1>{title}</h1>
       <div className="flex col gap">
         {pro.map((func) => (
