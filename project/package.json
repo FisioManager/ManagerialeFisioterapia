@@ -9,7 +9,28 @@
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^7.0.3",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "webpack": "^5.81.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-react": "^7.18.6",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "babel-loader": "^9.1.2",
+    "concurrently": "^8.0.1",
+    "css-loader": "^6.7.3",
+    "dotenv": "^16.0.3",
+    "mongodb": "^5.1.0",
+    "prettier": "^2.8.7",
+    "react-router-dom": "^6.8.2",
+    "sass": "^1.58.0",
+    "sass-loader": "^13.2.2",
+    "style-loader": "^3.3.1",
+    "svg-inline-loader": "^0.8.2",
+    "webpack-cli": "^5.0.1"
   },
   "scripts": {
     "dev": "npx webpack && concurrently \"cd db && mongod --dbpath . >nul\" \"node server.js\"",
@@ -32,25 +53,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@babel/core": "^7.20.12",
-    "@babel/preset-env": "^7.20.2",
-    "@babel/preset-react": "^7.18.6",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "babel-loader": "^9.1.2",
-    "concurrently": "^8.0.1",
-    "dotenv": "^16.0.3",
-    "mongodb": "^5.1.0",
-    "prettier": "^2.8.7",
-    "react-router-dom": "^6.8.2",
-    "sass": "^1.58.0",
-    "css-loader": "^6.7.3",
-    "sass-loader": "^13.2.2",
-    "style-loader": "^3.3.1",
-    "svg-inline-loader": "^0.8.2",
-    "webpack-cli": "^5.0.1"
   }
 }
