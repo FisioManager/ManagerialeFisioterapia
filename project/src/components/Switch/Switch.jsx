@@ -1,4 +1,4 @@
-import "./Switch.scss";
+import './Switch.scss'
 
 /* 
   methods: contains an array of two elements in which the switch will switch from one to another when clicked
@@ -7,18 +7,18 @@ import "./Switch.scss";
 */
 const Switch = ({ methods, index, setSelectedMethod }) => {
   return (
-    <label className="switch">
+    <label className='switch'>
       <input
-        type="checkbox"
+        type='checkbox'
         onClick={() => {
           index === 0
             ? setSelectedMethod(methods[1])
-            : setSelectedMethod(methods[0]);
+            : setSelectedMethod(methods[0])
         }}
       />
-      <span className="slider round"></span>
+      <span className='slider round'></span>
     </label>
-  );
-};
+  )
+}
 
-export default Switch;
+export default Switch

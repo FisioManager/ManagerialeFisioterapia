@@ -1,36 +1,36 @@
-import "./Section.scss";
+import './Section.scss'
 
 const Section = ({ src, titolo, testo, mode }) => {
   return (
     <div
-      id="section"
+      id='section'
       className={
-        "flex box-container " + (mode ? "left-to-right" : "right-to-left")
+        'flex box-container ' + (mode ? 'left-to-right' : 'right-to-left')
       }
     >
       {mode ? (
         <>
-          <div className="flex box-30">
-            <img src={src} alt="illustration" />
+          <div className='flex box-30'>
+            <img src={src} alt='illustration' />
           </div>
-          <div className="flex col box-30 gap-3">
+          <div className='flex col box-30 gap-3'>
             <h1>{titolo}</h1>
             <p>{testo}</p>
           </div>
         </>
       ) : (
         <>
-          <div className="flex col box-30 gap-3">
+          <div className='flex col box-30 gap-3'>
             <h1>{titolo}</h1>
             <p>{testo}</p>
           </div>
-          <div className="flex box-30">
-            <img src={src} alt="illustration" />
+          <div className='flex box-30'>
+            <img src={src} alt='illustration' />
           </div>
         </>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default Section;
+export default Section

@@ -1,16 +1,16 @@
-import { Outlet, useLocation } from "react-router-dom";
-import { Header, Footer, AppHeader } from "../components/components";
+import { Outlet, useLocation } from 'react-router-dom'
+import { Header, Footer, AppHeader } from '../components/components'
 
 const Layout = () => {
-  const location = useLocation();
+  const location = useLocation()
 
   return (
     <>
-      {!(location.pathname === "/manager") ? <Header /> : <AppHeader />}
+      {!(location.pathname === '/manager') ? <Header /> : <AppHeader />}
       <Outlet />
       <Footer />
     </>
-  );
-};
+  )
+}
 
-export default Layout;
+export default Layout

@@ -1,10 +1,10 @@
-import "./AboutUs.scss";
+import './AboutUs.scss'
 
 const AboutUs = () => {
   return (
-    <div id="main-container">
-      <div className="flex box-container">
-        <div id="about-us-container" className="flex col gap-3 box-30">
+    <div id='main-container'>
+      <div className='flex box-container'>
+        <div id='about-us-container' className='flex col gap-3 box-30'>
           <h1>Chi Siamo</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
@@ -28,18 +28,18 @@ const AboutUs = () => {
             magnis dis parturient montes, nascetur ridiculus mus. Donec eu
             tempor mauris.
           </p>
-          <div id="photo-container" className="flex gap-3">
-            <img src="/images/place-holder-500.png" alt="pippo" />
-            <img src="/images/place-holder-500.png" alt="dange" />
-            <img src="/images/place-holder-500.png" alt="dani" />
+          <div id='photo-container' className='flex gap-3'>
+            <img src='/images/place-holder-500.png' alt='pippo' />
+            <img src='/images/place-holder-500.png' alt='dange' />
+            <img src='/images/place-holder-500.png' alt='dani' />
           </div>
         </div>
-        <div className="flex box-30">
-          <img src="/images/place-holder-500.png" alt="contattaci" />
+        <div className='flex box-30'>
+          <img src='/images/place-holder-500.png' alt='contattaci' />
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default AboutUs;
+export default AboutUs
