@@ -10,8 +10,7 @@
 ## <u>Build e Debug</u>
 
 - `npx webpack`, build
-- `npm start`, debug react
-- `npm run server`, run server
+- `npm run dev`, build + start application
 - `npm run pretty`, format all files
 
 ## <u>MongoDB</u>
@@ -19,6 +18,8 @@
 - `mongod --dbpath .`, runnare all'interno di /db per far partire il server
 - `mongo`, entrare nella shell di mongodb
 - `use databaseName`, selezionare database
+- `show dbs`, show databases
+- `show collections`, show collections
 
 ***fisiomanagerdb:*** (database name)
 
