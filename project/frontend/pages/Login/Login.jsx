@@ -12,8 +12,6 @@ const Login = () => {
   const [password, setPassword] = useState('')
 
   async function loginUser(event) {
-    event.preventDefault()
-
     const response = await fetch('http://localhost:3000/api/login', {
       method: 'POST',
       headers: {
@@ -27,7 +25,8 @@ const Login = () => {
 
     const data = await response.json()
 
-    if (data.user) {
+    if (data.token) {
+      localStorage.setItem('token', data.token)
       alert('Login successful')
       window.location.href = '/manager'
     } else {

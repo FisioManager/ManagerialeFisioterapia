@@ -5,7 +5,7 @@ import bcrypt from 'bcryptjs'
 import { config } from 'dotenv'
 import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
-import User from './src/models/user.model.js'
+import User from './models/user.model.js'
 
 const __root = dirname(fileURLToPath(import.meta.url)) 
 const __publicPath = join(__root, 'public')
@@ -82,9 +82,9 @@ app.post('/api/login', async (req, res) => {
         { expiresIn: '1h' }
       )
 
-      return res.status(200).json({user: token })
+      return res.status(200).json({token: token })
     } else {
-      return res.status(400).json({user: false })
+      return res.status(400).json({token: false })
     }
   } catch (err) {
     res.status(500).json({error: 'TODO: handle error' })
