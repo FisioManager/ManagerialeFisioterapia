@@ -16,7 +16,7 @@ const Manager = () => {
           navigate('/login')
         }
         else {
-          alert("FUNZIONA")
+          alert('FUNZIONA')
         }
     }
   }, [])

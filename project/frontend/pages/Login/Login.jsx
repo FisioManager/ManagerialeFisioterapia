@@ -1,4 +1,5 @@
 import './Login.scss'
+import axios from 'axios'
 import { useState, useEffect } from 'react'
 import { useLocation, Link } from 'react-router-dom'
 
@@ -11,19 +12,17 @@ const Login = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
-  async function loginUser(event) {
-    const response = await fetch('http://localhost:3000/api/login', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
+  async function loginUser() {
+    const response = await axios.post('http://localhost:3000/api/login', {
         email,
         password,
-      }),
+    }, {
+        headers: {
+          'Content-Type': 'application/json',
+        },
     })
 
-    const data = await response.json()
+    const data = response.data
 
     if (data.token) {
       localStorage.setItem('token', data.token)

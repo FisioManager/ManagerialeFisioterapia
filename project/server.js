@@ -1,11 +1,9 @@
 import express from 'express'
 import mongoose from 'mongoose'
-import jwt from 'jsonwebtoken'
-import bcrypt from 'bcryptjs'
 import { config } from 'dotenv'
 import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
-import User from './models/user.model.js'
+import apiRouter from './api/apiRoutes'
 
 const __root = dirname(fileURLToPath(import.meta.url)) 
 const __publicPath = join(__root, 'public')
@@ -19,6 +17,9 @@ app.use(express.json())
 
 // Middleware that try to serve files inside the public folder automatically without any app.get() for each one of them
 app.use(express.static('public'))
+
+// Handle api calls by passing them to the router apiRoutes defined inside apiRoutes.js
+app.use('/api', apiRouter)
 
 // Config the .env environment
 config()
@@ -39,54 +40,3 @@ app.listen(port, (error) => {
 
 // Serve every route with index.html since this is handeled by React
 app.get('/*', (req, res) => { res.sendFile(join(__publicPath, 'index.html') ) })
-
-app.post('/api/register', async (req, res) => {
-  try {
-    const { name, email, password } = req.body
-    const hashedPassword = await bcrypt.hash(password, Number(process.env.HASH_SALT))
-
-    await User.create({
-      name: name,
-      email: email,
-      password: hashedPassword,
-    })
-    res.status(200).json('user added successfully')
-  } catch (err) {
-    res.status(500).json(err)
-  }
-})
-
-app.post('/api/login', async (req, res) => {
-  try {
-    const { email, password } = req.body
-
-    // Find the user with specific email
-    const user = await User.findOne({
-      email: email
-    })
-
-    // Compare passwords 
-    const result = await bcrypt.compare(password, user.password)
-
-    // If passwords don't match then stop
-    if (!result)
-      return res.status(400).json({error: 'TODO: handle wrong password'})
-
-    if (user) {
-      const token = jwt.sign(
-        {
-          name: user.name,
-          email: user.email,
-        },
-        process.env.ACCESS_KEY,
-        { expiresIn: '1h' }
-      )
-
-      return res.status(200).json({token: token })
-    } else {
-      return res.status(400).json({token: false })
-    }
-  } catch (err) {
-    res.status(500).json({error: 'TODO: handle error' })
-  }
-})

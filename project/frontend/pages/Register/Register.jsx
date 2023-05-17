@@ -1,5 +1,6 @@
 import './Register.scss'
 import Introduction from '../../components/Introduction/Introduction'
+import axios from 'axios'
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
@@ -15,23 +16,21 @@ const Register = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
-  async function registerUser(event) {
+  async function registerUser() {
     const [firstName, lastName] = name.split(' ')
 
-    const response = await fetch('http://localhost:3000/api/register', {
-      method: 'POST',
+    const response = await axios.post('http://localhost:3000/api/register', {
+      firstName,
+      lastName,
+      email,
+      password
+    }, {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({
-        firstName,
-        lastName,
-        email,
-        password,
-      }),
     })
 
-    const data = await response.json()
+    const data = response.data
 
     if (data.status === 'ok') {
       navigate('/log-in')
