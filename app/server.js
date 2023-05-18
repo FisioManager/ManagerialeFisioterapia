@@ -1,7 +1,7 @@
 import express from 'express'
 import mongoose from 'mongoose'
 import cookieParser from 'cookie-parser';
-import apiRouter from './api/apiRoutes.js'
+import apiRouter from './apis/apiRoutes.js'
 import authMiddleware from './middlewares/authMiddleware.js'
 import errorMiddleware from './middlewares/errorMiddleware.js'
 import { config } from 'dotenv'
@@ -49,4 +49,4 @@ app.listen(port, (error) => {
 })
 
 // Serve every route with index.html since this is handeled by React
-app.get('/*', (req, res) => { console.log('im here'); res.sendFile(join(__publicPath, 'index.html') ) })
+app.get('/*', (req, res) => { res.sendFile(join(__publicPath, 'index.html')) })

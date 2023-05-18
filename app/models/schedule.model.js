@@ -9,7 +9,7 @@ const ExerciseSchema = new mongoose.Schema(
     { collection: 'exercises' }
 )
 
-const TableSchema = new mongoose.Schema(
+const ScheduleSchema = new mongoose.Schema(
     {
         exercises: [
             {
@@ -22,10 +22,10 @@ const TableSchema = new mongoose.Schema(
             },
         ]
     },
-    { collection: 'tables' }
+    { collection: 'schedules' }
 )
 
 const Exercise = mongoose.model('Exercise', ExerciseSchema)
-const Table = mongoose.model('Table', TableSchema)
+const Schedule = mongoose.model('Schedule', ScheduleSchema)
 
-export { Exercise, Table }
+export { Exercise, Schedule }

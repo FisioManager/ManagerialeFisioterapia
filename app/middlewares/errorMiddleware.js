@@ -3,7 +3,7 @@ async function errorMiddleware(err, req, res, next) {
     console.error(err);
 
     // Set the status code and send an error response
-    res.status(500).json({ error: 'Internal Server Error' });
+    res.status(501).json({ error: 'Internal Server Error' });
 }
 
 export default errorMiddleware
