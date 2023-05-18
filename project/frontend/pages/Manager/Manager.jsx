@@ -1,23 +1,21 @@
 import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import jwt_decode from 'jwt-decode'
 import './Manager.scss'
 
 const Manager = () => {
   const navigate = useNavigate()
 
   useEffect(() => {
-    const token = localStorage.getItem('token')
-    if(token) {
-       const user = jwt_decode(token)
-        if(!user) {
-          console.log('Something went wrong')
-          localStorage.removeItem('token')
-          navigate('/login')
-        }
-        else {
-          alert('FUNZIONA')
-        }
+    const accessToken = localStorage.getItem('accessToken')
+    if(accessToken) {
+
+        // VALIDATE TOKEN BY ASKING SERVER
+
+        // IF NOT VALID THEN:
+        // console.log('Something went wrong')
+        // localStorage.removeItem('accessToken')
+        // localStorage.removeItem('refreshToken')
+        // navigate('/login')
     }
   }, [])
 

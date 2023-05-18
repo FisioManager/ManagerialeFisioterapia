@@ -1,9 +1,12 @@
 import express from 'express'
 import mongoose from 'mongoose'
+import cookieParser from 'cookie-parser';
+import apiRouter from './api/apiRoutes.js'
+import authMiddleware from './middleware/authMiddleware.js'
+import errorMiddleware from './middleware/errorMiddleware.js'
 import { config } from 'dotenv'
 import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
-import apiRouter from './api/apiRoutes'
 
 const __root = dirname(fileURLToPath(import.meta.url)) 
 const __publicPath = join(__root, 'public')
@@ -12,17 +15,24 @@ const __publicPath = join(__root, 'public')
 const app = express()
 const port = 3000
 
-// Specifing that express will handle JSON responses by default
+// Config the .env environment
+config()
+
+// 1.Specifing that express will handle JSON responses by default, 2.Parse cookies inside req.cookies
 app.use(express.json())
+app.use(cookieParser());
 
 // Middleware that try to serve files inside the public folder automatically without any app.get() for each one of them
 app.use(express.static('public'))
 
+// Apply middleware to specific routes
+app.use('/manager/**', authMiddleware)
+
 // Handle api calls by passing them to the router apiRoutes defined inside apiRoutes.js
 app.use('/api', apiRouter)
 
-// Config the .env environment
-config()
+// Handle errors raised by apis
+app.use(errorMiddleware)
 
 // Connect to the database
 mongoose.connect(process.env.MONGO_URI).then(() => console.log('Server is connected to the database'))
@@ -39,4 +49,4 @@ app.listen(port, (error) => {
 })
 
 // Serve every route with index.html since this is handeled by React
-app.get('/*', (req, res) => { res.sendFile(join(__publicPath, 'index.html') ) })
+app.get('/*', (req, res) => { console.log('im here'); res.sendFile(join(__publicPath, 'index.html') ) })

@@ -22,10 +22,9 @@ const Login = () => {
         },
     })
 
-    const data = response.data
-
-    if (data.token) {
-      localStorage.setItem('token', data.token)
+    if (response.data) {
+      localStorage.setItem('accessToken', response.data.accessToken)
+      localStorage.setItem('refreshToken', response.data.refreshToken)
       alert('Login successful')
       window.location.href = '/manager'
     } else {
@@ -62,7 +61,7 @@ const Login = () => {
                   (focusedElement === 'email' ? 'active' : ' ')
                 }
                 id='email-container'
-                onClick={() => setFocusedElement('user')}
+                onClick={() => setFocusedElement('email')}
               >
                 <img
                   src={
