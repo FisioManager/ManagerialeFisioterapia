@@ -6,7 +6,7 @@
 - [Politiche per la fatturazione](#politiche-per-la-fatturazione)
 - [Competitors](#competitors)
 
-## <u>*Funzionalità principali*</u>
+## *Funzionalità principali*
 
 ### **Gestione della cartella clinica dei pazienti**
 
@@ -59,7 +59,7 @@ L’applicativo deve notificare i seguenti eventi:
 - Scadenza di licenza d’utilizzo
 - Aggiornamenti del software
 
-## <u>*Mappa del sito*</u>
+## *Mappa del sito*
 
 - Home
 - Log In
@@ -77,7 +77,7 @@ L’applicativo deve notificare i seguenti eventi:
   - GDPR
 
 
-## <u>*Framework e tecnologie*</u>
+## *Framework e tecnologie*
 
 I framework utilizzati sono scelti per fornire due soluzioni:
 
@@ -95,7 +95,7 @@ I framework utilizzati sono scelti per fornire due soluzioni:
 
 Per entrambi I sistemi operativi si userà React Native con l’aggiunta delle librerie supportate da esso
 
-## <u>*Politiche per la fatturazione*</u>
+## *Politiche per la fatturazione*
 
 Ogni fattura deve contenere i seguenti campi:
 
@@ -124,7 +124,7 @@ Esistono tre modi tramite cui l’SdI invia le fatture:
 
 Per le prestazioni sanitarie non si deve emettere nessuna fattura elettronica ma bensì i dati devono essere inviate al sistema TS (tessera sanitaria) entro il 31 gennaio successivo dell’anno del pagamento del servizio.
 
-## <u>*Competitors*</u>
+## *Competitors*
 
 Gestionali già sul mercato che hanno le stesse funzionalità:
 

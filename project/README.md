@@ -7,42 +7,49 @@
 - [Interfacce](#interfacce)
 - [Risorse](#risorse)
 
-## <u>Build e Debug</u>
+## *Build e Debug*
 
 - `npx webpack`, build
 - `npm run dev`, build + start application
 - `npm run pretty`, format all files
 
-## <u>MongoDB</u>
+## *MongoDB*
 
-- `mongod --dbpath .`, runnare all'interno di /db per far partire il server
+- `mongod --dbpath .`, runnare all'interno di /db per far partire il database
 - `mongo`, entrare nella shell di mongodb
 - `use databaseName`, selezionare database
 - `show dbs`, show databases
 - `show collections`, show collections
 
-***fisiomanagerdb:*** (database name)
+### **Database (fisiomanagerdb) collections**
 
-- Utenti
-- altre tabelle...
+- users
+- patients
+    - doucments
+    - invoices
+- doctors
+- calendars
+    - events
+- tables
+    - exercises
 
-## <u>Requisiti Funzionali</u>
+## Requisiti Funzionali
 
-- [ ] Log In with database
-- [ ] Registrazione al sito
-- [ ] Ricezione email contattaci
-- [ ] Scelta del piano di pagamento
-- [ ] CRUD pazienti
+- [ ] Log In
+- [ ] Registrazione
+- [ ] Invio email contattaci
+- [ ] CRUD pazienti + documenti 
 - [ ] CRUD eventi su calendario
 - [ ] CRUD fatture
 - [ ] CRUD dipendenti
-- [ ] CRUD esercizi fisici
+- [ ] CRUD tabelle + esercizi fisici
 - [ ] Compilazione, Stampa di GDPR
 - [ ] Triage + redazione del documento finale
 - [ ] Creazione di schede con esercizi
 - [ ] Area notifiche
+- [ ] Scelta del piano di pagamento
 
-## <u>Requisiti non Funzionali</u>
+## Requisiti non Funzionali
 
 - [ ] Documentazione
 - [ ] Mappa del sito
@@ -52,14 +59,10 @@
 - [ ] Politiche di fatturazione
 - [ ] Separazione dei dati per ogni cliente
 
-## <u>Interfacce</u>
+## Interfacce
 
 - [ ] Servizio di pagamento
 - [ ] AdE e SdI
 - [ ] Sistema tessera sanitaria
 - [ ] Google Calendar
 - [ ] What's App
-
-## <u>Risorse</u>
-
-- [Register+Login](https://www.youtube.com/watch?v=Ejg7es3ba2k)
