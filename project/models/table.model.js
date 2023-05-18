@@ -6,7 +6,7 @@ const ExerciseSchema = new mongoose.Schema(
         area: { type: String, required: true },
         // video: { type: String, required: true }
     },
-    { collection: "exercises" }
+    { collection: 'exercises' }
 )
 
 const TableSchema = new mongoose.Schema(
@@ -15,17 +15,17 @@ const TableSchema = new mongoose.Schema(
             {
                 exercise: {
                     type: mongoose.Schema.Types.ObjectId,
-                    ref: "Exercise"
+                    ref: 'Exercise'
                 },
                 ripetition: { type: Number },
                 duration: { type: Number }
             },
         ]
     },
-    { collection: "tables" }
+    { collection: 'tables' }
 )
 
-const Exercise = mongoose.model("Exercise", ExerciseSchema)
-const Table = mongoose.model("Table", TableSchema)
+const Exercise = mongoose.model('Exercise', ExerciseSchema)
+const Table = mongoose.model('Table', TableSchema)
 
 export { Exercise, Table }

@@ -8,7 +8,7 @@ const EventSchema = new mongoose.Schema(
         content: { type: String, required: true },
         notes: { type: String }
     },
-    { collection: "events" }
+    { collection: 'events' }
 )
 
 const CalendarSchema = new mongoose.Schema(
@@ -17,15 +17,15 @@ const CalendarSchema = new mongoose.Schema(
             {
                 event: {
                     type: mongoose.Schema.Types.ObjectId,
-                    ref: "Event"
+                    ref: 'Event'
                 }
             }
         ]
     },
-    { collection: "calendars" }
+    { collection: 'calendars' }
 )
 
-const Event = mongoose.model("Event", EventSchema)
-const Calendar = mongoose.model("Calendar", CalendarSchema)
+const Event = mongoose.model('Event', EventSchema)
+const Calendar = mongoose.model('Calendar', CalendarSchema)
 
 export { Event, Calendar }

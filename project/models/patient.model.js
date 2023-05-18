@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
-import Event from './calendar.model'
-import User from './user.model'
+import { Event } from './calendar.model.js'
+import User from './user.model.js'
 
 const DocumentSchema = new mongoose.Schema(
     {

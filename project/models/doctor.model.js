@@ -7,9 +7,9 @@ const DoctorSchema = new mongoose.Schema(
       email: { type: String, required: true, unique: true },
       specialization: { type: String, required: true }
   },
-  { collection: "doctors" }
+  { collection: 'doctors' }
 )
 
-const Doctor = mongoose.model("Doctor", DoctorSchema)
+const Doctor = mongoose.model('Doctor', DoctorSchema)
 
 export default Doctor
