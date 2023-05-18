@@ -1,0 +1,5 @@
+{
+    "watch": ["server.js", "frontend/**/*.*"],
+    "exec": "npm run start"
+}
+  

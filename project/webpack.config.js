@@ -6,7 +6,7 @@ const __dirname = dirname(__filename);
 
 export default {
   mode: "development",
-  entry: "./src/index.jsx",
+  entry: "./frontend/index.jsx",
   output: {
     path: join(__dirname, "public"),
     filename: "bundle.js",
