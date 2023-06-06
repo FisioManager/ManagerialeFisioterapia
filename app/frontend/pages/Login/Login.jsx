@@ -22,7 +22,7 @@ const Login = () => {
         },
     })
 
-    if (response.data) {
+    if (response.status == 200) {
       localStorage.setItem('accessToken', response.data.accessToken)
       localStorage.setItem('refreshToken', response.data.refreshToken)
       alert('Login successful')

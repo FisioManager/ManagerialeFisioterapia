@@ -30,9 +30,7 @@ const Register = () => {
       },
     })
 
-    const data = response.data
-
-    if (data.status === 'ok') {
+    if (response.status == 200) {
       navigate('/log-in')
     }
   }
